@@ -1,0 +1,43 @@
+#header_m {
+    font-family: "NanumBarunGothicBold-web";
+    font-size: 14px;
+    border-top: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+    border-left: 1px solid #c9c9c9;
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    color: #434343;
+    text-align: left;
+    
+    padding: 10px;
+}
+.header {
+    font-family: "NanumBarunGothicBold-web";
+    font-size: 14px;
+    border-top: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+    border-left: 1px solid #c9c9c9;
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    color: #434343;
+    text-align: left;
+    
+}
+.menu a {
+    padding: 7px 10px;
+    position: relative;
+    display: block;
+    padding: 14px 10px;
+    height: 51px;
+}
+
+.menu-wrapper ul {
+    border-top: 1px solid #c9c9c9;
+}
+
+.menu-wrapper {
+    border-left: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+}
+
+/* 상단바를 위한 스타일(CSS) 적용 */

@@ -1,0 +1,257 @@
+
+
+
+
+
+<!DOCTYPE HTML>
+<html lang="ko">
+<head>
+
+
+
+
+
+
+
+
+<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+<title>생활환경안전정보시스템 - 화학물질 조회</title>
+<meta charset="utf-8">
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:type" content="website" />
+<meta property="og:title" content="초록누리 - 생활환경안전정보시스템" />
+<meta property="og:description"
+	content="생활환경 안전정보 및 건강유해정보 제공. 일상 생활에서 자주 쓰는 세정제, 합성세제 등 15개 품목에 사용된 화학물질 정보를 제공하고 있습니다. 본 시스템을 통해서 평소 궁금해하던 생활화학제품에 대하여 어떠한 화학물질이 사용되었는지, 해당 화학물질의 유해성 정보는 어떠한지 확인할 수 있습니다." />
+<meta property="og:image"
+	content="http://ecolife.me.go.kr/ecolife/resources/img/main/pc_logo.png" />
+<meta name="google-signin-client_id"
+	content="451293283965-v4krvgom5go39u0kc8ndqiubjecph3pj.apps.googleusercontent.com" />
+
+
+<link rel="shortcut icon" href="/ecolife/resources/img/favicon.ico" />
+<!-- CSS -->
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/ext/nanumbarungothic.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/ext/sweetalert.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/external.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/ptech.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/application.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/buttons.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/survey.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/ext/bootstrap_override.css">
+<link rel="stylesheet" type="text/css"
+	href="/ecolife/resources/css/ext/gis.css">
+
+
+<!-- JS -->
+<script type="text/javascript"
+	src="/ecolife/resources/js/ext/sweetalert-dev.js"></script>
+<script type="text/javascript"
+	src="/ecolife/resources/js/ext/jquery-1.11.3.min.js"></script>
+<script type="text/javascript"
+	src="/ecolife/resources/js/ext/bootstrap.min.js"></script>
+<script type="text/javascript"
+	src="/ecolife/resources/js/ext/handlebars-v4.0.5.js"></script>
+<script type="text/javascript" src="/ecolife/resources/js/common.js"></script>
+<script type="text/javascript"
+	src="/ecolife/resources/js/jquery.bootpag.min.js"></script>
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+	<script src="/ecolife/resources/js/ext/html5shiv.js"></script>
+	<script src="/ecolife/resources/js/ext/respond.js"></script>
+<![endif]-->
+
+
+
+</head>
+
+<body>
+
+
+
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<button type="button" class="navbar-toggle collapsed"
+							data-toggle="collapse" data-target="#main-navbar"
+							aria-expanded="false">
+							<span class="sr-only">Toggle navigation</span> <span
+								class="icon-bar"></span> <span class="icon-bar"></span> <span
+								class="icon-bar"></span>
+						</button>
+						<h1 class="user-logo">
+							<a href="/ecolife"> <img
+								src="/ecolife/resources/img/main/pc_logo.png" class="top-logo"
+								alt="생활환경안전정보시스템" />
+							</a>
+						</h1>
+					</div>
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse right" id="main-navbar">
+						<ul class="nav navbar-nav navbar-left" id="main-menu"
+							name="main-menu-area">
+
+
+						</ul>
+						<div class="total-search-wrapper margin-top10">
+							<form id="total-search-form" name="total-search-form"
+								method="POST" action="javascript:totSearch();">
+								<input type="text" name="searchKey" id="totalSearchKey"
+									class="form-control" title="검색어" placeholder="검색할 키워드를 입력하세요. "
+									+ value="" maxlength="20" />
+							</form>
+							<a class="total-search-btn" href="javascript:totSearch()"
+								style="cursor: pointer;" title="통합검색버튼"> <i
+								class="fa fa-search" aria-hidden="true"></i>
+							</a>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+
+
+	<script>
+    function totSearch(){
+        var searchKey = $("#totalSearchKey").val();
+        if(searchKey==""){
+            location.href="/ecolife/totSearch/index?searchKey=";
+        }else{
+            location.href="/ecolife/totSearch/index?searchKey="+encodeURIComponent(searchKey);  
+        }
+        
+        
+    }
+    $('#main-menu').hover(function(){
+        $('#main-menu-sub:not(:animated)').slideDown("fast");
+        },
+        function(){
+            $('#main-menu-sub').slideUp("fast");
+        });
+
+</script>
+
+
+
+
+
+
+	<div class="bread-crumb">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<div class="crumb home">
+						<i class="fa fa-home" aria-hidden="true"></i> <a href="/ecolife/">
+							Home </a>
+					</div>
+					<div class="crumb">
+						<i class="fa fa-angle-right" aria-hidden="true"></i> <a
+							href="/ecolife/chmstryMttr/chmstryMttrIndex"> 화학물질 </a>
+					</div>
+					<div class="crumb">
+						<i class="fa fa-angle-right" aria-hidden="true"></i> <a
+							href="/ecolife/chmstryMttr/chmstryMttrIndex"> 화학물질 조회 </a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="sub-banner product">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-12">
+					<h3 class="title">생활화학제품·물질안전정보</h3>
+					<h5 class="desc">각 부처에 분산된 화학물질 정보를 통합하여 화학물질에 대한 특성정보 및 유해성
+						정보를 제공하고 있습니다.</h5>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="container">
+		<div class="row">
+			<div class="col-sm-4 col-md-3">
+
+
+
+
+				<!-- PC 환경배출시설 서브메뉴 정보 -->
+
+
+				<!-- 모바일 환경배출시설 서브메뉴 정보 -->
+
+
+
+			</div>
+			<div class="col-sm-8 col-md-9 margin-bottom20" id="printArea">
+				<div class="row">
+					<div class="col-md-12">
+						<h2 class="page-title" id="content">
+							<div class="title">회수명령제품</div>
+						</h2>
+						<div class="page-desc">
+							<div class="sub-title">※ 아래의 번호 1부터 53까지가 '18.3.9일자로 공표된
+								제품이며, 나머지 제품은 그 이전에 공표된 것입니다.</div>
+						</div>
+					</div>
+				</div>
+				<div class="row">
+					<div class="col-md-12">
+						<div class="board-index tmpMobile">
+							<div class="counter">
+								총 <span class="number"> 132 </span> 개의 결과검색
+							</div>
+
+
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<style type="text/css">
+td>img {
+	cursor: pointer;
+}
+
+td, th {
+	text-align: center;
+}
+
+.sub-title {
+	color: #ff0000;
+	font-family: "NanumBarunGothicBold-web";
+	display: inline;
+}
+
+.page-desc {
+	padding: 0 0 10px 0;
+}
+
+.board-index .counter {
+	margin-bottom: 0;
+}
+</style>
+
+
+
+
+
+
+
+</body>
+</html>

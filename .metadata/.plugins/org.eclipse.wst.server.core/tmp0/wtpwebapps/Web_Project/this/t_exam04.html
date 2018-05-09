@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data = 10;
+	
+	function MyClass() {
+		this.data = 0;
+	}
+	
+	MyClass.prototype.method1 = function() {
+		this.data = 20;
+		data = 30;
+
+		console.log('1. data:' + data); //30
+		console.log('2. thisdata:' + this.data); //20 
+		console.log('3. window.data:' + window.data); //30
+		
+		window.onload = function() {
+			var myButton = document.getElementById("myButton");
+			myButton.onclick = function() {
+				this.data = 50;
+				data = 30;
+
+				console.log('4. thisdata: ' + this.data); //50
+			}
+		}
+	}
+
+	var m1 = new MyClass();
+	m1.method1();
+	
+</script>
+</head>
+<body>
+	<button id="myButton"></button>
+</body>
+</html>

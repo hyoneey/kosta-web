@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>초록누리</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="jquery.js" type="text/javascript"></script>
+<script src="Main.js"></script>
+</head>
+<body>
+
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+<!--                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button> -->
+                    <h1 class="user-logo">
+                        <a href="Main.html">
+                            <img src="images/imgs2017/pc_logo.png" class="top-logo" alt="생활환경안전정보시스템" width=100px;/>
+                        </a>
+                        <img alt="배너" id="banner" src="images/imgs2017/products_sub_banner_bg.png">
+                    </h1>
+                </div>
+                
+<!-- 메뉴 -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse right" id="main-navbar">
+						<ul>
+							<li class="topMenuLink"><a class="menuLink" id="menuLink1" href="Main.html">HOME</a>
+							</li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink2" href="#">화학
+									제품</a></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink3" href="#">리콜
+									대상</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="#">국내리콜</a></li>
+									<li><a class="submenuLink" href="#">해외리콜</a></li>
+								</ul></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink4" href="#">커뮤니티</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="#">공지사항</a></li>
+									<li><a class="submenuLink" href="#">홍보자료</a></li>
+									<li><a class="submenuLink" href="#">자주묻는 질문(FAQ)</a></li>
+									<li><a class="submenuLink" href="#">홈페이지 개선의견</a></li>
+									<li><a class="submenuLink" href="#">온라인 도움말</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="total-search-wrapper margin-top10">
+							<form id="total-search-form" name="total-search-form"
+								method="POST" action="javascript:totSearch();">
+								<input type="text" name="searchKey" id="totalSearchKey"
+									class="form-control" title="검색어" placeholder="검색어를 입력하세요. "
+									+ value="" maxlength="20" />
+								<div class="btn">
+									<input type="image" title="검색 새창열림"
+										src="images/imgs2017/btn_search.gif" alt="검색 새창열림" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+        </div>
+    </div>
+</nav>
+
+<!-- 이미지화면 -->
+<div class="main-img">
+	<img id="main-img01" src="images/imgs2017/main_visual_1.jpg">
+</div>
+<!-- 퀵메뉴 -->
+<div class="quick-menu">
+	<div class="quick-arrow">Quick Menu</div>
+	<a href="Main.html" class="quick-home"><img alt="" src="images/imgs2017/home-52.svg"><br><br>Home</a>
+	<a href="#" class="quick-chemi"><img alt="" src="images/imgs2017/skull-2.svg"><br><br>화학</a>
+	<a href="#" class="quick-irecall"><img alt="" src="images/imgs2017/trash-simple.svg"><br><br>리콜</a>
+	<a href="#" class="quick-frecall"><img alt="" src="images/imgs2017/multiple-11.svg"><br><br>커뮤니티</a>
+</div>
+
+
+<!-- 광고 -->
+<div class="main-ad">
+     <div class="slideshow-slides">
+        <a href="#" class="slide" id="slide-1"><img src="images/imgs2017/main_v01.jpg" alt="" width=500px></a>
+         <a href="#" class="slide" id="slide-2"><img src="images/imgs2017/main_v02.jpg" alt="" width=500px></a>
+        <a href="#" class="slide" id="slide-3"><img src="images/imgs2017/main_v03.jpg" alt="" width=500px></a> 
+    </div> 
+    <div class="slideshow-nav">
+        <a href="#" class="prev">Prev</a>
+        <a href="#" class="next">Next</a>
+    </div>
+</div>
+
+<!-- 공지사항 -->
+<div class="board" module="board_listpackage_1">
+	<section class="site_content02">
+        <div class="width1200 board_wrap">
+            <div class="notice_board01">
+                <p class="site-heading02 hover_bottom">
+                    <a id="board_head1" href="#">공지사항</a>
+                    <img src="images/imgs2017/button05.png" alt=":" />
+                    <a id="board_head2" href="#">홍보자료</a>
+                    <img src="images/imgs2017/button05.png" alt=":" />
+                    <a id="board_head3" href="#">개선의견</a>
+                </p>
+		        <div class="board_txt" id="board_txt1">
+	                
+						
+			                    <p><a href="/article/apko363300/view.action?articleId=31021" title="2018년도 위해우려제품 품질안전관리 컨설팅 지원사업 참여기업 모집 공고"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년도 위해우려제품 품질안전관리 컨설팅 지원사업 참여기업 모집 공고</span></a>
+			                        <span class="date right color">2018-03-29</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=31012" title="'18년 WTO 참깨 수입권공매 연간계획 공지"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> '18년 WTO 참깨 수입권공매 연간계획 공지</span></a>
+			                        <span class="date right color">2018-03-29</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=31010" title="2018년 WTO 참깨 수입권공매(1차) 입찰"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년 WTO 참깨 수입권공매(1차) 입찰</span></a>
+			                        <span class="date right color">2018-03-28</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=30970" title="2018년 TRQ 팥(3차) 2,000톤 구매입찰 공고(P2)"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년 TRQ 팥(3차) 2,000톤 구매입찰 공고(P2)</span></a>
+			                        <span class="date right color">2018-03-26</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=30969" title="2018년 TRQ 팥 (3차) 1,000톤 구매입찰 공고(P1)"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년 TRQ 팥 (3차) 1,000톤 구매입찰 공고(P1)</span></a>
+			                        <span class="date right color">2018-03-26</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=30957" title="[RE] 2018년 WTO 참깨 국영무역 1차 구매입찰(P2, 일반규격품)"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> [RE] 2018년 WTO 참깨 국영무역 1차 구매입찰(P2, 일반규격품)</span></a>
+			                        <span class="date right color">2018-03-23</span>
+			                    </p>		        
+		        </div>
+		        <div class="board_txt" id="board_txt2">
+                	
+						
+		                    <p><a href="/ap/bid/apko363100/view.action?bidId=12221" title="친환경농산물유통실태조사 추진방안 연구용역 사전공개"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 친환경농산물유통실태조사 추진방안 연구용역 사전공개</span></a>
+		                        <span class="date right color">2018-03-29</span>
+		                    </p>
+		                
+		                    <p><a href="/ap/bid/apko363100/view.action?bidId=12220" title="농공상융합형 중소기업 활성화사업 정책홍보관 및 업체부스 설치 용역"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 농공상융합형 중소기업 활성화사업 정책홍보관 및 업체부스 설치 용역</span></a>
+		                        <span class="date right color">2018-03-28</span>
+		                    </p>
+		                
+		                     <p><a href="/ap/bid/apko363100/view.action?bidId=12219" title="재공고)학교급식지원센터 운영 실태조사 연구용역 "><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 재공고)학교급식지원센터 운영 실태조사 연구용역 </span></a>
+		                        <span class="date right color">2018-03-28</span>
+		                    </p>
+		                
+		                    <p><a href="/ap/bid/apko363100/view.action?bidId=12218" title="제29기 농산물마케팅 경영인전문가과정 해외연수 용역"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 제29기 농산물마케팅 경영인전문가과정 해외연수 용역</span></a>
+		                        <span class="date right color">2018-03-27</span>
+		                    </p>
+		                
+		                    <p><a href="/ap/bid/apko363100/view.action?bidId=12217" title="제5기 농식품미래유통 협신리더과정 해외연수 용역"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 제5기 농식품미래유통 협신리더과정 해외연수 용역</span></a>
+		                        <span class="date right color">2018-03-27</span>
+		                    </p>
+		                
+		                    <p><a href="/ap/bid/apko363100/view.action?bidId=12216" title="제4기 농식품대량수요처 경영인전문가과정 해외연수 용역"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 제4기 농식품대량수요처 경영인전문가과정 해외연수 용역</span></a>
+		                        <span class="date right color">2018-03-27</span>
+		                    </p>
+		                
+		            
+                </div>
+                  <div class="board_txt" id="board_txt3">
+	                
+						
+			                    <p><a href="/article/apko363300/view.action?articleId=31021" title="2018년도 위해우려제품 품질안전관리 컨설팅 지원사업 참여기업 모집 공고"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년도 위해우려제품 품질안전관리 컨설팅 지원사업 참여기업 모집 공고</span></a>
+			                        <span class="date right color">2018-03-29</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=31012" title="'18년 WTO 참깨 수입권공매 연간계획 공지"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> '18년 WTO 참깨 수입권공매 연간계획 공지</span></a>
+			                        <span class="date right color">2018-03-29</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=31010" title="2018년 WTO 참깨 수입권공매(1차) 입찰"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년 WTO 참깨 수입권공매(1차) 입찰</span></a>
+			                        <span class="date right color">2018-03-28</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=30970" title="2018년 TRQ 팥(3차) 2,000톤 구매입찰 공고(P2)"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년 TRQ 팥(3차) 2,000톤 구매입찰 공고(P2)</span></a>
+			                        <span class="date right color">2018-03-26</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=30969" title="2018년 TRQ 팥 (3차) 1,000톤 구매입찰 공고(P1)"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> 2018년 TRQ 팥 (3차) 1,000톤 구매입찰 공고(P1)</span></a>
+			                        <span class="date right color">2018-03-26</span>
+			                    </p>
+			            
+			                    <p><a href="/article/apko363300/view.action?articleId=30957" title="[RE] 2018년 WTO 참깨 국영무역 1차 구매입찰(P2, 일반규격품)"><span class="sub-title"><img src="images/imgs2017/dot_img.jpg" alt=""/> [RE] 2018년 WTO 참깨 국영무역 1차 구매입찰(P2, 일반규격품)</span></a>
+			                        <span class="date right color">2018-03-23</span>
+			                    </p>		        
+		        </div>
+			</div>
+		</div>
+	</section>
+	
+	<!-- Video -->
+	<div class="col-md-4">
+		<div class="video-wrapper">
+			<video class="video"
+				src="images/imgs2017/ecolife_intro_video.mp4"
+				poster="images/imgs2017/ecolife_intro_video_screenshot.png"
+				controls="controls" title="홍보 영상" id="advertise_video">
+			</video>
+		</div>
+	</div>
+</div>
+
+
+
+
+	<!-- 하단바 -->
+    <div id="footer">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-3">
+					<img src="images/imgs2017/footer_logo.png" class="footer-logo" alt="환경부">
+    			</div>
+    			<div class="col-md-6">
+    				<div class="footer cn first">
+    					(우)30103 세종특별자치시 도움6로 11 정부세종청사 6동
+    				</div>
+                    <div class="footer cn third">
+    					<b>화학제품관련문의 : 1800-0490 (생활화학제품 안전콜센터)</b>,&nbsp;시스템문의 : 044-201-6425
+    				</div>
+    				<div class="footer cn second">
+    					Copyright © 2016 Ministry of environment. All Rights Reserved
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+</body>
+</html>

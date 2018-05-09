@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript">
+	
+	window.onload = function(){
+		var fruit = document.getElementById("fruit");
+		fruit.onchange = function(){
+			//select 태그는 options가 존재하는데 option전체를 배열로 나타냄
+			//selectedIndex는 선택한 옵션의 인덱스를 알려줌
+			var value = fruit.options[fruit.selectedIndex].value;
+			var pic = document.getElementById("pic");
+			pic.src = value;
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<form name="fmt">
+		<select id="fruit">
+			<option value="../images/strawberry.gif">딸기</option>
+			<option value="../images/banana.gif">바나나</option>
+			<option value="../images/apple.gif">사과</option>
+		</select>
+	</form>
+	<br>
+	<br>
+
+	<img id="pic" src="../images/strawberry.gif">
+
+</body>
+</html>
+
+
+
+
+
+
+

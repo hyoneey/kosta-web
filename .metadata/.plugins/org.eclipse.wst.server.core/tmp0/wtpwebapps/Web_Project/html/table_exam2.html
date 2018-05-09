@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<title>Insert title here</title>
+</head>
+<body>
+
+<!-- 'tr'은 행 / 'th'은 글자가 두껍고,중앙정렬  / 'td'는 표 한칸,정렬x  -->
+<!-- height는 칸 높이, align="center"은 문자 중앙정렬 -->
+<!-- 'colspan="숫자"' 는 열 합치기 /  'rowspan="숫자"' 는 행 합치기 -->
+<!-- 'caption'은 테이블 제목 -->
+
+	<table width="450" border="1" cellpadding="0" cellspacing="0">
+		<caption> 2017 프로야구 순위 </caption>
+		<thead>
+			<tr height="50" align="center">
+			  <th width="50"> 순위 </th>
+		 	  <th width="250"> 팀명 </th>
+			  <th width="50"> 승 </th>
+			  <th width="50"> 패 </th>
+			  <th width="50"> 무 </th>
+			</tr>
+		</thead>
+		
+		<tbody>
+			<tr height="50" align="center">
+				<td>1</td>
+				<td rowspan="2">기아</td>
+				<td>100</td>
+				<td>20</td>
+				<td>0</td>
+			</tr>
+			<tr height="50" align="center">
+				<td>2</td>
+				<td>두산</td>
+				<td>80</td>
+				<td>40</td>
+				<td>0</td>
+			</tr>
+			<tr height="50" align="center">
+				<td>3</td>
+				<td>롯데</td>
+				<td>70</td>
+				<td>50</td>
+				<td>0</td>
+			</tr>
+		</tbody>
+		
+		<tfoot>
+			<tr height="50">
+				<td colspan="2">결산</td>
+				<td></td>
+				<td></td>
+				<td></td>
+				<td></td>
+			</tr>
+		</tfoot>
+		
+	</table>
+
+</body>
+</html>

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	//string => match(정규표현식) : 매칭된 결과(매칭된 문자열)
+	/* var result = 'sports'.match(/sp/);
+	
+	if(result){ //어떠한 문자라도 존재하면
+		alert('매칭성공');
+	} */
+	
+	//RedExp => exec(문자열) : 매칭결과(매칭된 문자열);
+/*  var str =  "fdkdkjs Js fff 2efdsj dfhls AJS js dsa JS";
+	var re = /JS/ig; // i:소대문자 구분없이, g:전역검사 (문자 끝날때 까지 전체 출력)
+	var result = re.exec(str);
+	
+	//전체를 다 보여줄때
+	while(result){
+		document.write(result+"<br>");
+		result = re.exec(str);
+	} */ 
+	
+/* 	var re = new RegExp('JS','ig');
+	var str = "fdkdkjs Js fff 2efdsj dfhls AJS js dsa JS";
+	var result = re.exec(str);
+	
+	while(result){
+		document.write(result+"<br>");
+		result = re.exec(str);
+	}  */
+	
+	//퀴즈
+	// '\s' 는 공백문자, '\w'영어 '\d'숫자 , '*','+' 는 더있을수있다. 전체
+/*  	var str = "This is a data : march 20 2018";
+	var re = /:\s\w*\s\d+\s\d+/; 
+	var result = str.match(re);
+	
+	document.write(result); */
+	
+	
+/* 	var str = "Java--JavaScript";
+	var reg = /(\w*)-*(\w*)/;
+	var result = str.replace(reg, "$2-$1"); //javascript가 $2로 그룹2 java가 그룹1
+	document.write(result); */
+	
+	
+	//dolsam77@nate.com ->성공
+	//4234242sdfs33@nate.com ->실패
+	//dolsam77nate.com->실패
+	//dolsam77@nate.comdfsf->실패
+	
+	var str ="dolsam77@nate.com";
+	var reg =/^(\D)\w+@\w+\.\w{2,3}$/ //gi;
+	var result = reg.test(str);
+	
+	if(result){
+		alert('적절한 이메일');
+	}else{
+		alert('부적당한 이메일');
+	}
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	/* JavaScript 자료형 */
+	
+	//숫자형
+	var intNum = 10;
+	var floatNum = 3.14;
+	
+	//문자형
+	var singS = 'single';
+	var doubleS = "double";
+	
+	//논리형
+	var boolVar = true;
+	
+	//undefined
+	var emptyVar;
+	
+	//Null => object
+	var nullVar = null;
+	
+	//function
+	var func = function(){}
+	
+	
+	//연산자의 타입을 알려주는 함수
+	console.log(typeof intNum); //number
+	console.log(typeof floatNum); //number
+	console.log(typeof singS); //string
+	console.log(typeof doubleS); //string
+	console.log(typeof boolVar); //boolean
+	console.log(typeof emptyVar); //undefined
+	console.log(typeof nullVar); //object
+	console.log(typeof func); //function
+	
+	intNum="안녕";
+	console.log(typeof intNum); //Sting : 값이 들어가는 순간 형이 변함
+	
+	intNum = 5/2;
+	console.log(intNum); //2.5
+	console.log(Math.floor(intNum)); // 소수점 제거 => 2
+	
+	//형변환
+	var num = "15안녕"; //eval(),parseInt() => 정수형 변환
+	//num = eval(num); //25 => num이 15일 때 단, '15안녕' 이면 오류 : parseInt로 사용
+	num = parseInt(num) //25 => num이 '15안녕'이어도 출력이 된다. 만능형변환
+	num2 = num + 10; //1510
+	
+	console.log(num2);
+	
+	var num3 = "15";
+	
+	//'=='는 형변환해서 비교해줌(값만 비교) : 같다
+	//'===' 데이터 형까지 비교해준다 : 다르다.
+	if(num3 === 15){  
+		alert("같다.");
+	}else{
+		alert("다르다.");
+	}
+	
+	 
+</script>
+</head>
+<body>
+
+</body>
+</html>

@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	//사용자 객체
+	//객체 생성 3가지 방법
+	//1.Object 객체  2.리터럴 형식
+	
+	//1.Object 객체
+	var foo = new Object();
+	foo.name = "홍길동";
+	foo.age = 20;
+	
+	
+	console.log(foo.name);
+	console.log(foo.age);
+	
+	//2.리터럴 형식
+	var foo2 = {
+		name : '이가원', 
+		age :24,
+		display : function(){
+			console.log(this.name);
+		}	
+	}
+	
+	foo2.display(); // 함수를 호출하는것
+	//foo2.display; // 함수의 내용을 담아달라는 값의 표현  -> 조건의 이벤트가 만족되어졌을때 
+	
+	//함수도 객체이다.
+	function add(x,y){
+		return x+y;
+	}
+	
+	add.result = add(10,20);
+	add.status = 'ok';
+	
+	console.log(add.result);
+	console.log(add.status);
+	
+	//리터럴 형식으로 객체를 임의로 생성 후
+	//동적 프로퍼티와 메서드를 등록후 호출해서 사용하는 예제를 구현하시오.
+	
+	var obj = {};
+	
+	obj.name = "홍길동";
+	obj.display = function(){
+		return this.name;
+	}
+	
+	console.log(obj.display());
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

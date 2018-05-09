@@ -1,0 +1,129 @@
+html.scroll-hidden,
+body.scroll-hidden{
+	overflow-y:hidden !important;
+}
+
+#SeedModal{
+	position: fixed;
+    width: 100%;
+    min-width:300px;
+    height: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+    background: rgb(0,0,0);
+    background: rgba(0,0,0,0.4);
+    filter:progid:DXImageTransform.Microsoft.gradient(startColorstr=#50000000,endColorstr=#50000000);
+    text-align:center;
+    overflow:auto;
+	-webkit-overflow-scrolling: touch;
+}
+
+#SeedModal .iframe-box{
+	min-width:300px;
+	max-width:95%;
+	/*width: 45%;*/
+	width:460px;
+	margin:40px auto;
+	border:2px solid #006cbf;
+	-webkit-overflow-scrolling: touch;
+	background:#fff;
+	overflow: auto;
+	-webkit-transform: translate3d(0,-100px,0);
+	-moz-transform: translate3d(0,-100px,0);
+	-ms-transform: translate3d(0,-100px,0);
+	transform: translate3d(0,-100px,0);
+}
+
+#SeedModal .iframe-box.seed-open{
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+    -webkit-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+#SeedModal .iframe-header{
+	position:relative;
+	padding:19px 22px;
+	background-image:url(/site/consumer/images/common/bg/bg_modal_header.png);
+	text-align: left;
+}
+#SeedModal .iframe-header strong{
+	font-size:20px;color:#fff;font-family: 'NanumSquare';
+	text-align:left;
+}
+
+#SeedModal .iframe-header button{
+	position:absolute;right:22px;top:50%;width:27px;height:27px;margin-top:-13px;text-indent: -9999em;background-image:url(/site/consumer/images/common/btn/btn_modal_close.png)
+}
+
+#SeedIframe{
+	padding: 20px 0 0px 0;
+	width:100%;
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+}
+
+
+.seed-hide{
+	visibility: hidden;
+	opacity: 0;
+    -webkit-transition: all 0.3s;
+    -moz-transition: all 0.3s;
+    transition: all 0.3s;
+
+	-webkit-transform: translateZ(0);
+	-moz-transform: translateZ(0);
+	-ms-transform: translateZ(0);
+	transform: translateZ(0);
+
+	-webkit-transform: translate3d(0,0,0);
+	-moz-transform: translate3d(0,0,0);
+	-ms-transform: translate3d(0,0,0);
+	transform: translate3d(0,0,0);
+
+	-webkit-backface-visibility: hidden;
+	-moz-backface-visibility: hidden;
+	-ms-backface-visibility: hidden;
+	backface-visibility: hidden;
+
+	-webkit-perspective: 1000;
+	-moz-perspective: 1000;
+	-ms-perspective: 1000;
+	perspective: 1000;
+
+}
+.seed-open{
+	visibility: visible;
+	opacity:1;
+}
+
+html.ie8 .seed-hide{
+	visibility: visible;
+	opacity: 1;
+}
+/*
+@media screen and (max-width:639px){
+	#SeedModal .iframe-box{width:95%;margin:40px auto;}
+}
+*/
+@media screen and (max-width:480px){
+	#SeedModal .iframe-box{width:95%;margin:20px auto 40px auto;}
+}

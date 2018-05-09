@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="httpRequest.js"></script>
+<script type="text/javascript">
+
+	window.onload = function(){
+		sendRequest("member_json.jsp", "", viewInfo, "GET");
+	}
+	
+	function viewInfo(){
+		if(httpRequest.readyState == 4 ){  //완성된 결과값을 가져온것
+			if(httpRequest.status == 200){ //정상적인 결과일때만 가져와야 한다.
+				//eval함수를 통해 객체화
+				var result = eval("("+httpRequest.responseText+")");
+				if(result.code == 'success'){
+					var m = result.data.member;
+					//html코드로 변경
+					var html = '<span> 이름: '+m.name + " ID: "+m.id+"</span>";
+					
+					var list = document.getElementById("list");
+					list.innerHTML = html; 
+					
+				}else{
+					alert('실패');
+				}
+			}
+		}
+	}
+	
+</script>
+</head>
+<body>
+	<div id="list"></div>
+</body>
+</html>

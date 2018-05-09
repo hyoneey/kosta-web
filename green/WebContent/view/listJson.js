@@ -1,0 +1,25 @@
+
+$(function(){
+	$('.subMDp-1').ready(function(){
+		$.getJSON('b.json',function(data){
+			$('#good').empty();
+			//인덱스와 객체를 받을값('[]')
+			$.each(data, function(index, entry){
+			var html = '<li>'
+				html += '<a href="'+entry.image +'">';
+				html += '<p class="img_wrap">';
+				html += '<img src="'+entry.image+'"></p>';
+				html += '<dl>';
+				html += '<dt class="title">' + entry.title +'</dt>';
+				html += '<dd class="cat">'+ entry.cat +'</dd>';
+				html += '<dd class="code">'+ entry.code +'</dd>';
+				html += '</dl></a></li>';
+				
+				
+				$('#good').append(html);
+			});
+		});
+		
+		return false;
+	})
+});

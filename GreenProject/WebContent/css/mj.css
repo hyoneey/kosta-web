@@ -1,0 +1,97 @@
+.header {
+    font-family: "NanumBarunGothicBold-web";
+    font-size: 14px;
+    border-top: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+    border-left: 1px solid #c9c9c9;
+    background-color: #f1f1f1;
+    margin-top: 50px;
+    color: #434343;
+    text-align: left;
+    
+    padding: 10px;
+}
+
+.menu a {
+    padding: 7px 10px;
+    position: relative;
+    display: block;
+    padding: 14px 10px;
+    height: 51px;
+}
+
+.menu-wrapper ul {
+    border-top: 1px solid #c9c9c9;
+}
+
+.menu-wrapper {
+    border-left: 1px solid #c9c9c9;
+    border-right: 1px solid #c9c9c9;
+}
+
+/* 상단바를 위한 스타일(CSS) 적용 */
+    #topMenu {
+            height: 30px;  
+            width: 770px ;
+            position:realtive;
+    }
+    #topMenu ul {           
+        list-style-type: none;  
+        margin: 0px;           
+        padding: 0px;           
+    }
+    #topMenu ul li {            
+        color: #22741C;            
+        background-color: white; 
+        float: left;                
+        line-height: 30px;         
+        vertical-align: middle;  
+        text-align: center;            
+    }
+    .menuLink, .submenuLink {           
+        text-decoration:none;           
+        display: block;                    
+        width: 150px;                      
+        font-size: 12px;                   
+        font-weight: bold;                
+        font-family: "Trebuchet MS", Dotum; 
+    }
+    .menuLink {    
+        color: #22741C;
+    }
+    .topMenuLink:hover .menuLink {     
+       color: white;       
+        background-color: #BCE55C; 
+        text-decoration: underline;
+    }
+    .submenuLink {         
+        color: white;           
+        background-color: #CEF279;          
+    }
+    .longLink {     
+        width: 700px;   
+    }
+    .submenu {           
+        position: absolute;     /* html의 flow에 영향을 미치지 않게 absolute 설정 */
+        height: 0px;            /* 초기 높이는 0px로 설정 */
+        overflow: hidden;       /* 실 내용이 높이보다 커지면 해당 내용 감춤 */
+        transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(기본) */
+        -webkit-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 크롬/사파라ㅣ) */
+        -moz-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 파폭) */
+        -o-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 오페라) */
+        width: 850px;
+        left:0;
+        background-color: #CEF279;
+    }
+    
+    .submenu li{
+       display : inline-block;
+    }
+    .topMenuLink:hover .submenu { /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
+        height: 32px;         
+    }
+    .submenuLink:hover {   
+       color: white;
+        background-color: #CEF279; 
+        text-decoration: underline;
+    }

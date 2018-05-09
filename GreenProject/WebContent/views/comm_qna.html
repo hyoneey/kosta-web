@@ -1,0 +1,494 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+
+<meta id="viewport" name="viewport"
+	content="initial-scale=1.0, width=device-width, minimum-scale=1.0">
+<title>초록 누리</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="../css/catpcha.css" rel="stylesheet" type="text/css" />
+<link href="../css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../css/picker.default.css" rel="stylesheet" type="text/css" />
+<link href="../css/picker.default.date.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/user.smartPop.css" rel="stylesheet" type="text/css" />
+
+
+<link href="../css/navigation.css" rel="stylesheet" type="text/css" />
+<link href="../css/satisfaction.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css">
+<link rel="stylesheet" type="text/css" href="../css/remodal.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/remodal-default-theme.css">
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+<link rel="stylesheet" type="text/css" href="../css/content_01.css">
+<link rel="stylesheet" type="text/css" href="../css/content_02.css">
+<link rel="stylesheet" type="text/css" href="../css/select_map.css">
+<link rel="stylesheet" type="text/css" href="../css/webAcc.css">
+<link rel="stylesheet" type="text/css" href="../css/skin01.css">
+<link href="../css3/mj.css" rel="stylesheet" type="text/css" />
+<script src="jquery.js" type="text/javascript"></script>
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="../green/Main.js"></script>
+
+<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("div#faqBoard").hide();
+		$(".subMDp-1-1").addClass("subMenuOn");
+		$("#menuBar").children().click(function() {
+			$("li").removeClass("subMenuOn");
+			$(this).addClass("subMenuOn");
+		});
+
+		$("#notice_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("공지 사항");
+			$("div#noticeBoard").fadeIn();
+			$("div#faqBoard").hide();
+		})
+
+		$("#faq_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("자주 묻는 질문 (FAQ)");
+			$("div#noticeBoard").hide();
+			$("div#faqBoard").fadeIn();
+		});
+
+		$("#hongbo_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("홍보자료");
+			$("div#noticeBoard").hide();
+			$("div#faqBoard").hide();
+		});
+
+		$("#home_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("홈페이지 개선의견");
+			$("div#noticeBoard").hide();
+			$("div#faqBoard").hide();
+		});
+
+		$("#online_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("온라인 도움말");
+			$("div#noticeBoard").hide();
+			$("div#faqBoard").hide();
+		});
+
+		$(".fileajax").click(function() {
+			$(this).children("div").toggle();
+		});
+	});
+	
+	$(function(){
+		var url = $(location).attr("href").split("?");
+  		if(url[1] == "v1"){
+  			$("#notice_g").click();
+  		}else if(url[1] == "v2"){
+  			$("#hongbo_g").click();
+  		}else if(url[1] == "v3"){
+  			$("#faq_g").click();
+  		}else if(url[1] == "v4"){
+  			$("#home_g").click();
+  		}else if(url[1] == "v5"){
+  			$("#online_g").click();
+  		}
+	})
+</script>
+</head>
+
+<body>
+
+	
+	
+	<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+<!--                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button> -->
+                    <h1 class="user-logo">
+                        <a href="../green/Main.html">
+                            <img src="../images/imgs2017/pc_logo.png" class="top-logo" alt="생활환경안전정보시스템" width=100px;/>
+                        </a>
+                        <img alt="배너" id="banner" src="../images/imgs2017/products_sub_banner_bg.png">
+                    </h1>
+                </div>
+                
+<!-- 메뉴 -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse right" id="main-navbar">
+						<ul>
+							<li class="topMenuLink"><a class="menuLink" id="menuLink1" href="../green/Main.html">HOME</a>
+							</li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink2" href="../views/comm_search.html">화학
+									제품</a></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink3" href="../view/recall2.html?v=1">리콜
+									대상</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="../view/recall2.html?v=1">국내리콜</a></li>
+									<li><a class="submenuLink" href="../view/recall2.html?v=2">해외리콜</a></li>
+								</ul></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink4" href="../views/comm_qna.html?v1">커뮤니티</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="../views/comm_qna.html?v1">공지사항</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v2">홍보자료</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v3">자주묻는 질문(FAQ)</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v4">홈페이지 개선의견</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v5">온라인 도움말</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="total-search-wrapper margin-top10">
+							<form id="total-search-form" name="total-search-form"
+								method="POST" action="javascript:totSearch();">
+								<input type="text" name="searchKey" id="totalSearchKey"
+									class="form-control" title="검색어" placeholder="검색어를 입력하세요. "
+									+ value="" maxlength="20" />
+								<div class="btn">
+									<input type="image" title="검색 새창열림"
+										src="../images/imgs2017/btn_search.gif" alt="검색 새창열림" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+        </div>
+    </div>
+</nav>
+
+ 	<div class="sub_visual sub_visual_05">
+	</div>
+	<header class="header"></header>
+  
+	<div class="center_wrapper">
+		<aside id="snb_area">
+			<h2>
+				커뮤니티<span class="bar"></span>
+			</h2>
+			<ul class="subMDp-1 subPos-02" id="menuBar">
+				<li class="subMDp-1-1" id="notice_g"><a href="javascript:;"
+					class="arrow">공지사항</a></li>
+				<li class="subMDp-1-2" id="hongbo_g"><a href="javascript:;"
+					class="arrow">홍보자료</a></li>
+				<li class="subMDp-1-3" id="faq_g"><a href="javascript:;"
+					class="arrow">자주묻는 질문(FAQ)</a></li>
+				<li class="subMDp-1-4" id="home_g"><a href="javascript:;"
+					class="arrow">홈페이지 개선의견</a></li>
+				<li class="subMDp-1-5" id="online_g"><a href="javascript:;"
+					class="arrow">온라인 도움말</a></li>
+			</ul>
+		</aside>
+		
+		
+		<div class="sub_content_area seed-print">
+			<h3 class="sub_content_title" id="title_g">공지 사항</h3>
+			<div claas="sub_content_area_inner" id="noticeBoard">
+				<div class="seed_bbs_box">
+					<div class="totalCnt_bbsSearch seed_cf">
+						<p class="totalCnt">
+							총 <span style="font-weight: bold;">5</span>개의 결과검색
+						</p>
+						<div class="bbsSearch">
+							<form id="frmSearch" name="frmSearch"
+								action="/user/bbs/consumer/1/117/bbsDataList.do" method="post">
+								<fieldset class="seed_cf">
+									<legend>검색폼</legend>
+									<input type="hidden" name="page" value="1"> <input
+										type="hidden" name="tSite.siteIdx" value="consumer"> <input
+										type="hidden" name="tBbsSet.bbsSetIdx" value="1"> <input
+										type="hidden" name="bbsDataCategory" id="bbsDataCategory"
+										value=""> <label for="column" class="wa">선택하세요.</label>
+									<select name="column" id="column" class="seed_fl">
+										<option value="bbsDataTitle">제목</option>
+										<option value="bbsDataName">작성자</option>
+										<option value="bbsDataRegDate">작성일</option>
+									</select> <label for="search" class="wa">검색어를 입력하세요.</label> <input
+										type="text" name="search" id="search" value=""
+										class="specialKeyNot seed_fl"> <input type="submit"
+										value="검색" class="seed_fl search">
+								</fieldset>
+							</form>
+						</div>
+					</div>
+					<div class="listWrap default bbsList_1">
+						<fieldset>
+							<div class="seed_tbl">
+								<table>
+									<colgroup>
+										<col width="10%">
+										<col width="40%">
+										<col width="20%">
+										<col width="20%">
+										<col width="10%">
+									</colgroup>
+									<thead>
+										<tr>
+											<th>번호</th>
+											<th>제목</th>
+											<th>글쓴이</th>
+											<th>작성일</th>
+											<th>조회 수</th>
+										</tr>
+									</thead>
+									<tbody>
+										<tr>
+											<td align="center">1</td>
+											<td align="center">2018년도 위해우려제품 품질안전관리 컨설팅 지원사업 참여기업 모집
+												공고</td>
+											<td align="center">관리자</td>
+											<td align="center">2018-03-22</td>
+											<td align="center">100</td>
+										</tr>
+										<tr>
+											<td align="center">2</td>
+											<td align="center">2018년 상반기 위해우려제품 안전기준 이행 지원사업 안내</td>
+											<td align="center">관리자</td>
+											<td align="center">2018-03-16</td>
+											<td align="center">46</td>
+										</tr>
+										<tr>
+											<td align="center">3</td>
+											<td align="center">53개 생활화학제품 회수 및 판매금지</td>
+											<td align="center">관리자</td>
+											<td align="center">2018-03-12</td>
+											<td align="center">125</td>
+										</tr>
+										<tr>
+											<td align="center">4</td>
+											<td align="center">생활화학제품 자발적협약 참여기업 전성분 공개현황(3차)</td>
+											<td align="center">관리자</td>
+											<td align="center">2017-12-26</td>
+											<td align="center">83</td>
+										</tr>
+										<tr>
+											<td align="center">5</td>
+											<td align="center">생활화학제품 자발적협약 참여기업 전성분 공개현황(2차)</td>
+											<td align="center">관리자</td>
+											<td align="center">2017-12-12</td>
+											<td align="center">59</td>
+										</tr>
+									</tbody>
+								</table>
+							</div>
+						</fieldset>
+					</div>
+					<div class="seedbbs_pagination">
+						<div class="seed_cf">
+							<ul class="paginationList">
+								<li class="paginationFirst"><a class=""
+									href="javascript:void(0);">‹‹</a></li>
+								<li class="paginationPrev"><a class=""
+									href="javascript:void(0);">‹</a></li>
+								<li class="paginationNumber">
+									<div class="bx-wrapper" style="max-width: 73px;">
+										<div class="bx-viewport">
+											<ul class="paginationListNum seed_cf">
+												<li style="float: left;"><strong>1</strong></li>
+												<li style="float: left;"><a class=""
+													href="javascript:void(0);">2</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="paginationNext"><a class=""
+									href="javascript:void(0);">›</a></li>
+								<li class="paginationLast"><a class=""
+									href="javascript:void(0);">››</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="faqBoard">
+				<div class="ui_form_box_wrap">
+					<div class="form_center col4">
+						<select name="column" id="column" title="검색구분 선택">
+							<option value="searchQestnSj">제목</option>
+							<option value="searchQestnCn">문의내용</option>
+						</select> <input type="text" id="search" name="search" value=""
+							class="form_center_input" placeholder="검색어를 입력해 주세요"
+							title="검색어 입력"> <input type="submit" value="검색">
+					</div>
+				</div>
+
+				<ol class="talktalk_top_content faq_style">
+					<li>
+						<button type="button" class="fileajax">
+							<span class="letter">Q</span> <span>환경배출시설에서 수질 및 대기 사업장
+								구분에 대한 분류기준은 어떻게 되나요?</span>
+
+							<div style="display: none;">
+								<br> <span class="letter">A</span>
+								<p>환경배출시설에서 수질 및 대기의 사업장에 대한 구분은 「수질 및 수생태계 보전에 관한 법률 시행렬」 및
+									'「대기환경보전법 시행령 」을 근거로 분류 되어 집니다..</p>
+								<p class="attech_down cf"></p>
+							</div>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="fileajax">
+							<span class="letter">Q</span> <span>리모넨이라는 성분은 대체적으로 어디에
+								들어있나요?</span>
+
+							<div style="display: none;">
+								<br> <span class="letter">A</span>
+								<p>리모넨은 감귤류의 껍질과 기타 식물들에서 자연적으로 존재하는 무색의 액체입니다. 식품첨가제, 향수,
+									공기청정제, 자동차용품, 세정제, 농약 등 광범위하게 사용되고 있습니다. 리모넨을 포함한 증기가 실내에 많이 있는
+									경우 눈에 자극적일 수 있으며 일부 사람들에게는 기도에 자극적일 수 있습니다. 리모넨을 포함한 제품 또는 강한
+									감귤 냄새가 나는 제품의 사용을 가급적 피하시고 사용 할 경우에는 창문을 열어 환기를 시켜 냄새를 제거해 주는
+									것이 좋습니다.</p>
+								<p class="attech_down cf"></p>
+							</div>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="fileajax">
+							<span class="letter">Q</span> <span>납으로부터 노출을 줄이기 위한 방법을
+								알려주세요.</span>
+
+							<div style="display: none;">
+								<br> <span class="letter">A</span>
+								<p>많은 중금속 중에서 가정에서 많이 노출될 수 있는 물질이 납입니다. 가장 위협적인 환경오염물질로서
+									공기, 음용수, 음식, 토양 등 다양한 경로로 인체에 노출되며 오래된 납함유 페인트가 가장 주요한 노출원인
+									입니다. 납으로 부터 노출을 줄이기 위해서는 가능하면 직접 납 페인트를 제거하지 마시고 페인트로 처리된 목재는
+									태우지 않는 것이 좋습니다. 균형 잡힌 식사를 하시고 칼슘과 철을 충분히 섭취하는 것이 좋습니다.</p>
+								<p class="attech_down cf"></p>
+							</div>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="fileajax">
+							<span class="letter">Q</span> <span> 불소 물질이 궁금합니다.</span>
+
+							<div style="display: none;">
+								<br> <span class="letter">A</span>
+								<p>불소는 플루오린(Fluorine)로 불리는 강력한 할로겐 원소로 불소 자체로는 존재하지 않고 자연계에서
+									화합물의 형태로 존재합니다. 치약, 불소보충제, 불소 처리된 먹는 물 이외에도 불소 처리된 물로 만들어진 식품과
+									음료에서 불소를 섭취하게 되고 불소가 포함된 토양에서 자라거나 불소가 포함된 물을 준 식물, 불소가 포함된 물이나
+									먹이를 먹고 자란 젖소의 우유 등에도 불소가 존재할수 있습니다. 적은 양의 불소는 치아의 법랑질을 보호하지만 많은
+									양의 불소는 유독할 수 있습니다. 양치 후에는 충분히 헹구는 것이 좋고 어린이들에게는 과도한 노출을 피하기 위해
+									불소가 없는 치약을 선택하여 사용하는 것이 좋습니다.</p>
+								<p class="attech_down cf"></p>
+							</div>
+						</button>
+					</li>
+					<li>
+						<button type="button" class="fileajax">
+							<span class="letter">Q</span> <span>물티슈를 많이 사용하는데 물티슈 구매시
+								체크해야 할 사항은?</span>
+
+							<div style="display: none;">
+								<br> <span class="letter">A</span>
+								<p>물티슈는 일상생활에서도 많이 사용되는 제품중 하나입니다. 물티슈를 가장 꼼꼼하게 보는 방법은 뒷면의
+									전성분 표시를 확인하는 것이 좋은데요, 독성물질 논란을 일으킨 세트리모늄브로마이드, 가습기 살균제로 알려진
+									메틸클로로이소치아졸리논이 포함되지 않은 제품을 체크하여 사용하시고 GMP라는 우수화장품 제조 및 품질관리기준에
+									따른 인증마크를 확인하시면 됩니다. 전성분 표시를 보면 대개 '정제수'라고 표기되어 있지만 다 같은 정제수가
+									아니므로 미생물과 이물질을 거르기 위해 몇 번의 여과 장치를 거쳐 만든 정제수인지, 음용이 가능할 정도의 수준인지
+									따져보고 사용하시는 것이 좋습니다.</p>
+								<p class="attech_down cf"></p>
+							</div>
+						</button>
+					</li>
+				</ol>
+				
+				
+				<div class="seedbbs_pagination">
+					<div class="seed_cf">
+						<ul class="paginationList">
+							<li class="paginationFirst"><a class=""
+								href="javascript:void(0);">‹‹</a></li>
+							<li class="paginationPrev"><a class=""
+								href="javascript:void(0);">‹</a></li>
+							<li class="paginationNumber">
+								<div class="bx-wrapper" style="max-width: 73px;">
+									<div class="bx-viewport">
+										<ul class="paginationListNum seed_cf">
+											<li style="float: left;"><strong>1</strong></li>
+											<li style="float: left;"><a class=""
+												href="javascript:void(0);">2</a></li>
+										</ul>
+									</div>
+								</div>
+							</li>
+							<li class="paginationNext"><a class=""
+								href="javascript:void(0);">›</a></li>
+							<li class="paginationLast"><a class=""
+								href="javascript:void(0);">››</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="site_satis_area" class="cf">
+                  <div class="satis_choice_area">
+                     <h4>이 페이지에서 제공하는 정보에 만족하셨습니까?</h4>
+                     <ul class="cf">
+                        <li class="on"><input type="radio"
+                           name="siteSatisfactionStatus" id="siteSatisfactionStatus1"
+                           checked="" value="1"><label
+                           for="siteSatisfactionStatus1">매우만족</label></li>
+                        <li><input type="radio" name="siteSatisfactionStatus"
+                           id="siteSatisfactionStatus2" value="2"><label
+                           for="siteSatisfactionStatus2">만족</label></li>
+                        <li><input type="radio" name="siteSatisfactionStatus"
+                           id="siteSatisfactionStatus3" value="3"><label
+                           for="siteSatisfactionStatus3">보통</label></li>
+                        <li><input type="radio" name="siteSatisfactionStatus"
+                           id="siteSatisfactionStatus4" value="4"><label
+                           for="siteSatisfactionStatus4">불만족</label></li>
+                        <li><input type="radio" name="siteSatisfactionStatus"
+                           id="siteSatisfactionStatus5" value="5"><label
+                           for="siteSatisfactionStatus5">매우불만족</label></li>
+                     </ul>
+                  </div>
+                  <div class="satis_text_area">
+                     <h4>회원님의 의견을 적어 주세요.</h4>
+                     <div class="input_wrap cf">
+                        <label for="siteSatisfactionContents" class="hidden">의견작성</label>
+                        <input type="text" name="siteSatisfactionContents"
+                           id="siteSatisfactionContents"> <input type="submit"
+                           value="평가">
+                     </div>
+                  </div>
+               </div> <div id="footer">
+    	<div class="container">
+    		<div class="row">
+    			<div class="col-md-3">
+					<img src="images/imgs2017/footer_logo.png" class="footer-logo" alt="환경부">
+    			</div>
+    			<div class="col-md-6">
+    				<div class="footer cn first">
+    					(우)30103 세종특별자치시 도움6로 11 정부세종청사 6동
+    				</div>
+                    <div class="footer cn third">
+    					<b>화학제품관련문의 : 1800-0490 (생활화학제품 안전콜센터)</b>,&nbsp;시스템문의 : 044-201-6425
+    				</div>
+    				<div class="footer cn second">
+    					Copyright © 2016 Ministry of environment. All Rights Reserved
+    				</div>
+    			</div>
+    		</div>
+    	</div>
+    </div>
+		</div>
+		
+	</div>
+	
+</body>
+</html>

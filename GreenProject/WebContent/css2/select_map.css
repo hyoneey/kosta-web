@@ -1,0 +1,307 @@
+@charset "utf-8";
+/*  박종임 - 소비자정보 유가정보 지도 */
+
+/*  전국지도 */
+.select_map {position:relative; overflow:hidden; width:830px; margin:50px auto 0 auto; }
+.select_map:after {content:""; display:block; position:absolute; top:0; left:50%; width:30px; height:395px; margin-left:-15px; background:url(/site/consumer/images/sub/bg/bg_map_line.png) no-repeat;}
+.select_map .all_parts{position:relative; float:left; width:415px; height:396px; background:url(/site/consumer/images/sub/bg/map/bg_all_parts_Seoul.png) no-repeat center;}
+.select_map .all_parts button{position:absolute; font-weight:700; color:#545454; text-shadow:0px 0px 5px #fff; letter-spacing:-1px;}
+.select_map .all_parts button.Seoul{top:84px;left:140px;}
+.select_map .all_parts button.Busan{top:266px;left:242px;}
+.select_map .all_parts button.Daegu{top:215px;left:225px;}
+.select_map .all_parts button.Incheon{top:70px;left:80px;}
+.select_map .all_parts button.Gwangju{top:265px;left:130px;}
+.select_map .all_parts button.Daejeon{top:173px;left:155px;}
+.select_map .all_parts button.Ulsan{top:235px;left:285px;}
+.select_map .all_parts button.Gyeonggi-do{top:110px;left:160px;}
+.select_map .all_parts button.Gangwon-do{top:58px;left:220px;}
+.select_map .all_parts button.Sejong {top:150px;left:139px;}
+.select_map .all_parts button.Chungcheongbuk-do{top:132px;left:193px ;}
+.select_map .all_parts button.Chungcheongnam-do{top:136px;left:96px;}
+.select_map .all_parts button.Jeollabuk-do{top:220px;left:155px;}
+.select_map .all_parts button.Jeollanam-do{top:300px;left:130px;}
+.select_map .all_parts button.Gyeongsangbuk-do{top:171px;left:235px;}
+.select_map .all_parts button.Gyeongsangnam-do{top:245px;left:210px;}
+.select_map .all_parts button.Jeju{top:370px;left:125px;}
+
+
+/*  상세지도*/
+.select_map .map_detail{float:left; width:415px; }
+.select_map .map_detail > div{display:none; position:relative; height:396px;}
+.select_map .map_detail button{position:absolute; font-weight:700; color:#545454; text-shadow:0px 0px 5px #fff; letter-spacing:-1px;}
+.select_map .map_detail .Seoul {background:url(/site/consumer/images/sub/bg/map/bg_Seoul.png) no-repeat center;}
+.select_map .map_detail .Busan {background:url(/site/consumer/images/sub/bg/map/bg_Busan.png) no-repeat center;}
+.select_map .map_detail .Daegu {background:url(/site/consumer/images/sub/bg/map/bg_Daegu.png) no-repeat center;}
+.select_map .map_detail .Incheon {background:url(/site/consumer/images/sub/bg/map/bg_Incheon.png) no-repeat center;}
+.select_map .map_detail .Gwangju {background:url(/site/consumer/images/sub/bg/map/bg_Gwangju.png) no-repeat center;}
+.select_map .map_detail .Daejeon {background:url(/site/consumer/images/sub/bg/map/bg_Daejeon.png) no-repeat center;}
+.select_map .map_detail .Ulsan {background:url(/site/consumer/images/sub/bg/map/bg_Ulsan.png) no-repeat center;}
+.select_map .map_detail .Gyeonggi-do {background:url(/site/consumer/images/sub/bg/map/bg_Gyeonggi-do.png) no-repeat center;}
+.select_map .map_detail .Gangwon-do {background:url(/site/consumer/images/sub/bg/map/bg_Gangwon-do.png) no-repeat center;}
+.select_map .map_detail .Chungcheongbuk-do {background:url(/site/consumer/images/sub/bg/map/bg_Chungcheongbuk-do.png) no-repeat center;}
+.select_map .map_detail .Chungcheongnam-do {background:url(/site/consumer/images/sub/bg/map/bg_Chungcheongnam-do.png) no-repeat center;}
+.select_map .map_detail .Jeollabuk-do {background:url(/site/consumer/images/sub/bg/map/bg_Jeollabuk-do.png) no-repeat center;}
+.select_map .map_detail .Jeollanam-do {background:url(/site/consumer/images/sub/bg/map/bg_Jeollanam-do.png) no-repeat center;}
+.select_map .map_detail .Gyeongsangbuk-do {background:url(/site/consumer/images/sub/bg/map/bg_Gyeongsangbuk-do.png) no-repeat center;}
+.select_map .map_detail .Gyeongsangnam-do {background:url(/site/consumer/images/sub/bg/map/bg_Gyeongsangnam-do.png) no-repeat center;}
+	
+/*  서울특별시 */
+.select_map .map_detail .Seoul .Dobong-gu{top:53px; left:236px;}            /* 도봉구 */
+.select_map .map_detail .Seoul .Dongdaemun-gu{top:161px; left:252px;}       /* 동대문구 */
+.select_map .map_detail .Seoul .Dongjak-gu{top:241px; left:172px;}          /* 동작구 */
+.select_map .map_detail .Seoul .Eunpyeong-gu{top:120px; left:151px;}        /* 은평구 */
+.select_map .map_detail .Seoul .Gangbuk-gu{top:97px; left:218px;}           /* 강북구 */
+.select_map .map_detail .Seoul .Gangdong-gu{top:191px; left:332px;}         /* 강동구 */
+.select_map .map_detail .Seoul .Gangnam-gu{top:251px; left:258px;}          /* 강남구 */
+.select_map .map_detail .Seoul .Gangseo-gu{top:182px; left:69px;}           /* 강서구 */
+.select_map .map_detail .Seoul .Geumcheon-gu{top:296px; left:114px;}        /* 금천구 */
+.select_map .map_detail .Seoul .Guro-gu{top:251px; left:79px;}              /* 구로구 */
+.select_map .map_detail .Seoul .Gwanak-gu{top:282px; left:165px;}           /* 관악구 */
+.select_map .map_detail .Seoul .Gwangjin-gu{top:198px; left:287px;}         /* 광진구 */
+.select_map .map_detail .Seoul .Jongno-gu{top:160px; left:197px;}           /* 종로구 */
+.select_map .map_detail .Seoul .Jung-gu{top:183px; left:210px;}             /* 중구 */
+.select_map .map_detail .Seoul .Jungnang-gu{top:144px; left:288px;}         /* 중랑구 */
+.select_map .map_detail .Seoul .Mapo-gu{top:195px; left:149px;}             /* 마포구 */
+.select_map .map_detail .Seoul .Nowon-gu{top:103px; left:275px;}            /* 노원구 */
+.select_map .map_detail .Seoul .Seocho-gu{top:268px; left:222px;}           /* 서초구 */
+.select_map .map_detail .Seoul .Seodaemun-gu{top:170px; left:147px;}        /* 서대문구 */
+.select_map .map_detail .Seoul .Seongbuk-gu{top:138px; left:225px;}         /* 성북구 */
+.select_map .map_detail .Seoul .Seongdong-gu{top:194px; left:245px;}        /* 성동구 */
+.select_map .map_detail .Seoul .Songpa-gu{top:240px; left:307px;}           /* 송파구 */
+.select_map .map_detail .Seoul .Yangcheon-gu{top:225px; left:88px;}         /* 양천구 */
+.select_map .map_detail .Seoul .Yeongdeungpo-gu{top:227px; left:128px;}     /* 영등포구 */
+.select_map .map_detail .Seoul .Yongsan-gu{top:215px; left:194px;}          /* 용산구 */
+
+/*  부산 */
+.select_map .map_detail .Busan .Buk-gu {top:153px; left:190px;}             /* 북구 */
+.select_map .map_detail .Busan .Busanjin-gu {top:200px; left:200px;}        /* 부산진구 */
+.select_map .map_detail .Busan .Dong-gu {top:224px; left:200px;}            /* 동구 */
+.select_map .map_detail .Busan .Dongnae-gu {top:163px; left:220px;}         /* 동래구 */
+.select_map .map_detail .Busan .Gangseo-gu {top:230px; left:104px;}         /* 강서구 */
+.select_map .map_detail .Busan .Geumjeong-gu {top:136px; left:220px;}       /* 금정구 */
+.select_map .map_detail .Busan .Gijang-gun {top:110px; left:280px;}         /* 기장군 */
+.select_map .map_detail .Busan .Haeundae-gu {top:184px; left:272px;}        /* 해운대구 */
+.select_map .map_detail .Busan .Jung-gu {top:243px; left:188px;}            /* 중구 */
+.select_map .map_detail .Busan .Nam-gu {top:228px; left:232px;}             /* 남구 */
+.select_map .map_detail .Busan .Saha-gu {top:273px; left:147px;}            /* 사하구 */
+.select_map .map_detail .Busan .Sasang-gu {top:207px; left:164px;}          /* 사상구 */
+.select_map .map_detail .Busan .Seo-gu {top:274px; left:196px;}             /* 서구 */
+.select_map .map_detail .Busan .Suyeong-gu {top:203px; left:251px;}         /* 수영구 */
+.select_map .map_detail .Busan .Yeongdo-gu {top:261px; left:225px;}         /* 영도구 */
+.select_map .map_detail .Busan .Yeonje-gu {top:182px; left:233px;}          /* 연제구 */
+
+/*  대구 */
+.select_map .map_detail .Daegu .Buk-gu {top:105px; left:203px;}             /* 북구 */
+.select_map .map_detail .Daegu .Dalseo-gu {top:168px; left:170px;}          /* 달서구 */
+.select_map .map_detail .Daegu .Dalseong-gun {top:230px; left:150px;}       /* 달성군 */
+.select_map .map_detail .Daegu .Dong-gu {top:100px; left:257px;}            /* 동구 */
+.select_map .map_detail .Daegu .Jung-gu {top:143px; left:220px;}            /* 중구 */
+.select_map .map_detail .Daegu .Nam-gu {top:165px; left:210px;}             /* 남구 */
+.select_map .map_detail .Daegu .Seo-gu {top:139px; left:188px;}             /* 서구 */
+.select_map .map_detail .Daegu .Suseong-gu {top:165px; left:242px;}         /* 수성구 */
+
+/* 인천 */
+.select_map .map_detail .Incheon .Seo-gu {top:130px; left:170px;}           /* 서구 */
+.select_map .map_detail .Incheon .Gyeyang-gu {top:142px; left:229px;}       /* 계양구 */
+.select_map .map_detail .Incheon .Bupyeong-gu {top:183px; left:217px;}      /* 부평구 */
+.select_map .map_detail .Incheon .Namdong-gu {top:240px; left:228px;}       /* 남동구 */
+.select_map .map_detail .Incheon .Dong-gu {top:203px; left:165px;}          /* 동구 */
+.select_map .map_detail .Incheon .Jung-gu {top:222px; left:150px;}          /* 중구 */
+.select_map .map_detail .Incheon .Nam-gu {top:229px; left:186px;}           /* 남구 */
+.select_map .map_detail .Incheon .Yeonsu-gu {top:257px; left:181px;}        /* 연수구 */
+
+/* 광주 */
+.select_map .map_detail .Gwangju .Buk-gu {top:140px; left:260px;}           /* 북구 */
+.select_map .map_detail .Gwangju .Dong-gu {top:230px; left:293px;}          /* 동구 */
+.select_map .map_detail .Gwangju .Gwangsan-gu {top:177px; left:129px;}      /* 광산구 */
+.select_map .map_detail .Gwangju .Nam-gu {top:240px; left:240px;}           /* 남구 */
+.select_map .map_detail .Gwangju .Seo-gu {top:202px; left:215px;}           /* 서구 */
+
+/* 대전 */
+.select_map .map_detail .Daejeon .Daedeok-gu {top:110px; left:235px;}       /* 대덕구 */
+.select_map .map_detail .Daejeon .Dong-gu {top:190px; left:260px;}          /* 동구 */
+.select_map .map_detail .Daejeon .Jung-gu {top:226px; left:211px;}          /* 중구 */
+.select_map .map_detail .Daejeon .Seo-gu {top:250px; left:152px;}           /* 서구 */
+.select_map .map_detail .Daejeon .Yuseong-gu {top:150px; left:143px;}       /* 유성구 */
+
+/* 울산 */
+.select_map .map_detail .Ulsan .Buk-gu {top:130px; left:275px;}             /* 북구 */
+.select_map .map_detail .Ulsan .Dong-gu {top:193px; left:292px;}            /* 동구 */
+.select_map .map_detail .Ulsan .Jung-gu {top:156px; left:237px;}            /* 중구 */
+.select_map .map_detail .Ulsan .Nam-gu {top:187px; left:251px;}             /* 남구 */
+.select_map .map_detail .Ulsan .Ulju-gun {top:165px; left:155px;}           /* 울주군 */
+
+/* 경기 */
+.select_map .map_detail .Gyeonggi-do .Anseong-si {top:350px; left:223px;}     /* 안성시 */
+.select_map .map_detail .Gyeonggi-do .Bucheon-si {top:204px; left:72px;}      /* 부천시 */
+.select_map .map_detail .Gyeonggi-do .Seongnam-si {top:237px; left:184px;}    /* 성남시 */
+.select_map .map_detail .Gyeonggi-do .Yongin-si {top:295px; left:210px;}      /* 용인시 */
+.select_map .map_detail .Gyeonggi-do .Ansan-si {top:260px; left:51px;}        /* 안산시 */
+.select_map .map_detail .Gyeonggi-do .Goyang-si {top:170px; left:108px;}      /* 고양시 */
+.select_map .map_detail .Gyeonggi-do .Anyang-si {top:205px; left:130px;}      /* 안양시 */
+.select_map .map_detail .Gyeonggi-do .Dongducheon-si {top:100px; left:180px;} /* 동두천시 */
+.select_map .map_detail .Gyeonggi-do .Gapyeong-gun {top:123px; left:253px;}   /* 가평군 */
+.select_map .map_detail .Gyeonggi-do .Gimpo-si {top:162px; left:48px;}        /* 김포시 */
+.select_map .map_detail .Gyeonggi-do .Gunpo-si {top:259px; left:120px;}       /* 군포시 */
+.select_map .map_detail .Gyeonggi-do .Guri-si {top:189px; left:157px;}        /* 구리시 */
+.select_map .map_detail .Gyeonggi-do .Gwacheon-si {top:220px; left:160px;}    /* 과천시 */
+.select_map .map_detail .Gyeonggi-do .Gwangju-si {top:236px; left:223px;}     /* 광주시 */
+.select_map .map_detail .Gyeonggi-do .Gwangmyeong-si {top:223px; left:97px;}  /* 광명시 */
+.select_map .map_detail .Gyeonggi-do .Suwon-si {top:278px; left:151px;}       /* 수원시 */
+.select_map .map_detail .Gyeonggi-do .Hanam-si {top:210px; left:208px;}       /* 하남시 */
+.select_map .map_detail .Gyeonggi-do .Hwaseong-si {top:315px; left:122px;}    /* 화성시 */
+.select_map .map_detail .Gyeonggi-do .Icheon-si {top:280px; left:260px;}      /* 이천시 */
+.select_map .map_detail .Gyeonggi-do .Namyangju-si {top:171px; left:215px;}   /* 남양주시 */
+.select_map .map_detail .Gyeonggi-do .Osan-si {top:300px; left:160px;}        /* 오산시 */
+.select_map .map_detail .Gyeonggi-do .Paju-si {top:116px; left:104px;}        /* 파주시 */
+.select_map .map_detail .Gyeonggi-do .Pocheon-si {top:80px; left:215px;}      /* 포천시 */
+.select_map .map_detail .Gyeonggi-do .Pyeongtaek-si {top:354px; left:145px;}  /* 평택시 */
+.select_map .map_detail .Gyeonggi-do .Siheung-si {top:239px; left:70px;}      /* 시흥시 */
+.select_map .map_detail .Gyeonggi-do .Uijeongbu-si {top:153px; left:180px;}   /* 의정부시 */
+.select_map .map_detail .Gyeonggi-do .Uiwang-si {top:255px; left:163px;}      /* 의왕시 */
+.select_map .map_detail .Gyeonggi-do .Yangju-si {top:124px; left:150px;}      /* 양주시 */
+.select_map .map_detail .Gyeonggi-do .Yangpyeong-gun {top:213px; left:310px;} /* 양평군 */
+.select_map .map_detail .Gyeonggi-do .Yeoju-si {top:280px; left:311px;}       /* 여주시 */
+.select_map .map_detail .Gyeonggi-do .Yeoncheon-si {top:40px; left:161px;}    /* 연천군 */
+
+/* 강원 */
+.select_map .map_detail .Gangwon-do .Cheorwon-gun {top:101px; left:60px;}       /* 철원군 */
+.select_map .map_detail .Gangwon-do .Chuncheon-si {top:162px; left:120px;}      /* 춘천시 */
+.select_map .map_detail .Gangwon-do .Donghae-si {top:239px; left:334px;}        /* 동해시 */
+.select_map .map_detail .Gangwon-do .Gangneung-si {top:210px; left:290px;}      /* 강릉시 */
+.select_map .map_detail .Gangwon-do .Goseong-gun {top:76px; left:210px;}        /* 고성군 */
+.select_map .map_detail .Gangwon-do .Hoengseong-gun {top:236px; left:170px;}    /* 횡성군 */
+.select_map .map_detail .Gangwon-do .Hongcheon-gun {top:195px; left:165px;}     /* 홍천군 */
+.select_map .map_detail .Gangwon-do .Hwacheon-gun {top:120px; left:107px;}      /* 화천군 */
+.select_map .map_detail .Gangwon-do .Inje-gun {top:140px; left:195px;}          /* 인제군 */
+.select_map .map_detail .Gangwon-do .Jeongseon-gun {top:260px; left:263px;}     /* 정선군 */
+.select_map .map_detail .Gangwon-do .Pyeongchang-gun {top:220px; left:226px;}   /* 평창군 */
+.select_map .map_detail .Gangwon-do .Samcheok-si {top:280px; left:333px;}       /* 삼척시 */
+.select_map .map_detail .Gangwon-do .Sokcho-si {top:109px; left:265px;}         /* 속초시 */
+.select_map .map_detail .Gangwon-do .Taebaek-si {top:311px; left:308px;}        /* 태백시 */
+.select_map .map_detail .Gangwon-do .Wonju-si {top:280px; left:140px;}          /* 원주시 */
+.select_map .map_detail .Gangwon-do .Yanggu-gun {top:97px; left:150px;}         /* 양구군 */
+.select_map .map_detail .Gangwon-do .Yangyang-gun {top:144px; left:250px;}      /* 양양군 */
+.select_map .map_detail .Gangwon-do .Yeongwol-gun {top:307px; left:235px;}      /* 영월군 */
+
+/* 세종시 */
+.select_map .map_detail .Sejong .Sejong-si {top:172px; left:183px;}       /* 세종시 */
+
+/* 충북 */
+.select_map .map_detail .Chungcheongbuk-do .Boeun-gun {top:213px; left:150px;}        /* 보은군 */
+.select_map .map_detail .Chungcheongbuk-do .Cheongju-si {top:180px; left:100px;}      /* 청주시 */
+.select_map .map_detail .Chungcheongbuk-do .Chungju-si {top:90px; left:180px;}        /* 충주시 */
+.select_map .map_detail .Chungcheongbuk-do .Danyang-gun {top:100px; left:287px;}      /* 단양군 */
+.select_map .map_detail .Chungcheongbuk-do .Eumseong-gun {top:100px; left:115px;}     /* 음성군 */
+.select_map .map_detail .Chungcheongbuk-do .Goesan-gun {top:150px; left:180px;}       /* 괴산군 */
+.select_map .map_detail .Chungcheongbuk-do .Jecheon-si {top:70px; left:240px;}        /* 제천시 */
+.select_map .map_detail .Chungcheongbuk-do .Jeungpyeong-gun {top:148px; left:134px;}  /* 증평군 */
+.select_map .map_detail .Chungcheongbuk-do .Jincheon-gun {top:126px; left:83px;}      /* 진천군 */
+.select_map .map_detail .Chungcheongbuk-do .Okcheon-gun {top:253px; left:130px;}      /* 옥천군 */
+.select_map .map_detail .Chungcheongbuk-do .Yeongdong-gun {top:293px; left:167px;}    /* 영동군 */
+
+/* 충남 */
+.select_map .map_detail .Chungcheongnam-do .Asan-si {top:110px; left:210px;}            /* 아산시 */
+.select_map .map_detail .Chungcheongnam-do .Boryeong-si {top:211px; left:131px;}        /* 보령시 */
+.select_map .map_detail .Chungcheongnam-do .Buyeo-gun {top:253px; left:188px;}          /* 부여군 */
+.select_map .map_detail .Chungcheongnam-do .Cheongyang-gun {top:204px; left:180px;}     /* 청양군 */
+.select_map .map_detail .Chungcheongnam-do .Dangjin-gun {top:84px; left:145px;}         /* 당진군 */
+.select_map .map_detail .Chungcheongnam-do .Cheonan-si {top:110px; left:260px;}         /* 천안시 */
+.select_map .map_detail .Chungcheongnam-do .Geumsan-gun {top:285px; left:315px;}        /* 금산군 */
+.select_map .map_detail .Chungcheongnam-do .Gongju-si {top:195px; left:239px;}          /* 공주시 */ 
+.select_map .map_detail .Chungcheongnam-do .Gyeryong-si {top:238px; left:286px;}        /* 계룡시 */ 
+.select_map .map_detail .Chungcheongnam-do .Hongseong-gun {top:170px; left:140px;}      /* 홍성군 */
+.select_map .map_detail .Chungcheongnam-do .Nonsan-si {top:268px; left:250px;}          /* 논산시 */
+.select_map .map_detail .Chungcheongnam-do .Seocheon-gun {top:290px; left:156px;}       /* 서천군 */
+.select_map .map_detail .Chungcheongnam-do .Seosan-si {top:120px; left:110px;}          /* 서산시 */
+.select_map .map_detail .Chungcheongnam-do .Taean-gun {top:115px; left:60px;}           /* 태안군 */
+.select_map .map_detail .Chungcheongnam-do .Yeongi-gun {top:170px; left:280px;}         /* 연기군 */
+
+/* 전북 */
+.select_map .map_detail .Jeollabuk-do .Buan-gun {top:197px; left:76px;}       /* 부안군 */
+.select_map .map_detail .Jeollabuk-do .Jeonju-si {top:146px; left:183px;}     /* 전주시 */
+.select_map .map_detail .Jeollabuk-do .Gimje-si {top:150px; left:133px;}      /* 김제시 */
+.select_map .map_detail .Jeollabuk-do .Gochang-gun {top:251px; left:73px;}    /* 고창군 */
+.select_map .map_detail .Jeollabuk-do .Gunsan-si {top:114px; left:105px;}     /* 군산시 */
+.select_map .map_detail .Jeollabuk-do .Iksan-si {top:96px; left:158px;}       /* 익산시 */
+.select_map .map_detail .Jeollabuk-do .Imsil-gun {top:209px; left:210px;}     /* 임실군 */
+.select_map .map_detail .Jeollabuk-do .Jangsu-gun {top:190px; left:283px;}    /* 장수군 */
+.select_map .map_detail .Jeollabuk-do .Jeongeup-si {top:210px; left:139px;}   /* 정읍시 */
+.select_map .map_detail .Jeollabuk-do .Jinan-gun {top:140px; left:256px;}     /* 진안군 */
+.select_map .map_detail .Jeollabuk-do .Muju-gun {top:118px; left:320px;}      /* 무주군 */
+.select_map .map_detail .Jeollabuk-do .Namwon-si {top:258px; left:260px;}     /* 남원시 */
+.select_map .map_detail .Jeollabuk-do .Sunchang-gun {top:258px; left:190px;}  /* 순창군 */
+.select_map .map_detail .Jeollabuk-do .Wanju_Gun {top:100px; left:210px;}     /* 완주군 */
+
+/* 전남 */
+.select_map .map_detail .Jeollanam-do .Boseong-gun {top:197px; left:256px;}     /* 보성군 */
+.select_map .map_detail .Jeollanam-do .Damyang-gun {top:97px; left:221px;}      /* 담양군 */
+.select_map .map_detail .Jeollanam-do .Gangjin-gun {top:222px; left:187px;}     /* 강진군 */
+.select_map .map_detail .Jeollanam-do .Goheung-gun {top:241px; left:281px;}     /* 고흥군 */
+.select_map .map_detail .Jeollanam-do .Gokseong-gun {top:107px; left:267px;}    /* 곡성군 */
+.select_map .map_detail .Jeollanam-do .Gurye-gun {top:114px; left:308px;}       /* 구례군 */
+.select_map .map_detail .Jeollanam-do .Gwangyang-si {top:153px; left:337px;}    /* 광양시 */
+.select_map .map_detail .Jeollanam-do .Haenam-gun {top:250px; left:148px;}      /* 해남군 */
+.select_map .map_detail .Jeollanam-do .Hampyeong-gun {top:130px; left:150px;}   /* 함평군 */
+.select_map .map_detail .Jeollanam-do .Hwasun-gun {top:154px; left:230px;}      /* 화순군 */
+.select_map .map_detail .Jeollanam-do .Jangheung-gun {top:235px; left:226px;}   /* 장흥군 */
+.select_map .map_detail .Jeollanam-do .Jangseong-gun {top:98px; left:181px;}    /* 장성군 */
+.select_map .map_detail .Jeollanam-do .Jindo-gun {top:270px; left:94px;}        /* 진도군 */
+.select_map .map_detail .Jeollanam-do .Mokpo-si {top:207px; left:140px;}        /* 목포시 */
+.select_map .map_detail .Jeollanam-do .Muan-gun {top:174px; left:140px;}        /* 무안군 */
+.select_map .map_detail .Jeollanam-do .Naju-si {top:158px; left:180px;}         /* 나주시 */
+.select_map .map_detail .Jeollanam-do .Sinan-gun {top:158px; left:40px;}        /* 신안군 */
+.select_map .map_detail .Jeollanam-do .Suncheon-si {top:160px; left:290px;}     /* 순천시 */
+.select_map .map_detail .Jeollanam-do .Wando-gun {top:290px; left:200px;}       /* 완도군 */
+.select_map .map_detail .Jeollanam-do .Yeongam-gun {top:192px; left:173px;}     /* 영암군 */
+.select_map .map_detail .Jeollanam-do .Yeonggwang-gun {top:103px; left:134px;}  /* 영광군 */
+.select_map .map_detail .Jeollanam-do .Yeosu-si {top:202px; left:339px;}        /* 여수시 */
+
+/* 경북 */
+.select_map .map_detail .Gyeongsangbuk-do .Andong-si {top:141px; left:180px;}      /* 안동시 */
+.select_map .map_detail .Gyeongsangbuk-do .Bonghwa-gun {top:77px; left:199px;}     /* 봉화군 */
+.select_map .map_detail .Gyeongsangbuk-do .Pohang-si {top:220px; left:252px;}      /* 포항시 */
+.select_map .map_detail .Gyeongsangbuk-do .Cheongdo-gun {top:314px; left:180px;}   /* 청도군 */
+.select_map .map_detail .Gyeongsangbuk-do .Cheongsong-gun {top:182px; left:230px;} /* 청송군 */
+.select_map .map_detail .Gyeongsangbuk-do .Chilgok-gun {top:248px; left:135px;}    /* 칠곡군 */
+.select_map .map_detail .Gyeongsangbuk-do .Gimcheon-si {top:231px; left:79px;}     /* 김천시 */
+.select_map .map_detail .Gyeongsangbuk-do .Goryeong-gun {top:301px; left:109px;}   /* 고령군 */
+.select_map .map_detail .Gyeongsangbuk-do .Gumi-si {top:203px; left:107px;}        /* 구미시 */
+.select_map .map_detail .Gyeongsangbuk-do .Gunwi-gun {top:223px; left:166px;}      /* 군위군 */
+.select_map .map_detail .Gyeongsangbuk-do .Gyeongju-si {top:279px; left:249px;}    /* 경주시 */
+.select_map .map_detail .Gyeongsangbuk-do .Gyeongsan-si {top:285px; left:195px;}   /* 경산시 */
+.select_map .map_detail .Gyeongsangbuk-do .Mungyeong-si {top:120px; left:90px;}    /* 문경시 */
+.select_map .map_detail .Gyeongsangbuk-do .Sangju-si {top:172px; left:74px;}       /* 상주시 */
+.select_map .map_detail .Gyeongsangbuk-do .Seongju-gun {top:270px; left:100px;}    /* 성주군 */
+.select_map .map_detail .Gyeongsangbuk-do .Uiseong-gun {top:184px; left:150px;}    /* 의성군 */
+.select_map .map_detail .Gyeongsangbuk-do .Uljin-gun {top:70px; left:254px;}       /* 울진군 */
+.select_map .map_detail .Gyeongsangbuk-do .Ulleung-gun {top:54px; left:334px;}     /* 울릉군 */
+.select_map .map_detail .Gyeongsangbuk-do .Yecheon-gun {top:126px; left:132px;}    /* 예천군 */
+.select_map .map_detail .Gyeongsangbuk-do .Yeongcheon-si {top:243px; left:210px;}  /* 영천시 */
+.select_map .map_detail .Gyeongsangbuk-do .Yeongdeok-gun {top:164px; left:264px;}  /* 영덕군 */
+.select_map .map_detail .Gyeongsangbuk-do .Yeongju-si {top:87px; left:144px;}      /* 영주시 */
+.select_map .map_detail .Gyeongsangbuk-do .Yeongyang-gun {top:119px; left:233px;}  /* 영양군 */
+
+/* 경남 */
+.select_map .map_detail .Gyeongsangnam-do .Changnyeong-gun {top:127px; left:210px;}      /* 창녕군 */
+.select_map .map_detail .Gyeongsangnam-do .Geochang-gun {top:90px; left:100px;}          /* 거창군 */
+.select_map .map_detail .Gyeongsangnam-do .Geoje-si {top:278px; left:243px;}             /* 거제시 */
+.select_map .map_detail .Gyeongsangnam-do .Gimhae-si {top:187px; left:285px;}            /* 김해시 */
+.select_map .map_detail .Gyeongsangnam-do .Goseong-gun {top:248px; left:172px;}          /* 고성군 */
+.select_map .map_detail .Gyeongsangnam-do .Hadong-gun {top:226px; left:76px;}            /* 하동군 */
+.select_map .map_detail .Gyeongsangnam-do .Haman-gun {top:187px; left:198px;}            /* 함안군 */
+.select_map .map_detail .Gyeongsangnam-do .Hamyang-gun {top:118px; left:60px;}           /* 함양군 */
+.select_map .map_detail .Gyeongsangnam-do .Hapcheon-gun {top:128px; left:145px;}         /* 합천군 */
+.select_map .map_detail .Gyeongsangnam-do .Changwon-si {top:179px; left:242px;}          /* 창원시 */
+.select_map .map_detail .Gyeongsangnam-do .Jinju-si {top:204px; left:140px;}             /* 진주시 */
+.select_map .map_detail .Gyeongsangnam-do .Miryang-si {top:142px; left:270px;}           /* 밀양시 */
+.select_map .map_detail .Gyeongsangnam-do .Namhae-gun {top:293px; left:107px;}           /* 남해군 */
+.select_map .map_detail .Gyeongsangnam-do .Sacheon-si {top:233px; left:123px;}           /* 사천시 */
+.select_map .map_detail .Gyeongsangnam-do .Sancheong-gun {top:170px; left:91px;}         /* 산청군 */
+.select_map .map_detail .Gyeongsangnam-do .Tongyeong-si {top:280px; left:180px;}         /* 통영시 */
+.select_map .map_detail .Gyeongsangnam-do .Uiryeong-gun {top:160px; left:173px;}         /* 의령군 */
+.select_map .map_detail .Gyeongsangnam-do .Yangsan-si {top:158px; left:321px;}           /* 양산시 */
+
+/* 경남 */
+.select_map .map_detail .Jeju .Jeju-si {top:172px; left:165px;}      /* 제주시 */
+.select_map .map_detail .Jeju .Seogwipo-si {top:229px; left:176px;}          /* 서귀포시 */

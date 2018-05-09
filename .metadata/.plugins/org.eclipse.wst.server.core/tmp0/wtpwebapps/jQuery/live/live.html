@@ -1,0 +1,49 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=EUC-KR">
+<title>Insert title here</title>
+<script type="text/javascript" src="jquery.js"></script>
+<script type="text/javascript">
+$(function(){
+	$('button').click(function(){
+		//동적 생성 태그
+		$('body').append('<div>Hello jQuery!!!' + $('div').size() + 'th</div>');
+	});
+	
+	//새로 생선된 태그에는 적용이 안되고 정적 태그만 가능
+/* 	$('div').click(function(){
+		//html함수는 innerhtml과 같다.
+		alert($(this).html());
+	}) */
+	
+	//부모가 body -> 동적으로 생성된 태그에도 이벤트가 발생하도록 함
+	$('body').on('click', 'div', function(){
+		alert($(this).html());
+	});
+	
+	
+});
+</script>
+
+</head>
+<body>
+	<button>Add Button</button>
+	<div>Hello jQuery!!!</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

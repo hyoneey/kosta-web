@@ -1,0 +1,300 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script src="phtml.js"></script>
+<link rel="stylesheet" type="text/css" href="form.css">
+</head>
+<body>
+<div class="logo">초록누리</div>
+
+<!-- 상단바 메뉴 -->
+<div class="header">
+	<nav id="topMenu">
+		<ul>
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">HOME</a>
+			</li>
+			<li>|</li>
+			
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">화학 제품</a>
+			</li>
+			<li>|</li>
+			
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">리콜 대상</a>
+				<ul class="submenu"> 
+					 <li><a class="submenuLink">국내리콜</a></li>
+					 <li><a class="submenuLink">해외리콜</a></li> 
+				  </ul>
+			</li>
+			<li>|</li>
+			
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">커뮤니티</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- 최근 인기 top 10 -->
+<div class="top-container">
+	<h4>최근 회수명령 상품</h4>
+	<div class="topview">	
+			<div class="topview-img">
+				<div class="page">
+					<ul>
+						<li><img src="images/arr_back.gif" alt="prev" class="prev" /></li>
+						<li><a href="images/pr_78.png"><img src="images/pr_78.png" height="150px" width="150px" alt="다우니" /></a></li>
+						<li><a href="images/583.png"><img src="images/pr_79.png"  height="150px" width="150px"alt="유한곰팡이세정제"/></a></li>
+						<li><a href="images/410.png"><img src="images/pr_80.png"  height="150px" width="150px"alt="공중비책 한방 베이비 세정제"/></a></li>
+						<li><a href="images/u-485.png"><img src="images/pr_81.png"  height="150px" width="150px"alt="100회 쓰는 넬리소다세제"/></a></li>
+						<li><a href="images/M-186.png"><img src="images/pr_82.png" height="150px" width="150px"alt="가죽보호제" /></a></li>
+						<li><img src="images/bg_location.gif" alt="next" class="next" /></li>
+<!-- 						<li><img src="images/arr_back.gif" alt="prev" class="prev" /></li>
+						<li><a href="images/pr_78.png"><img src="images/pr_78.png" height="150px" width="150px" alt="다우니" /></a></li>
+						<li><a href="images/583.png"><img src="images/pr_79.png"  height="150px" width="150px"alt="유한곰팡이세정제"/></a></li>
+						<li><a href="images/410.png"><img src="images/pr_80.png"  height="150px" width="150px"alt="공중비책 한방 베이비 세정제"/></a></li>
+						<li><a href="images/u-485.png"><img src="images/pr_81.png"  height="150px" width="150px"alt="100회 쓰는 넬리소다세제"/></a></li>
+						<li><a href="images/M-186.png"><img src="images/pr_82.png" height="150px" width="150px"alt="가죽보호제" /></a></li>
+						<li><img src="images/bg_location.gif" alt="next" class="next" /></li> -->
+					</ul>
+				</div>
+			</div>		
+	</div>
+</div> 
+
+<!-- 내용 부분 -->
+<div class="container">
+	<!-- 왼쪽 네비게이션 -->
+	<div class="nav">
+		<ul class="nav-list">
+			<li>	<a href="#" class="nav-llst-name">리콜  대상</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">국내 리콜</a>
+				<ul class="nav-sub-item">
+					<li><a href="#" class="nav-sub-link">세제류</a></li>
+					<li><a href="#" class="nav-sub-link">코팅·접착제류</a></li>
+					<li><a href="#" class="nav-sub-link">방향제류</a></li>
+					<li><a href="#" class="nav-sub-link">염료,염색류</a></li>
+					<li><a href="#" class="nav-sub-link">살생물제류</a></li>
+					<li><a href="#" class="nav-sub-link">기타류</a></li>
+					<li><a href="#" class="nav-sub-link">농약류</a></li>
+				</ul>
+			</li>
+			
+			<li class="nav-item"><a href="#" class="nav-link">해외 리콜</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- 검색폼  -->
+<form id="frmSearch" name="frmSearch" action="#" method="post">
+<div class="ui_form_box_wrap pc">	
+		<input type="hidden" name="page" value='1'/>
+		<input type="hidden" name="recallSn" id="recallSn" value="" />
+		
+		<fieldset>
+			<legend>리콜정보 검색</legend>
+			<div class="goods_search_wrap_type_02 mt0 cf">
+				<div class="form_wrap_type_02">
+					<div class="col2 cf">
+						<label for="searchCondition1">분류/검색</label>
+						<select name="searchCondition1" id="searchCondition1" title="구분 선택">
+							<option value="">전체</option>						
+									<option value='0101' selected>세제류</option>
+									<option value='0201' >코팅·접착제류</option>
+									<option value='0203' >방향제류</option>
+									<option value='0204' >염료,염색류</option>					
+									<option value='0205' >살생물제류</option>
+									<option value='0207' >기타류</option>
+									<option value='0206' >농약류</option>
+						</select>
+						<input name="searchCondition2" id="searchCondition2" type="text" class="only_input" placeholder="상품명 또는 사업자명을 입력" value='' title='상품명 또는 사업자명을 입력' >
+					</div>
+					
+					<div class="col1 cf">
+						<label for="ex_date_start">리콜공표일</label>
+						<div class="append_tit search_date_inner">
+							<div class="datapicker_wrap">
+								<input type="text" id="ex_date_start" name="searchCondition3Fr" placeholder="리콜공표 시작일 : 입력예시 2018-01-01" title="리콜공표일 시작일 기준 : 입력예시 2018-01-01" maxlength="10" onkeydown="return fn_dateChk(this,event)" onkeyup="return fn_dateChkFormat(this,event)" value="" />
+							</div>
+							<span class="dash">~</span>
+							<div class="datapicker_wrap">
+								<input type="text" id="ex_date_end" name="searchCondition3To" placeholder="리콜공표 종료일 : 입력예시 2018-01-01" title="리콜공표일 종료일 기준 : 입력예시 2018-01-01" maxlength="10" onkeydown="return fn_dateChk(this,event)" onkeyup="return fn_dateChkFormat(this,event)" value="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="submit" name="button"  class="btn_search_goods" onclick="fnSearchAll(); return false;">검색</button>
+			</div>
+		</fieldset>
+</div>
+
+<div class="ui_form_box_wrap mobile">
+	<fieldset>
+		<legend>리콜정보 검색</legend>
+		<input type="text" id="m_search" placeholder="상품명 또는 사업자명을 입력" onkeydown="fn_search_form();" value="">
+		<input type="button" id="m_submit" value="검색">
+	</fieldset>
+</div>
+
+<!-- 검색 폼-->
+	<fieldset>
+			<legend>목록정렬</legend>
+			<div class="tbl_list_reset_wrap up_obj">
+				<p class="list_total_num">전체 <strong>132</strong>건</p>
+				<p class="reset_area">
+					<select name="row" title="리스트 갯수 선택" class="mobile_hidden" onChange="fnSearchAll();">
+						<option value="10" selected>10개씩 보기</option>
+						<option value="50" >50개씩 보기</option>
+						<option value="100" >100개씩 보기</option>
+					</select>
+				</p>
+			</div>
+		</fieldset>
+	</form>
+	
+<!--상품 리스트-->
+	<div id="goodsList" class="ui_goods_list up_obj">
+		<ul>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">심리철학</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8977751926</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+
+					<dl>
+						<dt class="title">복음의 소리</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8995105429</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">컴파일러</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8977602556</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">에덴의 벌거숭이들</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8970410651</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">최열 아저씨의 우리 환경 이야기</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8972780715</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">통상담당 공무원의 전문화 및 세계화 교육훈련 방안연</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8981780633</dd>
+					</dl>
+			</a></li>
+
+			<li><a	href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">텔레비전 경제학</dt>
+						<dd class="cat"></dd>
+						<dd class="code">893003506X</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">기독교대백과사전</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8946601051</dd>
+					</dl>
+			</a></li>
+
+			<li><a	href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">비트겐슈타인과 철학</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8930619142</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">이야기를 읽어요 2</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8971474475</dd>
+					</dl>
+			</a></li>
+		</ul>
+	</div>
+
+
+<!-- 페이징 -->
+<div class="ui_pagination_wrap">
+	<div class="ui_pagination_inner">
+		<a class='btn_first' href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=1&row=10" title="첫페이지">처음 목록으로 이동</a><a class='btn_prev' href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=1&row=10" title="이전페이지">이전 목록으로 이동</a><ul><li><strong title="현재페이지">1</strong></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=2&row=10" title="2 페이지">2</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=3&row=10" title="3 페이지">3</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=4&row=10" title="4 페이지">4</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=5&row=10" title="5 페이지">5</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=6&row=10" title="6 페이지">6</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=7&row=10" title="7 페이지">7</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=8&row=10" title="8 페이지">8</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=9&row=10" title="9 페이지">9</a></li><li><a href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=10&row=10" title="10 페이지">10</a></li></ul><a class='btn_next' href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=11&row=10" title="다음페이지">다음 목록으로 이동</a><a class='btn_last' href="/user/ftc/consumer/recallInfo/621/selectRecallInfoInternalList.do?hbrdSe=1&searchCondition1=0101&searchCondition2=&searchCondition3Fr=&searchCondition3To=&page=162&row=10" title="마지막페이지">마지막 목록으로 이동</a>
+	</div>
+</div>
+<!-- //페이징 -->
+
+<!-- 안내문 -->
+<div class="ui_sub_top_info_box up_obj">
+	<div class="ui_sub_top_info_box_inner">
+		<ul class="ui_list_square">
+			<li>리콜상품에 대한 수리·환불 등 조치방법은 해당 사업자에게 문의하시기 바랍니다.</li>
+			<li>만약 적절히 조치가 되지 않는경우,행복드림 열린소비자포털 또는 1372상담센터(국번없이1372)를 통해 피해구제 신청을 하실수 있습니다.</li>
+            
+            
+		</ul>
+	</div>
+</div>
+<!-- //안내문 -->
+
+
+
+</body>
+</html>

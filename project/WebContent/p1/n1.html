@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>리콜 제품 대상 조회</title>
+<script type="text/javascript">
+	//datapicker 날짜양식
+	function fn_dateChk(obj,event){
+		
+		event = event || window.event;
+		
+		if((event.keyCode >= 48 && event.keyCode <= 57) || (event.keyCode >= 96 && event.keyCode <= 105) || event.keyCode == 8 || event.keyCode == 46 || event.keyCode == 9){
+				
+		}else{
+			return false;
+		}
+		
+		var datePattern = /[1-9][0-9]{3}\-(0[1-9]|1[0-2])\-(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/;
+		
+		var str = $(obj).val();
+		if(str.length == 4 && !(event.keyCode==8 || event.keyCode==46)){
+			$(obj).val(str+"-");
+		}
+		if(str.length == 7 && !(event.keyCode==8 || event.keyCode==46)){
+			$(obj).val(str+"-");
+		}
+		
+		if($(obj).val().length > 10){
+			if(!datePattern.test($(obj).val())){
+				return false;
+			}
+		}
+	}
+	
+	//datapicker 날짜양식
+	function fn_dateChkFormat(obj,event){
+		
+		event = event || window.event;
+		
+		var datePattern = /[1-9][0-9]{3}\-(0[1-9]|1[0-2])\-(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/;
+		
+		if($(obj).val().length > 9 && event.keyCode != 8){
+			if(!datePattern.test($(obj).val())){
+				alert("날짜 형식이 잘못되었습니다. \r\n예) 2000-01-01");
+				$(obj).focus();
+				return false;
+			}
+		}
+	}
+
+<!-- </script>
+  <link rel="stylesheet" type="text/css" href="/site/consumer/css/datepicker.min.css">
+     <script src="/site/consumer/js/datepicker.min.js"></script> -->
+     
+<!-- 왼쪽 네비게이션 -->
+<style>
+	.header {
+	  padding:40px 10px;
+	  text-align: center;
+	  margin-bottom: 10px;
+	}
+	.logo {
+	  font-size: 2em;
+	  font-weight: bold;
+	  color: #000000;
+	  display: inline-block;
+	  padding: 3px 8px;
+	}
+	.container {
+	  overflow: hidden;
+	}
+	.nav {
+	  float: left;
+	  width: 170px;
+	  background: white;
+	  margin-right: 50px; 
+	  line-height: 30px;
+	  border: 1px solid #BDBDBD;
+	}
+	.nav-list {
+	  list-style: none;
+	  margin: 0px;
+	  padding: 0px 0;
+	}
+	.nav-llst-name{
+		font-size: 30px;
+		text-align: center; 
+		padding: 5px; 
+		font-weight: bold;      
+	}
+	.nav-link, .nav-llst-name {
+	  display: block;
+	  text-decoration: none;
+	  padding: 4px 10px;
+	  color: #000000;
+	  font-weight: bold;  
+	  font-size: 15px; 
+	   display: block;
+	   text-align: center; 
+	}
+	.nav-sub-item{
+	list-style-type: none; 
+	padding: 0px;
+	background: #EAEAEA;
+	}
+	 .nav-sub-link {
+	  overflow: hidden;            
+  	  display: block;
+	  text-decoration: none;
+	  color: #000000;
+	  font-size: 14px; 
+	   display: block;
+	   text-align: center; 
+	   font-weight: bold;  
+    }
+	.nav-link:hover {
+	  background: #47C83E;
+	  list-style-type: none;
+	}
+</style>
+
+<!-- 상단바를 위한 스타일(CSS) 적용-->
+<style>
+    #topMenu {
+            height: 30px;  
+            width: 770px ;
+            position:realtive;
+    }
+    #topMenu ul {           
+        list-style-type: none;  
+        margin: 0px;           
+        padding: 0px;           
+    }
+    #topMenu ul li {            
+        color: #22741C;            
+        background-color: white; 
+        float: left;                
+        line-height: 30px;         
+        vertical-align: middle;  
+        text-align: center;            
+    }
+    .menuLink, .submenuLink {           
+        text-decoration:none;           
+        display: block;                    
+        width: 150px;                      
+        font-size: 12px;                   
+        font-weight: bold;                
+        font-family: "Trebuchet MS", Dotum; 
+    }
+    .menuLink {    
+        color: #22741C;
+    }
+    .topMenuLink:hover .menuLink {     
+    	color: white;       
+        background-color: #BCE55C; 
+        text-decoration: underline;
+    }
+    .submenuLink {         
+        color: white;           
+        background-color: #CEF279;          
+    }
+    .longLink {     
+        width: 700px;   
+    }
+    .submenu {           
+        position: absolute;     /* html의 flow에 영향을 미치지 않게 absolute 설정 */
+        height: 0px;            /* 초기 높이는 0px로 설정 */
+        overflow: hidden;       /* 실 내용이 높이보다 커지면 해당 내용 감춤 */
+        transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(기본) */
+        -webkit-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 크롬/사파라ㅣ) */
+        -moz-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 파폭) */
+        -o-transition: height .2s; /* height를 변화 시켰을 때 0.2초간 변화 되도록 설정(구버전 오페라) */
+  		width: 850px;
+  		left:0;
+  		background-color: #CEF279;
+    }
+    
+    .submenu li{
+    	display : inline-block;
+    }
+    .topMenuLink:hover .submenu { /* 상위 메뉴에 마우스 모버한 경우 그 안의 하위 메뉴 스타일 설정 */
+        height: 32px;         
+    }
+    .submenuLink:hover {   
+    	color: white;
+        background-color: #CEF279; 
+        text-decoration: underline;
+    }
+    .top-container{
+    	height: 300px;
+    	width: 1000px ;
+        position:realtive;
+        margin-bottom: 5px;
+
+       }
+     .topview{
+      	height: 200px;
+    	width: 800px ;
+        margin-left: 100px;
+        margin-right: 100px;
+      }
+     .topview-img ul {
+  		margin: 0px;
+  		padding-left:10px;
+		padding: 0px;
+		display: inline;
+	}
+	.page ul li{
+		list-style: none;
+		 vertical-align: middle;
+		 width: 900px;
+		 text-align: center;
+		 display: inline;
+	}
+	.ui_form_box_wrap.pc {display:block;}
+
+</style>
+
+<!--[if lt IE 9]>
+ 	 <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script> 
+ <![endif]-->
+
+</head>
+<body>
+<div class="logo">초록누리</div>
+
+<!-- 상단바 메뉴 -->
+<div class="header">
+	<nav id="topMenu">
+		<ul>
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">HOME</a>
+			</li>
+			<li>|</li>
+			
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">화학 제품</a>
+			</li>
+			<li>|</li>
+			
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">리콜 대상</a>
+				<ul class="submenu"> 
+					 <li><a class="submenuLink">국내리콜</a></li>
+					 <li><a class="submenuLink">해외리콜</a></li> 
+				  </ul>
+			</li>
+			<li>|</li>
+			
+			<li class="topMenuLink">
+				<a class="menuLink" href="#">커뮤니티</a>
+			</li>
+		</ul>
+	</nav>
+</div>
+
+<!-- 최근 인기 top 10 -->
+<div class="top-container">
+	<h4>최근 회수명령 상품</h4>
+	<div class="topview">	
+			<div class="topview-img">
+				<div class="page">
+					<ul>
+						<li><img src="images/arr_back.gif" alt="prev" class="prev" /></li>
+						<li><a href="images/pr_78.png"><img src="images/pr_78.png" height="150px" width="150px" alt="다우니" /></a></li>
+						<li><a href="images/583.png"><img src="images/pr_79.png"  height="150px" width="150px"alt="유한곰팡이세정제"/></a></li>
+						<li><a href="images/410.png"><img src="images/pr_80.png"  height="150px" width="150px"alt="공중비책 한방 베이비 세정제"/></a></li>
+						<li><a href="images/u-485.png"><img src="images/pr_81.png"  height="150px" width="150px"alt="100회 쓰는 넬리소다세제"/></a></li>
+						<li><a href="images/M-186.png"><img src="images/pr_82.png" height="150px" width="150px"alt="가죽보호제" /></a></li>
+						<li><img src="images/bg_location.gif" alt="next" class="next" /></li>
+<!-- 						<li><img src="images/arr_back.gif" alt="prev" class="prev" /></li>
+						<li><a href="images/pr_78.png"><img src="images/pr_78.png" height="150px" width="150px" alt="다우니" /></a></li>
+						<li><a href="images/583.png"><img src="images/pr_79.png"  height="150px" width="150px"alt="유한곰팡이세정제"/></a></li>
+						<li><a href="images/410.png"><img src="images/pr_80.png"  height="150px" width="150px"alt="공중비책 한방 베이비 세정제"/></a></li>
+						<li><a href="images/u-485.png"><img src="images/pr_81.png"  height="150px" width="150px"alt="100회 쓰는 넬리소다세제"/></a></li>
+						<li><a href="images/M-186.png"><img src="images/pr_82.png" height="150px" width="150px"alt="가죽보호제" /></a></li>
+						<li><img src="images/bg_location.gif" alt="next" class="next" /></li> -->
+					</ul>
+				</div>
+			</div>		
+	</div>
+</div> 
+
+<!-- 내용 부분 -->
+<div class="container">
+	<!-- 왼쪽 네비게이션 -->
+	<div class="nav">
+		<ul class="nav-list">
+			<li>	<a href="#" class="nav-llst-name">리콜  대상</a></li>
+			<li class="nav-item"><a href="#" class="nav-link">국내 리콜</a>
+				<ul class="nav-sub-item">
+					<li><a href="#" class="nav-sub-link">세제류</a></li>
+					<li><a href="#" class="nav-sub-link">코팅·접착제류</a></li>
+					<li><a href="#" class="nav-sub-link">방향제류</a></li>
+					<li><a href="#" class="nav-sub-link">염료,염색류</a></li>
+					<li><a href="#" class="nav-sub-link">살생물제류</a></li>
+					<li><a href="#" class="nav-sub-link">기타류</a></li>
+					<li><a href="#" class="nav-sub-link">농약류</a></li>
+				</ul>
+			</li>
+			
+			<li class="nav-item"><a href="#" class="nav-link">해외 리콜</a></li>
+		</ul>
+	</div>
+</div>
+
+<!-- 검색폼  -->
+<form id="frmSearch" name="frmSearch" action="#" method="post">
+<div class="ui_form_box_wrap pc">	
+		<input type="hidden" name="page" value='1'/>
+		<input type="hidden" name="recallSn" id="recallSn" value="" />
+		
+		<fieldset>
+			<legend>리콜정보 검색</legend>
+			<div class="goods_search_wrap_type_02 mt0 cf">
+				<div class="form_wrap_type_02">
+					<div class="col2 cf">
+						<label for="searchCondition1">분류/검색</label>
+						<select name="searchCondition1" id="searchCondition1" title="구분 선택">
+							<option value="">전체</option>						
+									<option value='0101' selected>세제류</option>
+									<option value='0201' >코팅·접착제류</option>
+									<option value='0203' >방향제류</option>
+									<option value='0204' >염료,염색류</option>					
+									<option value='0205' >살생물제류</option>
+									<option value='0207' >기타류</option>
+									<option value='0206' >농약류</option>
+						</select>
+						<input name="searchCondition2" id="searchCondition2" type="text" class="only_input" placeholder="상품명 또는 사업자명을 입력" value='' title='상품명 또는 사업자명을 입력' >
+					</div>
+					
+					<div class="col1 cf">
+						<label for="ex_date_start">리콜공표일</label>
+						<div class="append_tit search_date_inner">
+							<div class="datapicker_wrap">
+								<input type="text" id="ex_date_start" name="searchCondition3Fr" placeholder="리콜공표 시작일 : 입력예시 2018-01-01" title="리콜공표일 시작일 기준 : 입력예시 2018-01-01" maxlength="10" onkeydown="return fn_dateChk(this,event)" onkeyup="return fn_dateChkFormat(this,event)" value="" />
+							</div>
+							<span class="dash">~</span>
+							<div class="datapicker_wrap">
+								<input type="text" id="ex_date_end" name="searchCondition3To" placeholder="리콜공표 종료일 : 입력예시 2018-01-01" title="리콜공표일 종료일 기준 : 입력예시 2018-01-01" maxlength="10" onkeydown="return fn_dateChk(this,event)" onkeyup="return fn_dateChkFormat(this,event)" value="" />
+							</div>
+						</div>
+					</div>
+				</div>
+				<button type="submit" name="button"  class="btn_search_goods" onclick="fnSearchAll(); return false;">검색</button>
+			</div>
+		</fieldset>
+</div>
+
+<div class="ui_form_box_wrap mobile">
+	<fieldset>
+		<legend>리콜정보 검색</legend>
+		<input type="text" id="m_search" placeholder="상품명 또는 사업자명을 입력" onkeydown="fn_search_form();" value="">
+		<input type="button" id="m_submit" value="검색">
+	</fieldset>
+</div>
+
+<!-- 검색 폼-->
+	<fieldset>
+			<legend>목록정렬</legend>
+			<div class="tbl_list_reset_wrap up_obj">
+				<p class="list_total_num">전체 <strong>132</strong>건</p>
+				<p class="reset_area">
+					<select name="row" title="리스트 갯수 선택" class="mobile_hidden" onChange="fnSearchAll();">
+						<option value="10" selected>10개씩 보기</option>
+						<option value="50" >50개씩 보기</option>
+						<option value="100" >100개씩 보기</option>
+					</select>
+				</p>
+			</div>
+		</fieldset>
+	</form>
+	
+<!--상품 리스트-->
+	<div id="goodsList" class="ui_goods_list up_obj">
+		<ul>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">심리철학</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8977751926</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+
+					<dl>
+						<dt class="title">복음의 소리</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8995105429</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">컴파일러</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8977602556</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">에덴의 벌거숭이들</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8970410651</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">최열 아저씨의 우리 환경 이야기</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8972780715</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">통상담당 공무원의 전문화 및 세계화 교육훈련 방안연</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8981780633</dd>
+					</dl>
+			</a></li>
+
+			<li><a	href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">텔레비전 경제학</dt>
+						<dd class="cat"></dd>
+						<dd class="code">893003506X</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">기독교대백과사전</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8946601051</dd>
+					</dl>
+			</a></li>
+
+			<li><a	href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">비트겐슈타인과 철학</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8930619142</dd>
+					</dl>
+			</a></li>
+
+			<li><a href="#">
+					<p class="img_wrap">
+						<img src="#" alt="심리철학">
+					</p>
+					<dl>
+						<dt class="title">이야기를 읽어요 2</dt>
+						<dd class="cat"></dd>
+						<dd class="code">8971474475</dd>
+					</dl>
+			</a></li>
+		</ul>
+	</div>
+
+
+
+
+</body>
+</html>

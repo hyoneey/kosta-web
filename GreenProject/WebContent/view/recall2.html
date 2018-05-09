@@ -1,0 +1,636 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+
+<meta id="viewport" name="viewport"
+	content="initial-scale=1.0, width=device-width, minimum-scale=1.0">
+<title>초록 누리</title>
+<!-- CSS -->
+<link href="../css2/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="../css2/catpcha.css" rel="stylesheet" type="text/css" />
+<link href="../css2/animate.css" rel="stylesheet" type="text/css" />
+<link href="../css2/picker.default.css" rel="stylesheet" type="text/css" />
+<link href="../css2/picker.default.date.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css2/user.smartPop.css" rel="stylesheet" type="text/css" />
+<link href="../css2/navigation.css" rel="stylesheet" type="text/css" />
+<link href="../css2/satisfaction.css" rel="stylesheet" type="text/css" />
+<link rel="stylesheet" type="text/css" href="../css2/datepicker.min.css">
+<link rel="stylesheet" type="text/css" href="../css2/remodal.css">
+<link rel="stylesheet" type="text/css"
+	href="../css2/remodal-default-theme.css">
+<link rel="stylesheet" type="text/css" href="../css2/layout.css">
+<link rel="stylesheet" type="text/css" href="../css2/common.css">
+<link rel="stylesheet" type="text/css" href="../css2/sub.css">
+<link rel="stylesheet" type="text/css" href="../css2/content_01.css">
+<link rel="stylesheet" type="text/css" href="../css2/content_02.css">
+<link rel="stylesheet" type="text/css" href="../css2/select_map.css">
+<link rel="stylesheet" type="text/css" href="../css2/webAcc.css">
+<link rel="stylesheet" type="text/css" href="../css2/skin01.css">
+<link rel="stylesheet" type="text/css" href="style.css">
+<link href="../css3/mj.css" rel="stylesheet" type="text/css" />
+<!-- CSS -->
+
+<!--[if lte IE 9]>
+		<script src="/js/html5.js"></script>
+		<![endif]-->
+
+
+
+
+<!-- js -->
+<script src="js/canvas.js"></script>
+<script src="js/captcha.js"></script>
+<script src="consumer_common.js"></script>
+<script src="consumer_main.js"></script>
+<script src="js/consumer_sub.js"></script>
+<script src="js/date.format.js"></script>
+<script src="datepicker.min.js"></script>
+<script src="js/jquery.slides.min.js"></script>
+<script src="js/owl.carousel.min.js"></script>
+<script src="js/remodal.js"></script>
+<script src="js/date.format.js"></script>
+<script src="js/smartPop.js"></script>
+<script src="js/statistics.js"></script>
+
+
+<script src="jquery.js" type="text/javascript"></script>
+<script src="recall2.js"></script>
+<script src="Main.js"></script>
+<script src="listJson.js" type="text/javascript"></script>
+<script src="slide.js" type="text/javascript"></script>
+<script src="inslide.js" type="text/javascript"></script>
+<!-- js -->
+
+
+<script type="text/javascript">
+	$(function() {
+		var url = $(location).attr("href").split("?");
+		if (url[1] == "v=2") {
+			$("#recall_2").click();
+		}
+	});
+</script>
+
+<script type="text/javascript">
+	//datapicker 날짜양식
+	function fn_dateChk(obj, event) {
+
+		event = event || window.event;
+
+		if ((event.keyCode >= 48 && event.keyCode <= 57)
+				|| (event.keyCode >= 96 && event.keyCode <= 105)
+				|| event.keyCode == 8 || event.keyCode == 46
+				|| event.keyCode == 9) {
+
+		} else {
+			return false;
+		}
+
+		var datePattern = /[1-9][0-9]{3}\-(0[1-9]|1[0-2])\-(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/;
+
+		var str = $(obj).val();
+		if (str.length == 4 && !(event.keyCode == 8 || event.keyCode == 46)) {
+			$(obj).val(str + "-");
+		}
+		if (str.length == 7 && !(event.keyCode == 8 || event.keyCode == 46)) {
+			$(obj).val(str + "-");
+		}
+
+		if ($(obj).val().length > 10) {
+			if (!datePattern.test($(obj).val())) {
+				return false;
+			}
+		}
+	}
+
+	//datapicker 날짜양식
+	function fn_dateChkFormat(obj, event) {
+
+		event = event || window.event;
+
+		var datePattern = /[1-9][0-9]{3}\-(0[1-9]|1[0-2])\-(0[1-9]|1[0-9]|2[0-9]|3[0-1])$/;
+
+		if ($(obj).val().length > 9 && event.keyCode != 8) {
+			if (!datePattern.test($(obj).val())) {
+				alert("날짜 형식이 잘못되었습니다. \r\n예) 2000-01-01");
+				$(obj).focus();
+				return false;
+			}
+		}
+	}
+</script>
+
+
+
+<style type="text/css">
+.subMDp-2 {
+	display: none;
+}
+</style>
+</head>
+
+<body>
+	<!-- 위에 상단바  -->
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<h1 class="user-logo">
+							<a href="../green/Main.html"> <img
+								src="images/imgs2017/pc_logo.png" class="top-logo"
+								alt="생활환경안전정보시스템" width=100px; />
+							</a> <img alt="배너" id="banner"
+								src="images/imgs2017/products_sub_banner_bg.png">
+						</h1>
+					</div>
+
+					<!-- 메뉴 -->
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse right" id="main-navbar">
+						<ul>
+							<li class="topMenuLink"><a class="menuLink" id="menuLink1"
+								href="../green/Main.html">HOME</a></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink2"
+								href="../views/comm_search.html">화학 제품</a></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink3"
+								href="../view/recall2.html?v=1">리콜 대상</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="../view/recall2.html?v=1">국내리콜</a></li>
+									<li><a class="submenuLink" href="../view/recall2.html?v=2">해외리콜</a></li>
+								</ul></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink4"
+								href="../views/comm_qna.html?v1">커뮤니티</a>
+								<ul class="submenu">
+									<li><a class="submenuLink"
+										href="../views/comm_qna.html?v1">공지사항</a></li>
+									<li><a class="submenuLink"
+										href="../views/comm_qna.html?v2">홍보자료</a></li>
+									<li><a class="submenuLink"
+										href="../views/comm_qna.html?v3">자주묻는 질문(FAQ)</a></li>
+									<li><a class="submenuLink"
+										href="../views/comm_qna.html?v4">홈페이지 개선의견</a></li>
+									<li><a class="submenuLink"
+										href="../views/comm_qna.html?v5">온라인 도움말</a></li>
+								</ul></li>
+						</ul>
+						<div class="total-search-wrapper margin-top10">
+							<form id="total-search-form" name="total-search-form"
+								method="POST" action="javascript:totSearch();">
+								<input type="text" name="searchKey" id="totalSearchKey"
+									class="form-control" title="검색어" placeholder="검색어를 입력하세요. "
+									+ value="" maxlength="20" />
+								<div class="btn">
+									<input type="image" title="검색 새창열림"
+										src="images/imgs2017/btn_search.gif" alt="검색 새창열림" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<!-- 위에상단바 -->
+	<!-- 하단 내용 -->
+	<div class="sub_visual sub_visual_05"></div>
+	<header class="header"></header>
+
+	<!-- 왼쪽 네비게이션 -->
+	<div class="center_wrapper">
+		<aside id="snb_area">
+			<h2>
+				회수명령제품<span class="bar"></span>
+			</h2>
+			<ul class="subMDp-1 subPos-02" id="menuBar">
+				<li class="subMDp-1-1" id="recall_1"><a href="javascript:;"
+					class="arrow">국내리콜</a></li>
+				<!-- 서브메뉴 -->
+				<li class="subMDp-2" id="recall_1-1"><a href="javascript:;"
+					class="submenuLink2">세제류</a></li>
+				<li class="subMDp-2" id="recall_1-2"><a href="javascript:;"
+					class="submenuLink2">코팅·접착제류</a></li>
+				<li class="subMDp-2" id="recall_1-3"><a href="javascript:;"
+					class="submenuLink2">방향제류</a></li>
+				<li class="subMDp-2" id="recall_1-4"><a href="javascript:;"
+					class="submenuLink2">염료,염색류</a></li>
+				<li class="subMDp-2" id="recall_1-5"><a href="javascript:;"
+					class="submenuLink2">살생물제류</a></li>
+				<li class="subMDp-2" id="recall_1-6"><a href="javascript:;"
+					class="submenuLink2">기타류</a></li>
+				<li class="subMDp-2" id="recall_1-7"><a href="javascript:;"
+					class="submenuLink2">농약류</a></li>
+
+				<li class="subMDp-1-2" id="recall_2"><a href="javascript:;"
+					class="arrow">해외리콜</a></li>
+
+			</ul>
+		</aside>
+	</div>
+
+	<!-- 하단 내용 -->
+	<div class="sub_content_area seed-print">
+
+		<!-- S : .card_news_wrap  슬라이드-->
+		<div class="card_news_wrap">
+			<h3>최근 검색 top 3</h3>
+			<!-- S : .card_news_slider_wrap -->
+			<div class="card_news_slider_wrap" style="overflow: visible;">
+				<div class="bx-wrapper" style="max-width: 1102px; margin: 0px auto;">
+					<div class="bx-viewport"
+						style="width: 100%; overflow: hidden; position: relative; height: 250px;">
+						<ul class="card_slider"
+							style="width: 1415%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+							<!-- ajax로 값 넣을곳 : inslide.js -->
+						</ul>
+					</div>
+				</div>
+				<button type="button" class="btn_card_news" id="btn_card_news_prev">이전</button>
+				<button type="button" class="btn_card_news" id="btn_card_news_next">다음</button>
+			</div>
+			<!-- E : .card_news_slider_wrap -->
+		</div>
+		<!-- E : .card_news_wrap -->
+
+		<!-- 페이지 -->
+		<h3 class="sub_content_title" id="title_g">국내 리콜</h3>
+
+		<!-- 국내리콜 페이지 -->
+		<div class="sub_content_area_inner" id="noticeBoard">
+			<div class="seed_bbs_box">
+				<div class="totalCnt_bbsSearch seed_cf">
+
+					<!-- 검색폼  -->
+					<form id="frmSearch" name="frmSearch" action="#" method="post">
+						<div class="ui_form_box_wrap pc">
+							<input type="hidden" name="page" value='1' /> <input
+								type="hidden" name="recallSn" id="recallSn" value="" />
+
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<div class="goods_search_wrap_type_02 mt0 cf">
+									<div class="form_wrap_type_02">
+										<div class="col2 cf">
+											<label for="searchCondition1">분류/검색</label> <select
+												name="searchCondition1" id="searchCondition1" title="구분 선택">
+												<option value="" selected>전체</option>
+												<option value='0101'>세제류</option>
+												<option value='0201'>코팅·접착제류</option>
+												<option value='0203'>방향제류</option>
+												<option value='0204'>염료,염색류</option>
+												<option value='0205'>살생물제류</option>
+												<option value='0207'>기타류</option>
+												<option value='0206'>농약류</option>
+											</select> <input name="searchCondition2" id="searchCondition2"
+												type="text" class="only_input" placeholder="상품명 또는 사업자명을 입력"
+												value='' title='상품명 또는 사업자명을 입력'>
+										</div>
+
+										<div class="col1 cf">
+											<label for="ex_date_start">리콜공표일</label>
+											<div class="append_tit search_date_inner">
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_start"
+														name="searchCondition3Fr"
+														placeholder="리콜공표 시작일 : 입력예시 2018-01-01"
+														title="리콜공표일 시작일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+													<a href="#ex_date_end" class="date-picker-control"
+														title="달력 보기" id="fd-but-ex_date_end" role="button"
+														aria-haspopup="true" tabindex="0"> <span>&nbsp;</span><span
+														class="fd-screen-reader">달력 보기</span></a>
+												</div>
+												<span class="dash">~</span>
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_end"
+														name="searchCondition3To"
+														placeholder="리콜공표 종료일 : 입력예시 2018-01-01"
+														title="리콜공표일 종료일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+													<a href="#ex_date_end" class="date-picker-control"
+														title="달력 보기" id="fd-but-ex_date_end" role="button"
+														aria-haspopup="true" tabindex="0"> <span>&nbsp;</span><span
+														class="fd-screen-reader">달력 보기</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button type="submit" name="button" class="btn_search_goods"
+										onclick="fnSearchAll(); return false;">검색</button>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="ui_form_box_wrap mobile">
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<input type="text" id="m_search" placeholder="상품명 또는 사업자명을 입력"
+									onkeydown="fn_search_form();" value=""> <input
+									type="button" id="m_submit" value="검색">
+							</fieldset>
+						</div>
+						<!-- 검색 폼-->
+
+						<!-- 목록 정렬 -->
+						<fieldset>
+							<legend>목록정렬</legend>
+							<div class="tbl_list_reset_wrap up_obj">
+								<p class="list_total_num">
+									전체 <strong>132</strong>건
+								</p>
+								<p class="reset_area">
+									<select name="row" title="리스트 갯수 선택" class="mobile_hidden"
+										onChange="fnSearchAll();">
+										<option value="10" selected>9개씩 보기</option>
+										<option value="50">45개씩 보기</option>
+										<option value="100">100개씩 보기</option>
+									</select>
+								</p>
+							</div>
+						</fieldset>
+					</form>
+					<!-- 목록 정렬 -->
+
+
+					<!--상품 리스트-->
+					<div id="goodsList" class="ui_goods_list up_obj">
+						<ul id="good">
+							<!-- ajax 들어갈곳 -->
+						</ul>
+					</div>
+					<!-- 상품 리스트 -->
+
+					<!-- 페이징 -->
+					<div class="seedbbs_pagination">
+						<div class="seed_cf">
+							<ul class="paginationList">
+								<li class="paginationFirst"><a class=""
+									href="javascript:void(0);">‹‹</a></li>
+								<li class="paginationPrev"><a class=""
+									href="javascript:void(0);">‹</a></li>
+								<li class="paginationNumber">
+									<div class="bx-wrapper" style="max-width: 73px;">
+										<div class="bx-viewport">
+											<ul class="paginationListNum seed_cf">
+												<li style="float: left;"><strong>1</strong></li>
+												<li style="float: left;"><a class=""
+													href="javascript:void(0);">2</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="paginationNext"><a class=""
+									href="javascript:void(0);">›</a></li>
+								<li class="paginationLast"><a class=""
+									href="javascript:void(0);">››</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 페이징 -->
+					<div id="dictionary"></div>
+				</div>
+			</div>
+		</div>
+
+		<!-- 국내리콜 페이지 -->
+
+		<!-- 해외리콜 페이지 -->
+		<!-- 국내와 동일 단 이미지 div="goodsList" 변경  -->
+		<div class="sub_content_area_inner" id="noticeBoard2">
+			<div class="seed_bbs_box">
+				<div class="totalCnt_bbsSearch seed_cf">
+
+					<!-- 검색폼  -->
+					<form id="frmSearch" name="frmSearch" action="#" method="post">
+						<div class="ui_form_box_wrap pc">
+							<input type="hidden" name="page" value='1' /> <input
+								type="hidden" name="recallSn" id="recallSn" value="" />
+
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<div class="goods_search_wrap_type_02 mt0 cf">
+									<div class="form_wrap_type_02">
+										<div class="col2 cf">
+											<label for="searchCondition1">분류/검색</label> <select
+												name="searchCondition1" id="searchCondition1" title="구분 선택">
+												<option value="" selected>전체</option>
+												<option value='0101'>세제류</option>
+												<option value='0201'>코팅·접착제류</option>
+												<option value='0203'>방향제류</option>
+												<option value='0204'>염료,염색류</option>
+												<option value='0205'>살생물제류</option>
+												<option value='0207'>기타류</option>
+												<option value='0206'>농약류</option>
+											</select> <input name="searchCondition2" id="searchCondition2"
+												type="text" class="only_input" placeholder="상품명 또는 사업자명을 입력"
+												value='' title='상품명 또는 사업자명을 입력'>
+										</div>
+
+										<div class="col1 cf">
+											<label for="ex_date_start">리콜공표일</label>
+											<div class="append_tit search_date_inner">
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_start"
+														name="searchCondition3Fr"
+														placeholder="리콜공표 시작일 : 입력예시 2018-01-01"
+														title="리콜공표일 시작일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+													<a href="#ex_date_end" class="date-picker-control"
+														title="달력 보기" id="fd-but-ex_date_end" role="button"
+														aria-haspopup="true" tabindex="0"> <span>&nbsp;</span><span
+														class="fd-screen-reader">달력 보기</span></a>
+												</div>
+												<span class="dash">~</span>
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_end"
+														name="searchCondition3To"
+														placeholder="리콜공표 종료일 : 입력예시 2018-01-01"
+														title="리콜공표일 종료일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+													<a href="#ex_date_end" class="date-picker-control"
+														title="달력 보기" id="fd-but-ex_date_end" role="button"
+														aria-haspopup="true" tabindex="0"> <span>&nbsp;</span><span
+														class="fd-screen-reader">달력 보기</span></a>
+												</div>
+											</div>
+										</div>
+									</div>
+									<button type="submit" name="button" class="btn_search_goods"
+										onclick="fnSearchAll(); return false;">검색</button>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="ui_form_box_wrap mobile">
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<input type="text" id="m_search" placeholder="상품명 또는 사업자명을 입력"
+									onkeydown="fn_search_form();" value=""> <input
+									type="button" id="m_submit" value="검색">
+							</fieldset>
+						</div>
+						<!-- 검색 폼-->
+
+						<!-- 목록 정렬 -->
+						<fieldset>
+							<legend>목록정렬</legend>
+							<div class="tbl_list_reset_wrap up_obj">
+								<p class="list_total_num">
+									전체 <strong>132</strong>건
+								</p>
+								<p class="reset_area">
+									<select name="row" title="리스트 갯수 선택" class="mobile_hidden"
+										onChange="fnSearchAll();">
+										<option value="10" selected>9개씩 보기</option>
+										<option value="50">45개씩 보기</option>
+										<option value="100">100개씩 보기</option>
+									</select>
+								</p>
+							</div>
+						</fieldset>
+					</form>
+					<!-- 목록 정렬 -->
+
+					<!--상품 리스트-->
+					<div id="goodsList" class="ui_goods_list up_obj">
+						<ul id="good">
+							<!-- ajax 들어갈곳 -->
+						</ul>
+					</div>
+					<!-- 상품 리스트 -->
+
+					<!-- 페이징 -->
+					<div class="seedbbs_pagination">
+						<div class="seed_cf">
+							<ul class="paginationList">
+								<li class="paginationFirst"><a class=""
+									href="javascript:void(0);">‹‹</a></li>
+								<li class="paginationPrev"><a class=""
+									href="javascript:void(0);">‹</a></li>
+								<li class="paginationNumber">
+									<div class="bx-wrapper" style="max-width: 73px;">
+										<div class="bx-viewport">
+											<ul class="paginationListNum seed_cf">
+												<li style="float: left;"><strong>1</strong></li>
+												<li style="float: left;"><a class=""
+													href="javascript:void(0);">2</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="paginationNext"><a class=""
+									href="javascript:void(0);">›</a></li>
+								<li class="paginationLast"><a class=""
+									href="javascript:void(0);">››</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 페이징 -->
+
+		<!-- 해외리콜 페이지 -->
+
+
+		<!-- 안내문 -->
+		<div class="ui_sub_top_info_box up_obj">
+			<div class="ui_sub_top_info_box_inner">
+				<ul class="ui_list_square">
+					<li>리콜상품에 대한 수리·환불 등 조치방법은 해당 사업자에게 문의하시기 바랍니다.</li>
+					<li>만약 적절히 조치가 되지 않는 경우, 행복드림 열린소비자포털을 통해 피해구제 신청을 하실수 있습니다.</li>
+
+				</ul>
+			</div>
+		</div>
+		<!-- //안내문 -->
+
+		<!-- /////////////////////////////////////////////////////////////////////////////////////////
+
+	서브 컨텐츠 끝
+
+////////////////////////////////////////////////////////////////////////////////////////// -->
+
+
+		<form id="siteSatisfaction_621Frm" name="siteSatisfaction_621Frm"
+			action="/common/proc/consumer/621/commonSatisfactionRegProc.do"
+			method="POST">
+
+			<input type="hidden" name="tSite.siteIdx" value="consumer" /> <input
+				type="hidden" name="tSiteMenu.siteMenuIdx" value="621" /> <input
+				type="hidden" name="pageUrl" id="pageUrl" value="" />
+
+
+
+			<!-- S : #site_satis_area -->
+			<div id="site_satis_area" class="cf">
+				<div class="satis_choice_area">
+					<h4>이 페이지에서 제공하는 정보에 만족하셨습니까?</h4>
+					<ul class="cf">
+						<li class="on"><input type="radio"
+							name="siteSatisfactionStatus" id="siteSatisfactionStatus1"
+							checked value="1"><label for="siteSatisfactionStatus1">매우만족</label></li>
+						<li><input type="radio" name="siteSatisfactionStatus"
+							id="siteSatisfactionStatus2" value="2"><label
+							for="siteSatisfactionStatus2">만족</label></li>
+						<li><input type="radio" name="siteSatisfactionStatus"
+							id="siteSatisfactionStatus3" value="3"><label
+							for="siteSatisfactionStatus3">보통</label></li>
+						<li><input type="radio" name="siteSatisfactionStatus"
+							id="siteSatisfactionStatus4" value="4"><label
+							for="siteSatisfactionStatus4">불만족</label></li>
+						<li><input type="radio" name="siteSatisfactionStatus"
+							id="siteSatisfactionStatus5" value="5"><label
+							for="siteSatisfactionStatus5">매우불만족</label></li>
+					</ul>
+				</div>
+				<div class="satis_text_area">
+					<h4>회원님의 의견을 적어 주세요.</h4>
+					<div class="input_wrap cf">
+						<label for="siteSatisfactionContents" class="hidden">의견작성</label>
+						<input type="text" name="siteSatisfactionContents"
+							id="siteSatisfactionContents"> <input type="submit"
+							value="평가">
+					</div>
+				</div>
+			</div>
+
+
+			<!-- 하단바 -->
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<img src="images/imgs2017/footer_logo.png" class="footer-logo"
+								alt="환경부">
+						</div>
+						<div class="col-md-6">
+							<div class="footer cn first">(우)30103 세종특별자치시 도움6로 11
+								정부세종청사 6동</div>
+							<div class="footer cn third">
+								<b>화학제품관련문의 : 1800-0490 (생활화학제품 안전콜센터)</b>,&nbsp;시스템문의 :
+								044-201-6425
+							</div>
+							<div class="footer cn second">Copyright © 2016 Ministry of
+								environment. All Rights Reserved</div>
+						</div>
+					</div>
+				</div>
+			</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<a href="top"> 맨위 </a>
+	
+	<header>
+	<h1> HTML 정리 </h1>
+	</header>
+	
+	<nav>
+		<ul>
+			<li><a href="#">JAVA EE 설정 </a></li>
+			<li><a href="#">HTML 기본 문법 </a></li>
+			<li><a href="#">HTML 5 사용 </a></li>
+		</ul>
+	</nav>
+	
+	<section>
+		<h2> section 사용 - 단락으로 묶을때 사용 </h2>
+		<section>
+			<h3> 1. Java EE 환경 설정 </h3>
+			<p>
+			톰캣 c드라이브에 tomacat8 폴더생성하여 지정, 설치할때 마지막 2개박스 체크불필요 <br>
+			이클립스 폴더 생성하여 java ee해서 윈도우 -> preference-> server->runtime 해서 tomcat8.0 지정 <br>
+			밑에 창에 서버에서 오른쪽마우스 new한다음 지정 server폴더생성됨 <br>
+			file->new->dynamic web project로 생성 <br>
+			web콘텐츠에 폴더생성해서 거기다가 사용 <br>
+			윈도우-> 속성-> 웹-> html->인코딩 맨위에꺼로 변경
+			</p>
+		</section>
+	</section>	
+	
+	<div>
+		<h2> 기본 문법 -- div사용 </h2>
+		<div>
+			<h3> 블럭레벨 </h3>
+			<p>
+			 새로운 줄(문단)로 시작
+			 화명의 전체를 사용하는 태그
+			 p태그, 그룹태그,ul태그		
+			</p>
+		</div>
+		
+		<div>
+			<h3>인라인(Inline) Element</h3>
+			<p>
+			p 또는 br 로 줄을 바꾸지 않는 한 한줄에 나타남.
+			span 태그, 에이태그, 이미지태그
+			화면의 일부를 차지하는 태그
+			</p>
+	
+		</div>
+		
+		<h4> 주의 사항 --span 사용 각자 따로 </h4>
+		<span>
+		인라인 요소 안에 인라인 요소를 작성하는건 가능하다. 
+		블록레벨안에 블록레벨을 쓸수 있다.
+		단, p 태그안에 div를 쓰면 오류발생
+		블록레벨안에 인라인 태그 쓸 수 있다.
+		인라인레벨안에 블록레벨 태그를 쓸 수 없다.
+		 </span>
+	</div>
+	
+	<article>
+		<h2> article 사용 - 독립적이다. </h2>
+		<h3> 이미지 경로 지정 </h3>
+		<dl>
+			<dt> 상대경로 </dt>
+			<dd> ./images/road1.jpg </dd>
+		</dl>
+		<dl>
+			<dt> 절대경로 </dt>
+			<dd> ..images/bg3.jpg </dd>
+		</dl>
+	</article>
+	
+	<section>
+		<div>
+		<h2> figure 함수 </h2>
+		<h3> 그림/비디오 같은 콘텐츠를 그룹 묶을때 사용</h3>
+			<figure>
+				<figcaption> 사진 삽입 예시 </figcaption>
+				<img src="images/road1.jpg">
+			</figure>
+			
+			<figure>
+	         <figcaption>video 삽입 예시</figcaption>
+	         <video width="640" height="360" controls="controls">
+	            <source src="Merry_Love.MP4" type="video/mp4">
+	         </video>
+	      </figure>
+		</div>
+	</section>
+	
+	<h2> form 함수 사용</h2>
+	<form action="" method="get">
+	<h3> fieldset은 그룹으로 박스 툴 생성 </h3>
+		<fieldset>
+			<ol>
+				<li>
+				<label for="username"> label 이름</label>
+				<input type="text" name="userName"  id="userName" autofocus="autofocus" placeholder="ex)김영현">
+				</li>
+								<li>
+					<label>날짜</label>
+					<input type="date">
+				</li>
+				<li>
+					<label>색상</label>
+					<input type="color">
+				</li>
+				<li>
+					<label>수량</label>
+					<input type="range" min="1" max="10" value="1">
+				</li>
+			</ol>
+		</fieldset>
+		<fieldset>
+			<input type="submit" value="전송">
+		</fieldset>
+	</form>
+	
+	<section>
+	<h3> iframe 사용 </h3>
+	<p>
+		Iframe 을 사용해서 다른 문서를 포함할 수 있다.
+	</p>
+	<p>
+		<iframe src="image_exam.html" width="500" height="500" title="이미지예제"></iframe>
+	</p>
+	</section>
+	
+	<section>
+	<h3> link 함수 사용 </h3>
+	<ul>
+	<!-- '_self' 는 페이지에서 자신의 페이지에서 화면 이동 -->
+	<!-- '_blank' 는 새로운 페이지창을 열어 화면 이동 -->
+	<li> <a href="http://www.naver.com" target="_self"> 네이버</a></li>
+	<li> <a href="http://www.daum.net" target="_blank"> 다음</a></li>
+	<li> <a href="image_exam.html" target="_self"> 이미지페이지</a></li>
+	</ul>
+	</section>
+	
+	<footer>
+	<h5> p태그는 br을 하지않으면 줄 단락이 바뀌지 않는다. h태그는 바뀜</h5>
+		<p>
+		footer함수는 마지막에 꼬리표처럼 적는것.
+		time 함수 이용하여 시간표현
+		작성일자 :  <time datetime="2018-03-19"> 2018년 3월 19일 </time>
+		</p>
+		<h3> 주소함수는 address </h3>
+		<address> kyh_2752@naver.com </address>
+	</footer>
+	
+<a href="#top"> top</a>
+
+</body>
+</html>

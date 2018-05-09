@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	class Rectangle {
+		constructor(width, height){
+			this.width = width;
+			this.height = height;
+		}
+		
+		get width(){
+			return this.width;
+		}
+		
+		set width(input){
+			this.width = input;
+		}
+		
+		get height(){
+			return this.height;
+		}
+		
+		set height(input){
+			this.height = input;
+		}
+		
+		getArea() {
+			return this.width * this.height;
+		}
+	}
+	
+	const rectangle = new Rectangle(100,200);
+	rectangle.width = 200;
+	
+	alert(rectangle.width);
+	alert(rectangle.getArea());
+	
+	
+	
+	class Square extends Rectangle{
+		constructor(length){
+			super(length,length);
+			alert(this)
+		}
+	}
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

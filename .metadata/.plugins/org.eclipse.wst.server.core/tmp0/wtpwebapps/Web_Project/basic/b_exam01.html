@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<!-- 외부 방식 -->
+<script type="text/javascript" src="common.js"></script>
+<!-- 내부방식 -->
+<script type="text/javascript">
+	function kosta() {
+		alert('kosta');
+		document.write('kosta');
+		console.log('kosta');
+	}
+</script>
+
+</head>
+<body>
+	<form>
+		<input type="button" value="버튼" onclick="kosta2()">
+	</form>
+	
+	<a onmouseover="document.bgColor = 'red'"
+		onmouseout="document.bgColor = 'blue'"> 바탕화면 배경 </a>
+</body>
+</html>

@@ -1,0 +1,624 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="UTF-8">
+<meta name="robots" content="noindex">
+		
+		<meta id="viewport" name="viewport" content="initial-scale=1.0, width=device-width, minimum-scale=1.0">
+		<title> 초록 누리</title>
+
+		<link href="../css/jquery-ui.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/catpcha.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/animate.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/picker.default.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/picker.default.date.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/user.smartPop.css" rel="stylesheet" type="text/css"/>
+		
+		<link href="../css/navigation.css" rel="stylesheet" type="text/css"/>
+		<link href="../css/satisfaction.css" rel="stylesheet" type="text/css"/>
+		
+	    <link rel="stylesheet" type="text/css" href="../css/datepicker.min.css">
+	    <link rel="stylesheet" type="text/css" href="../css/remodal.css">
+	    <link rel="stylesheet" type="text/css" href="../css/remodal-default-theme.css">
+	    <link rel="stylesheet" type="text/css" href="../css/layout.css">
+	    <link rel="stylesheet" type="text/css" href="../css/common.css">
+	    <link rel="stylesheet" type="text/css" href="../css/sub.css">
+	    <link rel="stylesheet" type="text/css" href="../css/content_01.css">
+	    <link rel="stylesheet" type="text/css" href="../css/content_02.css">
+	    <link rel="stylesheet" type="text/css" href="../css/select_map.css">
+	  	<link rel="stylesheet" type="text/css" href="../css/webAcc.css">
+	  	<link rel="stylesheet" type="text/css" href="../css/skin01.css">
+	  	<link rel="stylesheet" type="text/css" href="style.css">
+	  	
+		<script src="jquery.js" type="text/javascript"></script>
+	  	<script src="//code.jquery.com/jquery-1.11.3.min.js"></script>
+	  	<script src="recall2.js"></script>
+	 
+	  	<style type="text/css">
+	  	.subMDp-2{
+	  	display: none;
+	  	}
+	  	</style>
+	  	
+</head>
+
+<body>
+<nav class="navbar navbar-default">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-12">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <h1 class="user-logo">
+                        <a href="Main.html">
+                            <img src="images/imgs2017/pc_logo.png" class="top-logo" alt="생활환경안전정보시스템" width=100px;/>
+                        </a>
+                        <img alt="배너" id="banner" src="images/imgs2017/products_sub_banner_bg.png">
+                    </h1>
+                </div>
+                
+<!-- 메뉴 -->
+                <!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse right" id="main-navbar">
+						<ul>
+							<li class="topMenuLink"><a class="menuLink" id="menuLink1" href="../green/Main.html">HOME</a>
+							</li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink2" href="../views/comm_search.html">화학
+									제품</a></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink3" href="../view/recall2.html?v=1">리콜
+									대상</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="../view/recall2.html?v=1">국내리콜</a></li>
+									<li><a class="submenuLink" href="../view/recall2.html?v=2">해외리콜</a></li>
+								</ul></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink4" href="../views/comm_qna.html?v1">커뮤니티</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="../views/comm_qna.html?v1">공지사항</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v2">홍보자료</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v3">자주묻는 질문(FAQ)</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v4">홈페이지 개선의견</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v5">온라인 도움말</a></li>
+								</ul>
+							</li>
+						</ul>
+						<div class="total-search-wrapper margin-top10">
+							<form id="total-search-form" name="total-search-form"
+								method="POST" action="javascript:totSearch();">
+								<input type="text" name="searchKey" id="totalSearchKey"
+									class="form-control" title="검색어" placeholder="검색어를 입력하세요. "
+									+ value="" maxlength="20" />
+								<div class="btn">
+									<input type="image" title="검색 새창열림"
+										src="images/imgs2017/btn_search.gif" alt="검색 새창열림" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+        </div>
+    </div>
+</nav>
+
+<!-- 왼쪽 네비게이션 -->
+	<div class="center_wrapper">
+		<aside id="snb_area">
+			<h2>
+				회수명령제품<span class="bar"></span>
+			</h2>
+			<ul class="subMDp-1 subPos-02" id="menuBar">
+				<li class="subMDp-1-1" id="recall_1"><a href="javascript:;"
+					class="arrow">국내리콜</a></li>
+				<!-- 서브메뉴 -->
+				<li class="subMDp-2" id="recall_1-1"><a href="javascript:;"
+					class="submenuLink2">세제류</a></li>
+				<li class="subMDp-2" id="recall_1-2"><a href="javascript:;"
+					class="submenuLink2">코팅·접착제류</a></li>
+				<li class="subMDp-2" id="recall_1-3"><a href="javascript:;"
+					class="submenuLink2">방향제류</a></li>
+				<li class="subMDp-2" id="recall_1-4"><a href="javascript:;"
+					class="submenuLink2">염료,염색류</a></li>
+				<li class="subMDp-2" id="recall_1-5"><a href="javascript:;"
+					class="submenuLink2">살생물제류</a></li>
+				<li class="subMDp-2" id="recall_1-6"><a href="javascript:;"
+					class="submenuLink2">기타류</a></li>
+				<li class="subMDp-2" id="recall_1-7"><a href="javascript:;"
+					class="submenuLink2">농약류</a></li>
+
+				<li class="subMDp-1-2" id="recall_2"><a href="javascript:;"
+					class="arrow">해외리콜</a></li>
+
+			</ul>
+		</aside>
+	</div>
+
+<!-- 하단 내용 -->
+	<div class="sub_content_area seed-print">
+		<h3 class="sub_content_title" id="title_g">국내 리콜</h3>
+
+<!-- 국내리콜 페이지 -->
+		<div class="sub_content_area_inner" id="noticeBoard">
+			<div class="seed_bbs_box">
+				<div class="totalCnt_bbsSearch seed_cf">
+					
+					<!-- 검색폼  -->
+					<form id="frmSearch" name="frmSearch" action="#" method="post">
+						<div class="ui_form_box_wrap pc">
+							<input type="hidden" name="page" value='1' /> <input
+								type="hidden" name="recallSn" id="recallSn" value="" />
+
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<div class="goods_search_wrap_type_02 mt0 cf">
+									<div class="form_wrap_type_02">
+										<div class="col2 cf">
+											<label for="searchCondition1">분류/검색</label> <select
+												name="searchCondition1" id="searchCondition1" title="구분 선택">
+												<option value="">전체</option>
+												<option value='0101' selected>세제류</option>
+												<option value='0201'>코팅·접착제류</option>
+												<option value='0203'>방향제류</option>
+												<option value='0204'>염료,염색류</option>
+												<option value='0205'>살생물제류</option>
+												<option value='0207'>기타류</option>
+												<option value='0206'>농약류</option>
+											</select> <input name="searchCondition2" id="searchCondition2"
+												type="text" class="only_input" placeholder="상품명 또는 사업자명을 입력"
+												value='' title='상품명 또는 사업자명을 입력'>
+										</div>
+
+										<div class="col1 cf">
+											<label for="ex_date_start">리콜공표일</label>
+											<div class="append_tit search_date_inner">
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_start"
+														name="searchCondition3Fr"
+														placeholder="리콜공표 시작일 : 입력예시 2018-01-01"
+														title="리콜공표일 시작일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+												</div>
+												<span class="dash">~</span>
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_end"
+														name="searchCondition3To"
+														placeholder="리콜공표 종료일 : 입력예시 2018-01-01"
+														title="리콜공표일 종료일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<button type="submit" name="button" class="btn_search_goods"
+										onclick="fnSearchAll(); return false;">검색</button>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="ui_form_box_wrap mobile">
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<input type="text" id="m_search" placeholder="상품명 또는 사업자명을 입력"
+									onkeydown="fn_search_form();" value=""> <input
+									type="button" id="m_submit" value="검색">
+							</fieldset>
+						</div>
+
+						<!-- 검색 폼-->
+						<fieldset>
+							<legend>목록정렬</legend>
+							<div class="tbl_list_reset_wrap up_obj">
+								<p class="list_total_num">
+									전체 <strong>132</strong>건
+								</p>
+								<p class="reset_area">
+									<select name="row" title="리스트 갯수 선택" class="mobile_hidden"
+										onChange="fnSearchAll();">
+										<option value="10" selected>10개씩 보기</option>
+										<option value="50">50개씩 보기</option>
+										<option value="100">100개씩 보기</option>
+									</select>
+								</p>
+							</div>
+						</fieldset>
+					</form>
+
+
+					<!--상품 리스트-->
+					<div id="goodsList" class="ui_goods_list up_obj">
+						<ul>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">심리철학</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8977751926</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+
+									<dl>
+										<dt class="title">복음의 소리</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8995105429</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">컴파일러</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8977602556</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">컴파일러</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8977602556</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">최열 아저씨의 우리 환경 이야기</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8972780715</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">통상담당 공무원의 전문화 및 세계화 교육훈련 방안연</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8981780633</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">텔레비전 경제학</dt>
+										<dd class="cat"></dd>
+										<dd class="code">893003506X</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">기독교대백과사전</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8946601051</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">비트겐슈타인과 철학</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8930619142</dd>
+									</dl>
+							</a></li>
+						</ul>
+					</div>
+					<!-- 상품목록 -->
+
+					<!-- 페이징 -->
+					<div class="seedbbs_pagination">
+						<div class="seed_cf">
+							<ul class="paginationList">
+								<li class="paginationFirst"><a class=""
+									href="javascript:void(0);">‹‹</a></li>
+								<li class="paginationPrev"><a class=""
+									href="javascript:void(0);">‹</a></li>
+								<li class="paginationNumber">
+									<div class="bx-wrapper" style="max-width: 73px;">
+										<div class="bx-viewport">
+											<ul class="paginationListNum seed_cf">
+												<li style="float: left;"><strong>1</strong></li>
+												<li style="float: left;"><a class=""
+													href="javascript:void(0);">2</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="paginationNext"><a class=""
+									href="javascript:void(0);">›</a></li>
+								<li class="paginationLast"><a class=""
+									href="javascript:void(0);">››</a></li>
+							</ul>
+						</div>
+					</div>
+					<!-- 페이징 -->
+
+				</div>
+			</div>
+		</div>
+	</div>
+<!-- 국내리콜 페이지 -->
+
+<!-- 해외리콜 페이지 -->
+<!-- 국내와 동일 단 이미지 div="goodsList" 변경  -->
+		<div class="sub_content_area_inner" id="noticeBoard2">
+			<div class="seed_bbs_box">
+				<div class="totalCnt_bbsSearch seed_cf">
+
+					<!-- 검색폼  -->
+					<form id="frmSearch" name="frmSearch" action="#" method="post">
+						<div class="ui_form_box_wrap pc">
+							<input type="hidden" name="page" value='1' /> <input
+								type="hidden" name="recallSn" id="recallSn" value="" />
+
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<div class="goods_search_wrap_type_02 mt0 cf">
+									<div class="form_wrap_type_02">
+										<div class="col2 cf">
+											<label for="searchCondition1">분류/검색</label> <select
+												name="searchCondition1" id="searchCondition1" title="구분 선택">
+												<option value="" selected>전체</option>
+												<option value='0101'>세제류</option>
+												<option value='0201'>코팅·접착제류</option>
+												<option value='0203'>방향제류</option>
+												<option value='0204'>염료,염색류</option>
+												<option value='0205'>살생물제류</option>
+												<option value='0207'>기타류</option>
+												<option value='0206'>농약류</option>
+											</select> <input name="searchCondition2" id="searchCondition2"
+												type="text" class="only_input" placeholder="상품명 또는 사업자명을 입력"
+												value='' title='상품명 또는 사업자명을 입력'>
+										</div>
+
+										<div class="col1 cf">
+											<label for="ex_date_start">리콜공표일</label>
+											<div class="append_tit search_date_inner">
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_start"
+														name="searchCondition3Fr"
+														placeholder="리콜공표 시작일 : 입력예시 2018-01-01"
+														title="리콜공표일 시작일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+												</div>
+												<span class="dash">~</span>
+												<div class="datapicker_wrap">
+													<input type="text" id="ex_date_end"
+														name="searchCondition3To"
+														placeholder="리콜공표 종료일 : 입력예시 2018-01-01"
+														title="리콜공표일 종료일 기준 : 입력예시 2018-01-01" maxlength="10"
+														onkeydown="return fn_dateChk(this,event)"
+														onkeyup="return fn_dateChkFormat(this,event)" value="" />
+												</div>
+											</div>
+										</div>
+									</div>
+									<button type="submit" name="button" class="btn_search_goods"
+										onclick="fnSearchAll(); return false;">검색</button>
+								</div>
+							</fieldset>
+						</div>
+
+						<div class="ui_form_box_wrap mobile">
+							<fieldset>
+								<legend>리콜정보 검색</legend>
+								<input type="text" id="m_search" placeholder="상품명 또는 사업자명을 입력"
+									onkeydown="fn_search_form();" value=""> <input
+									type="button" id="m_submit" value="검색">
+							</fieldset>
+						</div>
+						<!-- 검색 폼-->
+
+						<!-- 목록 정렬 -->
+						<fieldset>
+							<legend>목록정렬</legend>
+							<div class="tbl_list_reset_wrap up_obj">
+								<p class="list_total_num">
+									전체 <strong>132</strong>건
+								</p>
+								<p class="reset_area">
+									<select name="row" title="리스트 갯수 선택" class="mobile_hidden"
+										onChange="fnSearchAll();">
+										<option value="10" selected>9개씩 보기</option>
+										<option value="50">45개씩 보기</option>
+										<option value="100">100개씩 보기</option>
+									</select>
+								</p>
+							</div>
+						</fieldset>
+					</form>
+					<!-- 목록 정렬 -->
+					<!--상품 리스트-->
+					<div id="goodsList2" class="ui_goods_list up_obj">
+						<ul>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">심리철학</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8977751926</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+
+									<dl>
+										<dt class="title">복음의 소리</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8995105429</dd>
+									</dl>
+							</a></li>
+
+							<li><a href="#">
+									<p class="img_wrap">
+										<img src="#" alt="심리철학">
+									</p>
+									<dl>
+										<dt class="title">컴파일러</dt>
+										<dd class="cat"></dd>
+										<dd class="code">8977602556</dd>
+									</dl>
+							</a></li>
+
+						</ul>
+					</div>
+					<!-- 상품목록 -->
+					<!-- 페이징 -->
+					<div class="seedbbs_pagination">
+						<div class="seed_cf">
+							<ul class="paginationList">
+								<li class="paginationFirst"><a class=""
+									href="javascript:void(0);">‹‹</a></li>
+								<li class="paginationPrev"><a class=""
+									href="javascript:void(0);">‹</a></li>
+								<li class="paginationNumber">
+									<div class="bx-wrapper" style="max-width: 73px;">
+										<div class="bx-viewport">
+											<ul class="paginationListNum seed_cf">
+												<li style="float: left;"><strong>1</strong></li>
+												<li style="float: left;"><a class=""
+													href="javascript:void(0);">2</a></li>
+											</ul>
+										</div>
+									</div>
+								</li>
+								<li class="paginationNext"><a class=""
+									href="javascript:void(0);">›</a></li>
+								<li class="paginationLast"><a class=""
+									href="javascript:void(0);">››</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- 페이징 -->
+<!-- 해외리콜 페이지 -->
+
+		<!-- 서브 페이지 -->
+		<!-- 검색폼  -->
+		<form id="frmSearch2" name="frmSearch" action="#" method="post">
+			<div class="ui_form_box_wrap pc">
+				<input type="hidden" name="page" value='1' /> <input type="hidden"
+					name="recallSn" id="recallSn" value="" />
+
+				<fieldset>
+					<legend>리콜정보 검색</legend>
+					<div class="goods_search_wrap_type_02 mt0 cf">
+						<div class="form_wrap_type_02">
+							<div class="col2 cf">
+								<label for="searchCondition1">분류/검색</label> <select
+									name="searchCondition1" id="searchCondition1" title="구분 선택">
+									<option value="">전체</option>
+									<option value='0101' selected>세제류</option>
+									<option value='0201'>코팅·접착제류</option>
+									<option value='0203'>방향제류</option>
+									<option value='0204'>염료,염색류</option>
+									<option value='0205'>살생물제류</option>
+									<option value='0207'>기타류</option>
+									<option value='0206'>농약류</option>
+								</select> <input name="searchCondition2" id="searchCondition2"
+									type="text" class="only_input" placeholder="상품명 또는 사업자명을 입력"
+									value='' title='상품명 또는 사업자명을 입력'>
+							</div>
+
+							<div class="col1 cf">
+								<label for="ex_date_start">리콜공표일</label>
+								<div class="append_tit search_date_inner">
+									<div class="datapicker_wrap">
+										<input type="text" id="ex_date_start"
+											name="searchCondition3Fr"
+											placeholder="리콜공표 시작일 : 입력예시 2018-01-01"
+											title="리콜공표일 시작일 기준 : 입력예시 2018-01-01" maxlength="10"
+											onkeydown="return fn_dateChk(this,event)"
+											onkeyup="return fn_dateChkFormat(this,event)" value="" />
+									</div>
+									<span class="dash">~</span>
+									<div class="datapicker_wrap">
+										<input type="text" id="ex_date_end" name="searchCondition3To"
+											placeholder="리콜공표 종료일 : 입력예시 2018-01-01"
+											title="리콜공표일 종료일 기준 : 입력예시 2018-01-01" maxlength="10"
+											onkeydown="return fn_dateChk(this,event)"
+											onkeyup="return fn_dateChkFormat(this,event)" value="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<button type="submit" name="button" class="btn_search_goods"
+							onclick="fnSearchAll(); return false;">검색</button>
+					</div>
+				</fieldset>
+			</div>
+
+			<div class="ui_form_box_wrap mobile">
+				<fieldset>
+					<legend>리콜정보 검색</legend>
+					<input type="text" id="m_search" placeholder="상품명 또는 사업자명을 입력"
+						onkeydown="fn_search_form();" value=""> <input
+						type="button" id="m_submit" value="검색">
+				</fieldset>
+			</div>
+			<!-- 검색 폼-->
+
+			<!-- 목록 정렬 -->
+			<fieldset>
+				<legend>목록정렬</legend>
+				<div class="tbl_list_reset_wrap up_obj">
+					<p class="list_total_num">
+						전체 <strong>132</strong>건
+					</p>
+					<p class="reset_area">
+						<select name="row" title="리스트 갯수 선택" class="mobile_hidden"
+							onChange="fnSearchAll();">
+							<option value="10" selected>9개씩 보기</option>
+							<option value="50">45개씩 보기</option>
+							<option value="100">100개씩 보기</option>
+						</select>
+					</p>
+				</div>
+			</fieldset>
+		</form>
+
+		<!-- 목록 정렬 -->
+		<!-- ㅅ서브 페이지 -->
+</body>
+</html>

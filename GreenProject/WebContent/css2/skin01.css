@@ -1,0 +1,235 @@
+@charset "utf-8";
+
+/* bbs common */
+.seed_cf {zoom:1;}
+.seed_cf:before,
+.seed_cf:after {display:table;content:'';}
+.seed_cf:after {clear:both;}
+.seed_bbs_box .postFunc {margin-top:20px;line-height:34px;}
+.seed_bbs_box .postFunc #frmData fieldset {font-size:0;}
+.seed_bbs_box .postFunc #frmData fieldset * {vertical-align:top;}
+.seed_bbs_box .postFunc #frmData fieldset label {font-size:13px;}
+.seed_bbs_box .postFunc #frmData fieldset #selDataCM {margin-left:5px;}
+.seed_bbs_box .postFunc #frmData fieldset #dataCopy {display:inline-block;height:36px;margin-left:5px;padding:0 20px;background:#148914;font-size:13px;font-weight:700;color:#ffffff;vertical-align:top;white-space:nowrap;}
+.seed_bbs_box .wa {overflow:hidden;position:absolute;top:0;left:-10000%;width:1px;height:1px;font-size:0;line-height:0;text-indent:-9999px;}
+.seed_bbs_box .bbsSearch {float:right;}
+.seed_bbs_box .bbsSearch #frmSearch fieldset {font-size:0;}
+.seed_bbs_box .bbsSearch #frmSearch fieldset .specialKeyNot {margin-left:5px;}
+.seed_bbs_box .bbsSearch #frmSearch fieldset .search {display:inline-block;height:36px;margin-left:5px;padding:0 20px;background:#444444;font-size:13px;font-weight:700;color:#ffffff;vertical-align:top;white-space:nowrap;}
+.seed_bbs_box .totalCnt {float:left;padding-left:18px;background:url(/site/consumer/images/sub/bul/bul_tbl_list_total.png) no-repeat 0 50%;line-height:36px;}
+.seed_btnArea {margin-top:30px;}
+.seed_btnArea .seed_fl {float:left;font-size:0;}
+.seed_btnArea .seed_fl .del {display:inline-block;height:36px;padding:0 20px;background:#c73934;font-size:13px;font-weight:700;color:#ffffff;vertical-align:top;white-space:nowrap;}
+.seed_btnArea .seed_fr {float:right;}
+.seed_btnArea .seed_fr .seedbbs_btn,
+.seed_btnArea .seed_fr input[type='submit'] {display:inline-block;height:36px;margin-left:5px;padding:0 20px;font-size:13px;font-weight:700;vertical-align:top;white-space:nowrap;}
+.seed_btnArea .seed_fr .seedbbs_btn.reg {background:#215399;color:#ffffff;}
+.seed_btnArea .seed_fr .mod,
+.seed_btnArea .seed_fr .save,
+.seed_btnArea .seed_fr .seedbbs_btn.mod {background:#215399;color:#ffffff;}
+.seed_btnArea .seed_fr .seedbbs_btn.del {background:#c73934;color:#ffffff;}
+.seed_btnArea .seed_fr .seedbbs_btn.list {background:#444444;color:#ffffff;}
+.seed_btnArea .seed_fr .seedbbs_btn.reply {background:#02809c;color:#ffffff}
+.seed_btnArea .seed_fr a.seedbbs_btn {line-height:36px;}
+.bbsFileList > li {display:block;margin-top:5px;}
+.bbsFileList > li:first-child {margin-top:0;}
+.bbsFileList > li > a {display:block;}
+.bbsFileList > li > a > img {vertical-align:middle;margin-right:5px;}
+.triangle {font-weight:700;color:#c73934;}
+#upFile {display:inline-block;padding:0 43px 0 20px;background:#444444;background-image:url(/site/consumer/images/common/btn/btn_ui_ico_file_attach.png);background-repeat:no-repeat;background-position:100% 9px;font-size:13px;font-weight:700;color:#ffffff;vertical-align:top;white-space:nowrap;height:30px;line-height:30px;}
+#upFileHtml .bbsFileHtml {zoom:1;}
+#upFileHtml .bbsFileHtml:before,
+#upFileHtml .bbsFileHtml:after {display:table;content:'';}
+#upFileHtml .bbsFileHtml:after {clear:both;}
+#upFileHtml .afterFileHtml {zoom:1;}
+#upFileHtml .afterFileHtml:before,
+#upFileHtml .afterFileHtml:after {display:table;content:'';}
+#upFileHtml .afterFileHtml:after {clear:both;}
+#upFileHtml .bbsFileHtml .seed_fl,
+#upFileHtml .afterFileHtml .seed_fl {float:left;}
+#upFileHtml .bbsFileHtml .seed_fl img,
+#upFileHtml .afterFileHtml .seed_fl img {vertical-align:middle;margin-right:5px;}
+#upFileHtml .bbsFileHtml .seed_fr,
+#upFileHtml .afterFileHtml .seed_fr {float:right;}
+#upFileHtml .bbsFileHtml a.seed_fr,
+#upFileHtml .afterFileHtml a.seed_fr {width:19px;height:19px;background:url(/site/consumer/images/common/btn/btn_ui_ico_file_attach_del.png) no-repeat 50% 50%;text-indent:-9999em;margin-left:10px;}
+.seed_tbl {border-top:2px solid #505050;border-bottom:1px solid #acacac;margin-top:20px;}
+.seed_tbl table {width:100%;border-spacing:0;border-collapse:collapse;table-layout:fixed;}
+.seed_tbl table th,
+.seed_tbl table td {padding:10px;border-top:1px solid #e1e2e2;}
+.seed_tbl table th {background:#fafafa;}
+.seed_tbl table thead tr th {border-top:0;}
+.seed_tbl .list_bbsDataTitle {overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;display:block;}
+.seedbbsContentWrap {padding:20px;}
+.seedbbsContentWrap .upimg {text-align:center;}
+.seedbbsContentWrap .upimg img {width:auto !important;max-width:100% !important;margin-bottom:20px;}
+
+/* 작성일 검색 관련 */
+.seed_fl {float:left;}
+#frmSearch #searchDate {float:left;margin-left:5px;}
+#frmSearch #searchDate {zoom:1;}
+#frmSearch #searchDate:before,
+#frmSearch #searchDate:after {display:table;content:'';}
+#frmSearch #searchDate:after {clear:both;}
+#frmSearch #searchSDate,
+#frmSearch .dash,
+#frmSearch #searchEDate {float:left;}
+#frmSearch .dash {display:inline-block;margin:0 5px;font-size:13px;line-height:36px;}
+
+/* paging */
+.seedbbs_pagination {margin-top:30px;}
+.seedbbs_pagination > .seed_cf {text-align:center;}
+.seedbbs_pagination > .seed_cf > .paginationList {display:inline-block;}
+.seedbbs_pagination > .seed_cf > .paginationList > li {float:left;margin-left:5px;}
+.seedbbs_pagination > .seed_cf > .paginationList > li:first-child {margin-left:0;}
+.seedbbs_pagination > .seed_cf > .paginationList > li > a,
+.seedbbs_pagination > .seed_cf > .paginationList .paginationListNum li a,
+.seedbbs_pagination > .seed_cf > .paginationList .paginationListNum li strong {display:block;width:32px;height:32px;border:1px solid #cccccc;font-size:13px;font-weight:700;line-height:32px;text-align:center;-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;transition:all 0.5s ease;}
+.seedbbs_pagination > .seed_cf > .paginationList > li > a:hover,
+.seedbbs_pagination > .seed_cf > .paginationList > li > a:focus,
+.seedbbs_pagination > .seed_cf > .paginationList .paginationListNum li a:hover,
+.seedbbs_pagination > .seed_cf > .paginationList .paginationListNum li a:focus {border-color:#215399;}
+.seedbbs_pagination > .seed_cf > .paginationList .paginationListNum li strong {border-color:#555555;background:#555555;color:#ffffff;}
+.seedbbs_pagination > .seed_cf > .paginationList > li > .pagination {background:url(/site/consumer/images/common/btn/btn_ui_paging.png) no-repeat 0 0;text-indent:-9999em;font-size:0;line-height:1px;}
+.seedbbs_pagination > .seed_cf > .paginationList > .paginationFirst > .pagination.arrow_prev {background-position:0 0;}
+.seedbbs_pagination > .seed_cf > .paginationList > .paginationPrev > .pagination.arrow_prev {background-position:0 -32px;}
+.seedbbs_pagination > .seed_cf > .paginationList > .paginationNext > .pagination.arrow_next {background-position:0 -96px;}
+.seedbbs_pagination > .seed_cf > .paginationList > .paginationLast > .pagination.arrow_next {background-position:0 -64px;}
+.seedbbs_pagination .bx-wrapper .bx-controls {display:inline-block;margin-top:15px;vertical-align:top;}
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager .bx-pager-item {float:left;margin-left:10px;}
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager .bx-pager-item .bx-pager-item {margin-left:10px;}
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager .bx-pager-item a {display:block;width:14px;height:14px;border-radius:50%;background:#b1b1b1;text-indent:-9999em;}
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager .bx-pager-item .active {background:#12a8d9;}
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager {zoom:1;}
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager:before,
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager:after {display:table;content:'';}
+.seedbbs_pagination .bx-wrapper .bx-controls .bx-pager:after {clear:both;}
+
+/* 답글관련 */
+.bbs_comment_title {margin-top:30px;font-size:20px;font-weight:700;color:#3f5d8e;line-height:29px;}
+.seedbbs_content_commentWrap {margin-top:20px;}
+.seedbbs_content_comment_inner textarea {float:left;width:760px;min-height:50px;}
+.seedbbs_content_comment_inner input[type='submit'] {float:left;height:36px;height:80px;margin-left:5px;padding:0 20px;background:#215399;font-size:13px;font-weight:700;color:#ffffff;vertical-align:top;white-space:nowrap;}
+.commentListArea > ul {border-top:1px solid #838383;}
+.commentListArea > ul > li {padding:19px 31px;border-bottom:1px solid #e3e3e3;}
+.user_write_date > p {float:left;}
+.user_write_date > p > strong {font-size:14px;font-weight:600;line-height:24px;}
+.user_write_date > p > .date {margin-left:17px;color:#a3a3a3;}
+.user_write_date > .seedbbs_btn_comment_del {float:right;padding-right:23px;background:url(/site/consumer/images/common/btn/btn_ui_ico_file_attach_del.png) no-repeat 100% 50%;}
+.commentListArea {margin-top:30px;}
+.commentListArea > ul > li .commentTxt {margin-top:20px;line-height:20px;}
+
+
+/* list */
+.listWrap .seed_tbl table tbody tr {-webkit-transition:all 0.5s ease;-moz-transition:all 0.5s ease;transition:all 0.5s ease;}
+.listWrap .seed_tbl table tbody tr:hover {background:#fafafa;}
+.listWrap .seed_tbl td img {vertical-align:middle;}
+
+
+/* view */
+.viewWrap .seed_tbl {margin-top:0;}
+.viewWrap.replay .seed_tbl {margin-top:20px;}
+.viewWrap table tbody tr:first-child th,
+.viewWrap table tbody tr:first-child td {border-top:0;}
+
+
+/* add, edit */
+.addWrap table tbody tr:first-child th,
+.addWrap table tbody tr:first-child td {border-top:0;}
+.addWrap table tbody label[for='bbsDataNotice'] {margin-left:5px;}
+.addWrap #bbsDataTitle,
+.addWrap #bbsDataTitle_1 {width:100%;height:36px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+
+/* 게시판 상단 노출 */
+.noticeDate {margin-top:10px;}
+.noticeDate {zoom:1;}
+.noticeDate:before,
+.noticeDate:after {display:table;content:'';}
+.noticeDate:after {clear:both;}
+.noticeDate > p,
+.noticeDate > .dash {float:left;}
+.noticeDate > p > label,
+.noticeDate > .dash {line-height:36px;}
+.noticeDate > .dash {margin:0 10px;}
+
+@media screen and (max-width:1139px) {
+    /* list */
+    .seed_bbs_box .totalCnt {line-height:41px;}
+    .seed_bbs_box .bbsSearch #frmSearch fieldset .search,
+    .seed_bbs_box .postFunc #frmData fieldset #dataCopy,
+    .seed_btnArea .seed_fl .del,
+    .seed_btnArea .seed_fr .seedbbs_btn {height:41px;font-size:16px;}
+    .seed_btnArea .seed_fr a.seedbbs_btn {line-height:41px;}
+    .seed_bbs_box .postFunc #frmData fieldset label {display:inline-block;font-size:16px;line-height:41px;}
+
+    /* add, edit */
+    .addWrap #bbsDataTitle {height:41px;}
+    .seed_btnArea .seed_fr input[type='submit'] {height:41px;font-size:16px;}
+    #upFileHtml .bbsFileHtml .seed_fl,
+    #upFileHtml .afterFileHtml .seed_fl {width:-webkit-calc(100% - 29px);width:-moz-calc(100% - 29px);width:calc(100% - 29px);overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+    #bbsDataRegDate {width:100%;height:41px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;}
+
+    /* 댓글 관련 */
+    .seedbbs_content_comment_inner textarea {width:-webkit-calc(100% - 70px);width:-moz-calc(100% - 70px);width:calc(100% - 70px);}
+    .seedbbs_content_comment_inner input[type='submit'] {height:90px;}
+    .user_write_date > p > strong {font-size:17px;}
+
+    /* 게시판 상단 노출 */
+    .noticeDate > p > label,
+    .noticeDate > .dash {line-height:41px;}
+    .noticeDate > p {width:-webkit-calc((100% - 30px) / 2);width:-moz-calc((100% - 30px) / 2);width:calc((100% - 30px) / 2);}
+    .noticeDate > p > .datepicker {width:-webkit-calc(100% - 86px);width:-moz-calc(100% - 86px);width:calc(100% - 86px);}
+}
+@media screen and (max-width:855px) {
+    /* list */
+    .seed_bbs_box .totalCnt,
+    .seed_bbs_box .bbsSearch,
+    .seed_bbs_box .bbsSearch #frmSearch fieldset {float:none;}
+    .seed_bbs_box .bbsSearch #frmSearch fieldset {margin-top:20px;}
+    .seed_bbs_box .bbsSearch #frmSearch fieldset .specialKeyNot {width:-webkit-calc(100% - 205px);width:-moz-calc(100% - 205px);width:calc(100% - 205px);}
+    .seed_bbs_box .postFunc #frmData fieldset #selDataCM {width:-webkit-calc(100% - 190px);width:-moz-calc(100% - 190px);width:calc(100% - 190px);}
+    #frmSearch #searchDate {width:-webkit-calc(100% - 177px);width:-moz-calc(100% - 177px);width:calc(100% - 177px);}
+    #frmSearch #searchDate .dash {font-size:16px;line-height:41px;}
+    #frmSearch #searchSDate,
+    #frmSearch #searchEDate {width:-webkit-calc((100% - 76px) / 2);width:-moz-calc((100% - 76px) / 2);width:calc((100% - 76px) / 2);}
+}
+
+@media screen and (max-width:768px) {
+
+}
+
+@media screen and (max-width:639px) {
+    .activeHidden {display:none;}
+
+    /* 댓글관련 */
+    .user_write_date > p > strong {display:block;}
+    .user_write_date > p > .date {display:block;margin-left:0;margin-top:10px;}
+}
+
+@media screen and (max-width:480px) {
+    .seed_bbs_box .bbsSearch #frmSearch fieldset #column,
+    .seed_bbs_box .bbsSearch #frmSearch fieldset .search {width:100%;margin-left:0;}
+    .seed_bbs_box .bbsSearch #frmSearch fieldset .specialKeyNot {width:100%;height:41px;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin-top:5px;margin-left:0;}
+    .seed_bbs_box .bbsSearch #frmSearch fieldset .search {margin-top:5px;}
+    .seed_bbs_box .postFunc #frmData fieldset label {width:100%;}
+    .seed_bbs_box .postFunc #frmData fieldset #selDataCM {width:100%;margin-top:5px;margin-left:0;}
+    .seed_bbs_box .postFunc #frmData fieldset #dataCopy {width:100%;margin-top:5px;margin-left:0;}
+    .seed_btnArea .seed_fl,
+    .seed_btnArea .seed_fr {float:none;}
+    .seed_btnArea .seed_fl .del {width:100%;margin-bottom:5px;}
+    .seed_btnArea .seed_fr input[type='submit'] {width:100%;margin-left:0;}
+    .seed_btnArea .seed_fr .seedbbs_btn {width:100%;-webkit-box-sizing:border-box;-moz-box-sizing:border-box;box-sizing:border-box;margin-left:0;text-align:center;}
+    .seed_btnArea .seed_fr .last {margin-top:5px;}
+
+    /* 리스트 검색 */
+    #frmSearch #searchDate {width:100%;margin-top:5px;margin-left:0;}
+
+    /* 댓글관련 */
+    .seedbbs_content_comment_inner textarea {float:none;width:100%;}
+    .seedbbs_content_comment_inner input[type='submit'] {float:none;width:100%;height:41px;margin-top:5px;margin-left:0;}
+    .user_write_date > .seedbbs_btn_comment_del {width:11px;height:11px;margin-top:9px;padding-right:0;text-indent:-9999em;}
+}
+
+@media screen and (max-width:320px) {
+
+}

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data=10;
+	
+	//생성자 함수 : new MyClass() 로 생성했기 때문에 생성자 함수
+	function MyClass(){
+		this.data = 0;
+	}
+	
+	//myclass를 상속받기에 method1에 선언된 this.data도 myclass꺼
+	MyClass.prototype.method1 = function(){
+		this.data = 20;
+		data = 30;
+		
+		console.log('1.data:' + data); //30
+		console.log('2.thisdata:' + this.data); //20 
+		console.log('3.window.data:' + window.data); //30
+	}
+	
+	var m1 = new MyClass();
+	m1.method1();
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

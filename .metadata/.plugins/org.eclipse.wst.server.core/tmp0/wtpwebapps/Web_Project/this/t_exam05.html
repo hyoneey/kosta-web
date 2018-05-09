@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	var data = 'Global data';
+	var obj1 = {'data': 'obj1 data'};
+	var obj2 = {'data' : 'obj2 data'};
+	
+
+	function func(){
+		console.log(this.data); //Global data
+	}
+	
+	func();
+	
+	//특정함수안에서 내가 원하는 값으로 변경 할 수 있다.
+	// call을 사용하면 this를 변경 가능
+	func.call(obj1); //obj1 data
+	func.call(obj2); //obj2 data
+	
+</script>
+</head>
+<body>
+
+</body>
+</html>

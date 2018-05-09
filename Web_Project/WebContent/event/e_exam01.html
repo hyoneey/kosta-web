@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript" src="crossEvent.js"></script>
+<script type="text/javascript">
+	function doProcess(){
+		var result = document.getElementById("result");
+		result.innerHTML = "<span> 이벤트 결과 </span>";
+	}
+	
+	function doProcess2(){
+		alert('이벤트결과2')
+	}
+	
+	window.onload = function(){
+		var btn = document.getElementById("btn");
+		//btn.onclick = doProcess2; //doprocess2() 이렇게 하면 클릭하면 실행되는게 아니라 바로 그냥 실행되므로 ()을 쓰지 않는다.
+		//btn.onclick = doProcess; //두개의 이벤트를 하려고 하면 앞에 있는 이벤트는 사라지고 덮어쓰기가 되어 마지막꺼가 실행
+		
+		//두개 이상의 이벤트를 발생시켜 주는 함수
+	//	btn.addEventListener('click', doProcess2, false);
+	//	btn.addEventListener('click', doProcess, false);
+	
+		cross.Event.addListener(btn, 'click', doProcess2 , false);
+		cross.Event.addListener(btn, 'click', doProcess , false);
+	}
+	
+</script>
+
+
+</head>
+<body>
+	<input type="button" value="버튼1" onclick="doProcess()">
+	<input type="button" value="버튼2" id="btn">
+	<div id="result"></div>
+</body>
+</html>

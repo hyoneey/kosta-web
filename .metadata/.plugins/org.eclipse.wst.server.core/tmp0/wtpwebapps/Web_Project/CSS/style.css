@@ -1,0 +1,9 @@
+@CHARSET "UTF-8";
+
+/* 외부 링크 방식 */
+h4{
+	font-family: 돋움,self;
+	font-size: 67px;
+	color: white;
+	background: grey;
+}

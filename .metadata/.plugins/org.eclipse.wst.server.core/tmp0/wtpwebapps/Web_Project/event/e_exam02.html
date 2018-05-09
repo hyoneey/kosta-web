@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<style type="text/css">
+	div{
+		border: 1px solid	
+	}
+	
+	#aa{
+	width: 300px;
+	height: 300px;
+	background: yellow;
+	}
+	
+	#bb{
+		width: 150px;
+		height: 150px;
+		margin-left: 80px;
+		margin-top: 40px;
+		background: green;
+	}
+</style>
+<title>Insert title here</title>
+<script type="text/javascript" src="crossEvent.js"></script>
+<script type="text/javascript">
+	function aProcess(){
+		alert("aa");
+	}
+	
+	//이벤트를 발생시키는 핸들러
+	function bProcess(e){ //표준브라우저는 bProcess(e)만 써도 불러올수 있지만 , 구형은 불가
+		alert("bb");
+	
+		//부모로 흘러가는 것을 방지 	
+		var event = window.event || e;
+		cross.Event.stopBubble(event);
+	
+	}
+	
+	
+	window.onload = function(){
+		var aa = document.getElementById("aa");
+		var bb = document.getElementById("bb");
+		aa.onclick = aProcess;
+		bb.onclick = bProcess;		
+	}
+	
+</script>
+</head>
+<body>
+	<div id="aa">
+		aaaaaaaaaaaaaaa
+		<div id="bb">
+			bbbbbbbbbbbbbbbb
+		</div>
+		aaaaaaaaaaaaaaaaaaa
+	</div>
+</body>
+</html>

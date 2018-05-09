@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+	console.log(add(10,20));
+	
+	//선언적함수 : top-down을 이전으로해서 먼저 console사용가능 
+	function add(a,b){
+		var sum = a+b;
+		return sum;
+	}
+	
+	//익명함수 : 변수에 함수를 담을 수 있다. 함수의 이름이 존재하지않아 변수명이 함수가 되어 호출 가능 : console을 위로하면 오류 => top-down방식
+	var add2 = function(a,b){
+		var sum =a+b;
+		return sum;
+	}
+	
+	//함수는 변수에 전달 될 수 있다. 실제 변수와 파라미트 수가 달라도 된다.
+	var plus = add2;
+	console.log(plus(20,40,1,1,1,1,1));
+	
+	//함수의 인자에 함수를 전달 할 수 있다.
+	var foo = function(func){
+		if(typeof func == 'function'){
+			func();
+		}	
+	}
+	
+	foo(function(){
+		console.log('인자에 함수를 호출 예제');
+	})
+	
+	//함수의 리턴값으로 함수를 리턴할 수 잇다.
+	var foo2 = function(){
+		return function(){
+			console.log('함수를 리턴하는 예제')	
+		}	
+	}
+	
+	var baz = foo2();
+	baz();
+	
+	
+
+	
+
+</script>
+
+
+</head>
+<body>
+
+</body>
+</html>

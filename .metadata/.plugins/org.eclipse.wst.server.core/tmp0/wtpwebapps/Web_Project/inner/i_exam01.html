@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var arr1 = [];
+	arr1[0] = '가원';
+	arr1[1] = '소연';
+	arr1[2] = '철진';
+	
+	var arr2 = new Array(3);
+	arr2[0] = '윤철';
+	arr2[1] = '성주';
+	arr2[2] = '진영';
+	
+	var arr3 = new Array('석근','지현','주희');
+	
+	//배열 -> 문자열로 변환
+	document.write(arr1.toString() + "<br>");
+	document.write(arr1.join(" ") +"<br>");
+	
+	//배열추가
+	//석근,지현,주희,윤철,성주,진영
+	var arr4 = arr3.concat(arr2);
+	document.write(arr4.toString() + "<br>");
+	
+	//배열 부분추출
+	//slice는 arr4에서 자른값을 arr5로 넘겨줌
+	//지현,주희,윤철
+	var arr5 = arr4.slice(1,4);
+	document.write(arr5.toString() + "<br>");
+	
+	//배열 부분삭제
+	//splice(시작점,갯수) -> arr4에 자른 값을 arr6에 넘겨주고, arr4에는 자르고 남은 값이 존재
+/* 	var arr6 = arr4.splice(1,3)
+	document.write(arr6.toString() + "<br>"); //지현,주희,윤철
+	document.write(arr4.toString() + "<br>"); //석근,성주,진영 */
+	
+	//배열 정렬
+	var arr7 = arr4.sort(); //오름차순 정렬(기본)
+	document.write(arr7.toString() + "<br>");
+	
+	var array = [43,12,49,57,23,55];
+	array.sort(function(a, b) {
+		if(a<b){
+			return 1; //변경o
+		}else if(a>b){
+			return -1; //변경x
+		}else{
+			return 0;
+		}
+		
+	})
+	document.write(array.toString() + "<br>");
+	
+</script>
+
+</head>
+<body>
+
+</body>
+</html>

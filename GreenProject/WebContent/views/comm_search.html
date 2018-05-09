@@ -1,0 +1,437 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="robots" content="noindex">
+
+<meta id="viewport" name="viewport"
+	content="initial-scale=1.0, width=device-width, minimum-scale=1.0">
+<title>초록 누리</title>
+<link href="../css/style.css" rel="stylesheet" type="text/css" />
+<link href="../css/mj.css" rel="stylesheet" type="text/css" />
+<link href="../css/jquery-ui.css" rel="stylesheet" type="text/css" />
+<link href="../css/catpcha.css" rel="stylesheet" type="text/css" />
+<link href="../css/animate.css" rel="stylesheet" type="text/css" />
+<link href="../css/picker.default.css" rel="stylesheet" type="text/css" />
+<link href="../css/picker.default.date.css" rel="stylesheet"
+	type="text/css" />
+<link href="../css/user.smartPop.css" rel="stylesheet" type="text/css" />
+
+<link href="../css/navigation.css" rel="stylesheet" type="text/css" />
+<link href="../css/satisfaction.css" rel="stylesheet" type="text/css" />
+
+<link rel="stylesheet" type="text/css" href="../css/datepicker.min.css">
+<link rel="stylesheet" type="text/css" href="../css/remodal.css">
+<link rel="stylesheet" type="text/css"
+	href="../css/remodal-default-theme.css">
+<link rel="stylesheet" type="text/css" href="../css/layout.css">
+<link rel="stylesheet" type="text/css" href="../css/common.css">
+<link rel="stylesheet" type="text/css" href="../css/sub.css">
+<link rel="stylesheet" type="text/css" href="../css/content_01.css">
+<link rel="stylesheet" type="text/css" href="../css/content_02.css">
+<link rel="stylesheet" type="text/css" href="../css/select_map.css">
+<link rel="stylesheet" type="text/css" href="../css/webAcc.css">
+<link rel="stylesheet" type="text/css" href="../css/skin01.css">
+<script src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+<script src="listjson.js"></script>
+<script type="text/javascript" src="opinion.js"></script>
+<script type="text/javascript" src="../green/Main.js"></script>
+<script type="text/javascript">
+	$(document).ready(function() {
+		$("div#faqBoard").hide();
+		$(".subMDp-1-1").addClass("subMenuOn");
+		$("#menuBar").children().click(function() {
+			$("li").removeClass("subMenuOn");
+			$(this).addClass("subMenuOn");
+		});
+
+		$("#notice_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("화학제품 조회");
+			$("div#noticeBoard").show();
+			$("div#faqBoard").hide();
+		})
+
+		$("#hongbo_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("자주 찾는 화학제품 조회");
+			$("div#noticeBoard").hide();
+			$("div#faqBoard").hide();
+		});
+
+		$("#faq_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("화학제품 사고사례");
+			$("div#noticeBoard").hide();
+			$("div#faqBoard").show();
+		});
+
+		$("#home_g").click(function() {
+			$("#title_g").empty();
+			$("#title_g").text("법규/규제/고시 검색");
+			$("div#noticeBoard").hide();
+			$("div#faqBoard").hide();
+		});
+
+		$(".fileajax").click(function() {
+			$(this).children("div").toggle();
+		});
+
+		$(".btn_submit").click(function() {
+			var param = [];
+			param.search_text = $('#search1').val();
+			listView(param);
+		});
+		$(".btn_submit").click(function() {
+			var param = [];
+			param.search_text = $('#search2').val();
+			listView(param);
+		});
+	});
+	$(function() {
+		$('#site_satis_area .satis_choice_area ul li').on('click', function() {
+			$('#site_satis_area .satis_choice_area ul li').removeClass('on');
+			$(this).addClass('on');
+			$(this).find('input').attr('checked', 'checked')
+		});
+	});
+</script>
+</head>
+
+<body>
+	<nav class="navbar navbar-default">
+		<div class="container">
+			<div class="row">
+				<div class="col-xs-12 col-md-12">
+					<!-- Brand and toggle get grouped for better mobile display -->
+					<div class="navbar-header">
+						<!--                     <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#main-navbar" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span> <span class="icon-bar"></span> <span class="icon-bar"></span> <span class="icon-bar"></span>
+                    </button> -->
+						<h1 class="user-logo">
+							<a href="../green/Main.html"> <img
+								src="../images/imgs2017/pc_logo.png" class="top-logo"
+								alt="생활환경안전정보시스템" width=100px; />
+							</a> <img alt="배너" id="banner"
+								src="../images/imgs2017/products_sub_banner_bg.png">
+						</h1>
+					</div>
+
+					<!-- 메뉴 -->
+					<!-- Collect the nav links, forms, and other content for toggling -->
+					<div class="collapse navbar-collapse right" id="main-navbar">
+						<ul>
+							<li class="topMenuLink"><a class="menuLink" id="menuLink1"
+								href="../green/Main.html">HOME</a></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink2"
+								href="../views/comm_search.html">화학 제품</a></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink3"
+								href="../view/recall2.html?v=1">리콜 대상</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="../view/recall2.html?v=1">국내리콜</a></li>
+									<li><a class="submenuLink" href="../view/recall2.html?v=2">해외리콜</a></li>
+								</ul></li>
+							<li>|</li>
+
+							<li class="topMenuLink"><a class="menuLink" id="menuLink4"
+								href="../views/comm_qna.html?v1">커뮤니티</a>
+								<ul class="submenu">
+									<li><a class="submenuLink" href="../views/comm_qna.html?v1">공지사항</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v2">홍보자료</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v3">자주묻는 질문(FAQ)</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v4">홈페이지 개선의견</a></li>
+									<li><a class="submenuLink" href="../views/comm_qna.html?v5">온라인 도움말</a></li>
+								</ul></li>
+						</ul>
+						<div class="total-search-wrapper margin-top10">
+							<form id="total-search-form" name="total-search-form"
+								method="POST" action="javascript:totSearch();">
+								<input type="text" name="searchKey" id="totalSearchKey"
+									class="form-control" title="검색어" placeholder="검색어를 입력하세요. "
+									+ value="" maxlength="20" />
+								<div class="btn">
+									<input type="image" title="검색 새창열림"
+										src="../images/imgs2017/btn_search.gif" alt="검색 새창열림" />
+								</div>
+							</form>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</nav>
+	<div class="center_wrapper">
+		<br> <br>
+		<aside id="snb_area">
+			<h2>
+				화학제품<span class="bar"></span>
+			</h2>
+			<ul class="subMDp-1 subPos-02" id="menuBar">
+				<li class="subMDp-1-1" id="notice_g"><a href="javascript:;"
+					class="arrow">화학제품 조회</a></li>
+				<li class="subMDp-1-2" id="hongbo_g"><a href="javascript:;"
+					class="arrow">자주 찾는 화학제품 조회</a></li>
+				<li class="subMDp-1-3" id="faq_g"><a href="javascript:;"
+					class="arrow">화학제품 사고사례</a></li>
+				<li class="subMDp-1-4" id="home_g"><a href="javascript:;"
+					class="arrow">법규/규제/고시 검색</a></li>
+			</ul>
+			<ul>
+				<li>
+					<div class="header">관련사이트</div>
+				</li>
+				<li>
+					<div class="menu-wrapper">
+						<ul>
+							<li>
+								<div class="menu">
+									<a href="http://ecolife.me.go.kr/hcpsafety/portal/index.do"
+										target="_blank"> <img src="../images/subMenuLogo1.png"
+										alt="위해우려제품 안전정보">
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="menu">
+									<a href="http://www.safetykorea.kr/" target="_blank"
+										style="padding: 5px;"> <img
+										src="../images/subMenuLogo2.png"
+										style="margin-left: 5px; width: 110px;"
+										alt="공산품 제품정보(산업통상자원부)">
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="menu">
+									<a href="https://ezdrug.mfds.go.kr" target="_blank"> <img
+										src="../images/subMenuLogo3.png" style="width: 150px;"
+										alt="의약품/화장품 제품정보(식품의약품안전처)">
+									</a>
+								</div>
+							</li>
+							<li>
+								<div class="menu">
+									<a href="http://www.ciss.go.kr/www/index.do" target="_blank">
+										<img src="../images/subMenuLogo4.png" alt="한국소비자원 소비자위해감시시스템">
+									</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</li>
+			</ul>
+		</aside>
+
+
+
+		<div class="sub_content_area seed-print">
+			<h3 class="sub_content_title" id="title_g">화학제품 조회</h3>
+			<div class="sub_content_area_inner">
+				<!-- 검색 -->
+				<fieldset>
+					<!-- 검색폼 -->
+					<div class="ui_form_box_wrap">
+						<div class="goodsInfoTab">
+							<div class="goodsInfoTab01Inner">
+								<div class="goodsInfo_line_01">
+									<input id="column1" name="column" class="i_text" type="radio"
+										value="01" checked="checked"
+										onClick="this.form.text1.disabled=true">
+										<label for="column1">물품명</label> <input type="text" name="text1"
+										id="search1" title="물품명 입력" value=""> <input
+										id="column2" name="column" type="radio" value="02"
+										onClick="this.form.text2.disabled=false"> <label
+										for="column2" class="on">물품 종류</label> <input type="text"
+										name="text2" id="search2" title="물품종류 입력">
+								</div>
+								<div class="goodsInfo_line_02">
+									<dl>
+										<dt>대상구분</dt>
+										<dd>
+											<ul>
+												<li><input type="checkbox" id="seDetail01_01"
+													value="01_01"><label for="seDetail01_01">세제류</label></li>
+												<li><input type="checkbox" id="seDetail01_02"
+													value="01_02"><label for="seDetail01_02">코팅,
+														접착제류</label></li>
+												<li><input type="checkbox" id="seDetail01_03"
+													value="01_03"><label for="seDetail01_03">방향제류</label></li>
+												<li><input type="checkbox" id="seDetail01_04"
+													value="01_04"><label for="seDetail01_04">염료,
+														염색류</label></li>
+												<li><input type="checkbox" id="seDetail01_05"
+													value="01_05"><label for="seDetail01_05">살생물제류</label></li>
+												<li><input type="checkbox" id="seDetail01_06"
+													value="01_06"><label for="seDetail01_06">기타</label></li>
+											</ul>
+										</dd>
+									</dl>
+								</div>
+							</div>
+							<input type="button" value="검색" class="btn_submit"
+								onclick="myFunction()">
+						</div>
+					</div>
+					<!--// 검색폼 -->
+
+				</fieldset>
+
+				<!-- 리스트 CNT 설정 -->
+				<fieldset>
+					<legend>목록정렬</legend>
+					<div class="tbl_list_reset_wrap up_obj">
+						<p class="list_total_num">
+							전체 <strong>5,270,649</strong>건
+						</p>
+
+						<p class="reset_area">
+							<select id="row" name="row" title="리스트 갯수 선택"
+								class="mobile_hidden">
+								<option value="30" selected="selected">30개씩 보기</option>
+								<option value="60">60개씩 보기</option>
+								<option value="90">90개씩 보기</option>
+							</select>
+						</p>
+					</div>
+				</fieldset>
+
+				<div>
+					<input type="hidden" name="CSRFToken"
+						value="fbd3770f-d0c4-44ae-99d2-7ab3fd779703">
+				</div>
+				</form>
+				<!-- 검색 -->
+
+				<!--상품 리스트-->
+				<div id="goodsList" class="ui_goods_list up_obj">
+					<ul id="good">
+						<!-- ajax 들어갈곳 -->
+					</ul>
+				</div>
+				<!-- 상품 리스트 -->
+
+				<div class="ui_pagination_wrap">
+					<div class="ui_pagination_inner">
+						<a class="btn_first"
+							href="/user/ftc/consumer/goodsinfo/57/selectGoodsInfoList.do&amp;page=1&amp;row=30"
+							title="첫페이지">처음 목록으로 이동</a><a class="btn_prev"
+							href="/user/ftc/consumer/goodsinfo/57/selectGoodsInfoList.do&amp;page=1&amp;row=30"
+							title="이전페이지">이전 목록으로 이동</a>
+						<div class="bx-wrapper"
+							style="max-width: 390px; margin: 0px auto;">
+							<div class="bx-viewport"
+								style="width: 100%; overflow: hidden; position: relative; height: 34px;">
+								<ul
+									style="width: 1215%; position: relative; transition-duration: 0s; transform: translate3d(0px, 0px, 0px);">
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><strong
+										title="현재페이지">1</strong></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="2 페이지">2</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="3 페이지">3</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="4 페이지">4</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="5 페이지">5</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="6 페이지">6</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="7 페이지">7</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="8 페이지">8</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="9 페이지">9</a></li>
+									<li
+										style="float: left; list-style: none; position: relative; width: 39px;"><a
+										href="#" title="10 페이지">10</a></li>
+								</ul>
+							</div>
+						</div>
+						<a class="btn_next" href="#" title="다음페이지">다음 목록으로 이동</a><a
+							class="btn_last" href="#" title="마지막페이지">마지막 목록으로 이동</a>
+					</div>
+					<!-- S : #site_satis_area -->
+					<div id="site_satis_area" class="cf">
+						<div class="satis_choice_area">
+							<h4>이 페이지에서 제공하는 정보에 만족하셨습니까?</h4>
+							<ul class="cf">
+								<li class="on"><input type="radio"
+									name="siteSatisfactionStatus" id="siteSatisfactionStatus1"
+									checked="" value="1"><label
+									for="siteSatisfactionStatus1">매우만족</label></li>
+								<li><input type="radio" name="siteSatisfactionStatus"
+									id="siteSatisfactionStatus2" value="2"><label
+									for="siteSatisfactionStatus2">만족</label></li>
+								<li><input type="radio" name="siteSatisfactionStatus"
+									id="siteSatisfactionStatus3" value="3"><label
+									for="siteSatisfactionStatus3">보통</label></li>
+								<li><input type="radio" name="siteSatisfactionStatus"
+									id="siteSatisfactionStatus4" value="4"><label
+									for="siteSatisfactionStatus4">불만족</label></li>
+								<li><input type="radio" name="siteSatisfactionStatus"
+									id="siteSatisfactionStatus5" value="5"><label
+									for="siteSatisfactionStatus5">매우불만족</label></li>
+							</ul>
+						</div>
+						<div class="satis_text_area">
+							<h4>회원님의 의견을 적어 주세요.</h4>
+							<div class="input_wrap cf">
+								<label for="siteSatisfactionContents" class="hidden">의견작성</label>
+								<input type="text" name="siteSatisfactionContents"
+									id="siteSatisfactionContents"> <input type="submit"
+									value="평가">
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<br> <br> <br>
+			<div id="footer">
+				<div class="container">
+					<div class="row">
+						<div class="col-md-3">
+							<img src="../images/imgs2017/footer_logo.png" class="footer-logo"
+								alt="환경부">
+						</div>
+						<div class="col-md-6">
+							<div class="footer cn first">(우)30103 세종특별자치시 도움6로 11
+								정부세종청사 6동</div>
+							<div class="footer cn third">
+								<b>화학제품관련문의 : 1800-0490 (생활화학제품 안전콜센터)</b>,&nbsp;시스템문의 :
+								044-201-6425
+							</div>
+							<div class="footer cn second">Copyright © 2016 Ministry of
+								environment. All Rights Reserved</div>
+						</div>
+					</div>
+				</div>
+			</div>
+
+
+
+
+			<!-- /////////////////////////////////////////////////////////////////////////////////////////
+
+                                서브 컨텐츠 끝
+
+                            ////////////////////////////////////////////////////////////////////////////////////////// -->
+		</div>
+	</div>
+	<!-- 하단바 -->
+
+</body>
+</html>

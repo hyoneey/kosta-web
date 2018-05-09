@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="EUC-KR">
+<title>Insert title here</title>
+<script src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+<script src="jquery.js" type="text/javascript"></script>
+<script type="text/javascript">
+
+$(function(){
+	   var $container = $('.slideshow');//슬라이더쇼 전체컨테이너
+	   var $slideGroup = $('.slideshow-slides')//슬라이더 그룹
+	   var $slides = $slideGroup.find('.slide');//각각의 슬라이더 4개
+	   var $nav = $container.find('.slideshow-nav');//네비게이션(prev,next)
+	   var $indicator = $container.find('.slideshow-indicator');//인디게이터
+	   
+	   var currentIndex = 0;
+	   var slideCount = $slides.length;
+	   var indicatorHTML = '';
+	   var timer;
+	   
+	   $slides.each(function(i){
+	      $(this).css({
+	         left : 100 * i + '%'
+	      });
+	      
+	      indicatorHTML += '<a href="#">' + (i+1) + '</a>';
+	   });
+	   
+	   $indicator.html(indicatorHTML);
+	   
+	   //슬라이더 이동함수
+	   function goToSlide(index){
+	      $slideGroup.animate({
+	         left : -100 * index + '%'
+	      }, 500);
+	      currentIndex = index;
+	      updateNav();
+	   }   
+	   
+	   //인디게이터 이벤트
+	   $indicator.on('click', 'a', function(event){
+	      event.preventDefault();
+	      
+	      goToSlide($(this).index());
+	      
+	   });
+	      
+	   
+	   //네비게이션 이벤트
+	   $nav.find('a').click(function(event){
+	      event.preventDefault();
+	      if($(this).hasClass('prev')){
+	         goToSlide(currentIndex - 1);
+	      }else{
+	         goToSlide(currentIndex + 1);
+	      }
+	      
+	      updateNav();
+	   });
+	   
+	   //네비게이션 업데이트 함수
+	   function updateNav(){
+	      var $navPrev = $nav.find('.prev');
+	      var $navNext = $nav.find('.next');
+	      
+	      if(currentIndex == 0){
+	         $navPrev.addClass('disabled');
+	      }else{
+	         $navPrev.removeClass('disabled');
+	      }
+	      
+	      if(currentIndex == slideCount - 1){
+	         $navNext.addClass('disabled');
+	      }else{
+	         $navNext.removeClass('disabled');
+	      }
+	      
+	      //해당인디게이터에게 'active' 클래스 주입
+	      $indicator.find('a').removeClass('active')
+	                  .eq(currentIndex).addClass('active');
+	      
+	   }
+	   
+	   //마우스 관련 이벤트
+	   $container.on({
+	      mouseenter : stopTimer,
+	      mouseleave : startTimer
+	   })
+	   
+	   //타이머 시작 함수
+	   function startTimer(){
+	      timer = setInterval(function() {
+	         var nextIndex = (currentIndex +1) % slideCount;
+	         goToSlide(nextIndex)
+	      }, 2000);
+	   }
+	   
+	   //타이머 정지 함수
+	   function stopTimer(){
+	      clearInterval(timer);
+	   }
+	   
+	   
+	   goToSlide(currentIndex);
+	   startTimer()
+	   
+	});
+	$(document).ready(function () {
+	    $("#board_head1").mouseover(function () {
+	        $("#board_head1").css("color", "#116cbb").css("border-bottom", "4px solid #116cbb");
+	        $("#board_head2").css("color", "#636363").css("border-bottom", "4px solid transparent");
+	        $("#board_head3").css("color", "#636363").css("border-bottom", "4px solid transparent");
+	        $("#board_head4").css("color", "#636363").css("border-bottom", "4px solid transparent");
+	        $("#board_txt1").show();
+	        $("#board_txt2").hide();
+	        $("#board_txt3").hide();
+	        $("#board_txt4").hide();
+	    });
+	});
+
+</script>
+<style>
+/*슬라이더 CSS*/
+.main-ad {
+   position: relative;
+   margin-left: 0px;
+   width: 500px;
+   float: left;
+}
+
+.slideshow-slides {
+    height: 100%;
+    position: absolute;
+    width: 100%;
+}
+.slideshow-slides .slide {
+    height: 100%;
+    overflow: hidden;
+    position: absolute;
+    width: 100%;
+}
+.slideshow-slides .slide img {
+    left: 50%;
+    margin-left: -265px;            
+    position: absolute;
+}
+
+.slideshow-nav a,
+.slideshow-indicator a {
+    overflow: hidden;
+}
+.slideshow-nav a:before,
+.slideshow-indicator a:before {
+    content: url(images/pr_78.png);
+    display: inline-block;
+    font-size: 0;
+    line-height: 0;
+}
+
+.slideshow-nav a {
+    position: absolute;
+    top: 50%;
+    left: 92%;
+    width: 72px;
+    height: 72px;
+    margin-top: -36px;
+}
+.slideshow-nav a.prev {
+    margin-left: -480px;
+}
+.slideshow-nav a.prev:before {
+    margin-top: -20px;    
+}
+.slideshow-nav a.next {
+    margin-left: -10px;
+}
+.slideshow-nav a.next:before {
+    margin-left: -80px;
+    margin-top: -20px;
+}
+.slideshow-nav a.disabled {
+    display: none;
+}
+
+.slideshow-indicator {
+    bottom: 30px;
+    height: 16px;
+    left: 0;
+    position: absolute;
+    right: 0;
+    text-align: center;
+}
+.slideshow-indicator a {
+    display: inline-block;
+    width: 16px;
+    height: 16px;
+    margin-left: 3px;
+    margin-right: 3px;
+}
+.slideshow-indicator a.active {
+    cursor: default;
+}
+.slideshow-indicator a:before {
+    margin-left: -110px;
+}
+.slideshow-indicator a.active:before {
+    margin-left: -130px;
+}
+    </style>
+</head>
+<div class="main-ad">
+     <div class="slideshow-slides">
+        <a href="./" class="slide" id="slide-1"><img src="images/main_v01.jpg" alt="" width=500px></a>
+         <a href="./" class="slide" id="slide-2"><img src="images/main_v02.jpg" alt="" width=500px></a>
+        <a href="./" class="slide" id="slide-3"><img src="images/main_v03.jpg" alt="" width=500px></a> 
+    </div> 
+    <div class="slideshow-nav">
+        <a href="#" class="prev">Prev</a>
+        <a href="#" class="next">Next</a>
+    </div>
+</div>
+</body>
+</html>

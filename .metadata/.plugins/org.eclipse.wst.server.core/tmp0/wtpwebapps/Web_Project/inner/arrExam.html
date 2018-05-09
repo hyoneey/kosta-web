@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+<script type="text/javascript">
+
+	var arr = [];
+	
+	for(var i=0; i<7; i++){
+		arr[i] = "../images/pic"+(i+1)+".jpg";
+	}
+
+	window.onload = function(){
+		var n = Math.floor(Math.random()*7); //0~6 floor은 소수점 제거
+		var img = document.getElementById("img"); //img가 이미지 객체 => img태그를 객체화해서 가져옴
+		img.src = arr[n];
+	}
+
+</script>
+</head>
+<body>
+	<img id="img" src="">
+</body>
+</html>

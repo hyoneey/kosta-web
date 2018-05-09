@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+</head>
+<body>
+	<h3>form Exam</h3>
+	<form action="" method="get">
+		<fieldset>
+			<ol>
+				<li>
+				<!-- for 이름과 name의 이름이 같아서 이름만 클릭해도 안에 포커스가 맞춰짐 -->
+					<label for="userName">이름</label>
+					<!-- name은 서버를 사용할때 사용할 이름 -->
+					<input type="text" name="userName" id="userName" autofocus="autofocus" placeholder="ex)홍길동">
+				</li>
+				<li>
+					<label>이메일</label>
+					<input type="email" placeholder="aa@aa.com" required="required">
+				</li>
+				<li>
+					<label>날짜</label>
+					<input type="date">
+				</li>
+				<li>
+					<label>색상</label>
+					<input type="color">
+				</li>
+				<li>
+					<label>수량</label>
+					<input type="range" min="1" max="10" value="1">
+				</li>
+				
+			</ol>
+		</fieldset>
+		
+		<fieldset>
+			<input type="submit" value="전송">
+		</fieldset>
+		
+	</form>
+
+</body>
+</html>

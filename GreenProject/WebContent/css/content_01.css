@@ -1,0 +1,1657 @@
+@charset "utf-8";
+
+/* 박종임 ( 소비자정보 전체메뉴, 상담 및 피해/분쟁 통합상담신청 폼 관련 )*/
+
+/* 최원규 수정 추가 */
+.txt_orange {color:#f7600e !important;}
+.txt_blue01 {color:#0953ad !important;}
+.txt_green01 {color:#0a9200 !important;}
+.e_strong {font-weight:600;}
+.ui_exp .txt_orange{ color:#f7600e;}
+.bd-dashed{ border-bottom:1px dashed #d8d8d8; display:block; width:100%; margin-top: 28px; margin-bottom: -16px;}
+.hap_img.hap_img_box01{ margin-top:25px; text-align:center;}
+.hap_img.hap_img_box01 img{ margin-left:34px;}
+.hap_img.hap_img_box01 img:first-child{ margin-top:9px; margin-right:34px; margin-left:0;}
+.hap_img.hap_img_box02{ margin-top:20px;}
+.hap_img.hap_img_box02 img{ margin:0 auto;}
+.hap_img.hap_img_box03{ margin-top:23px;}
+.hap_img.hap_img_box03 img{ margin:0 auto;}
+.service_top_area.hap .title{ border-top:none; margin-top:0;}
+.bd_beige{ font-size:16px; font-family:'NanumSquare'; border-left:8px solid #f3cca2; border-right:8px solid #f3cca2; width:684px; margin:0 auto; margin-top:30px; line-height:24px; padding:8px 33px;word-break:keep-all; color:#000000; font-weight:600; position:relative;box-sizing:border-box;}
+.bd_beige span{ background:#f3cca2; width:16px; height:8px; display:block; position:absolute;}
+.bd_beige:before,
+.bd_beige:after{background:#f3cca2; width:16px; height:8px; display:block; position:absolute; content:'';}
+.bd_beige .left{ top:0; left:0;}
+.bd_beige .right{ top:0; right:0;}
+.bd_beige:before{bottom:0; left:0;}
+.bd_beige:after{bottom:0; right:0;}
+.bg_gray{ background:#f6f6f6; font-size:17px; font-family:'NanumSquare'; font-weight:600; text-align:center; color:#000; padding:20px 0; margin-top:20px;}
+.bg_gray span{ color:#c43c21; font-size:15px; display:block; margin-top:5px;}
+.barcode_box{box-sizing:border-box; padding:24px;}
+.barcode_box div{ float:left; border-right:1px dashed #d8d8d8; width:329px; padding-right:24px;}
+.barcode_box div p{ color:#686868; line-height:24px; margin-top:15px;word-break:keep-all;}
+.barcode_box div p span{ color:#0953ad; font-weight:600;}
+.barcode_box div + img{ float:right; width:404px;}
+.eyong_info_list{ margin-top:17px; margin-bottom:20px;}
+.eyong_info_list ul{ background:url(/site/consumer/images/sub/content/eyonginfo_img01.png) 0 0 no-repeat; padding-left:160px; height:130px; display:table-cell; vertical-align:middle;}
+.eyong_info_list li{ position:relative; color:#686868; margin-bottom:10px; padding-left:11px;}
+.eyong_info_list li:before{ display:block; content:''; width:3px; height:3px; background:#424242; position:absolute; top:7px; left:0;}
+.eyong_info_list.type02 ul{background:url(/site/consumer/images/sub/content/eyonginfo_img02.png) 0 0 no-repeat;}
+.eyong_info_list.type03 ul{background:url(/site/consumer/images/sub/content/eyonginfo_img03.png) 0 0 no-repeat;}
+.eyong_info_list{ display:table;}
+
+.gangsa_add_wrap {display:none;}
+.gangsa_add_wrap .star{ color:#ff0000;}
+.tbl .hp_list li{ position:relative; padding-left:8px; margin-top:4px; word-break:keep-all;}
+.tbl .hp_list li:first-child{ margin-top:0;}
+.tbl .hp_list li:after{ position:absolute; top:-1px; left:0; display:block; content:'-';}
+.tbl .black a{ color:#333333; word-break:keep-all; font-weight:600; display:block; text-decoration:underline;}
+.tbl_title {position:relative;font-family:'NanumSquare',sans-serif;font-size:20px;line-height:32px;}
+.tbl_title label{ margin-left:5px;}
+.tbl_title small {position:absolute;right:0;bottom:0;font-family:'Open Sans','Nanum Gothic','나눔고딕',sans-serif;font-size:13px;}
+.tbl_title small span {color:#ff0000;}
+.tbl_title.up_obj {margin-top:24px;}
+
+.ccm_box {margin-top:11px;}
+.ccm_box:after {content:''; display:block; clear:both;}
+.ccm_box img {float:left;margin-top:11px;}
+.ccm_box p {float:left;margin:22px 0 0 20px; width:670px;}
+
+.ccm_box2 {margin-top:11px;}
+.ccm_box2:after {content:''; display:block; clear:both;}
+.ccm_box2 img {float:left;margin-top:11px;}
+.ccm_box2 p {float:left;margin:22px 0 0 20px; width:540px;}
+
+.e_imgbox01 {margin-top:20px;}
+.e_imgbox02 {margin-top:20px;}
+.e_imgbox03 {margin-top:20px;}
+.e_imgbox04 {margin-top:20px;}
+
+.e_img_pc {display:inline-block;}
+.e_img_ta {display:none;}
+.e_img_mo {display:none;}
+
+@media screen and (max-width:1139px) {
+
+	.ccm_box {}
+	.ccm_box p {margin:22px 0 0 0; width:-webkit-calc(100% - 130px); width:-moz-calc(100% - 130px); width:calc(100% - 130px);}
+
+	.ccm_box2 {}
+	.ccm_box2 p {margin:22px 0 0 20px; width:-webkit-calc(100% - 270px); width:-moz-calc(100% - 270px); width:calc(100% - 270px);}
+
+}
+
+@media screen and (max-width:768px) {
+
+	.e_img_pc {display:none;}
+	.e_img_ta {display:inline-block;}
+	.e_img_mo {display:none;}
+
+}
+
+@media screen and (max-width:639px) {
+
+	.ccm_box {text-align:center;}
+	.ccm_box img {float:none;}
+	.ccm_box p {float:none; text-align:left; width:-webkit-calc(100%); width:-moz-calc(100%); width:calc(100%);}
+
+	.ccm_box2 {text-align:center;}
+	.ccm_box2 img {float:none;}
+	.ccm_box2 p {float:none; text-align:left; width:-webkit-calc(100% - 20px); width:-moz-calc(100% - 20px); width:calc(100% - 20px);}
+
+}
+
+@media screen and (max-width:480px) {
+	
+	.ccm_box2 p {margin:22px 0 0 0; width:-webkit-calc(100%); width:-moz-calc(100%); width:calc(100%);}
+
+	.e_img_pc {display:none;}
+	.e_img_ta {display:none;}
+	.e_img_mo {display:inline-block;}
+
+}
+
+
+/* ==========================================================================
+	1. 소비자정보
+==========================================================================  */
+
+/* ========================= 상단알림 박스 */
+
+/* 배경이 있는 알림박스 타입 */
+.consumer_info {min-height:77px; padding:26px 30px 25px 255px; background-color:#fff;}
+.consumer_info .consumer_info_title{font-weight:700; color:#565656; font-size:20px; line-height:28px; font-family:'NanumSquare'; }
+.consumer_info .consumer_info_title span{color:#f57018;}
+.consumer_info.inzung .consumer_info_title {font-size:14px;font-family:'Open Sans','Nanum Gothic','나눔고딕',sans-serif;}
+.consumer_info .consumer_info_text{margin-top:7px;font-size:14px; line-height:21px;min-height:42px;}
+.consumer_info .consumer_info_text2 {font-size:14px; line-height:21px; color:#545454; }
+.consumer_info .consumer_info_btn {margin-top:11px;}
+
+/* 배경이 없는 알림박스 타입 */
+.compare_info {min-height:auto; padding-left:25px; padding-right:25px; text-align:center; }
+.compare_info .consumer_info_title span {color:#0074c6;}
+.compare_info.inzung .consumer_info_title.txt_break em {color:#0074c6;font-weight:700;}
+.compare_info.inzung .consumer_info_title.txt_break span {color:#565656;}
+.compare_info .consumer_info_text strong{color:#545454;}
+
+/* 문자알림서비스메뉴 배경 */
+.sms_request{background-image:url(/site/consumer/images/sub/bg/bg_consumer_sms_request.png); background-repeat:no-repeat; background-position:left bottom;}
+.sms_request.bg_request_02 {background-image:url(/site/consumer/images/sub/bg/bg_consumer_sms_request_02.png);}
+.sms_result{background-image:url(/site/consumer/images/sub/bg/bg_consumer_sms_result.png);background-position:left bottom;background-repeat:no-repeat;}
+.consumer_talktalk {background-image:url(/site/consumer/images/sub/bg/bg_consumer_talktalk.png);background-position:40px 81px;background-repeat:no-repeat;}
+
+/* 교육일정메뉴 배경 */
+.edu_schedule{background-image:url(/site/consumer/images/sub/bg/bg_consumer_edu_schedule.png); background-repeat:no-repeat;}
+
+/* 가격정보메뉴 배경 */
+.price_img_01{background:url(/site/consumer/images/sub/bg/bg_consumer_price01.png) no-repeat left center #fff;}
+.price_img_02{background:url(/site/consumer/images/sub/bg/bg_consumer_price02.png) no-repeat left center #fff;}
+.price_img_03{background:url(/site/consumer/images/sub/bg/bg_consumer_price03.png) no-repeat left center #fff;}
+.price_img_04{background:url(/site/consumer/images/sub/bg/bg_consumer_price04.png) no-repeat left center #fff;}
+.price_img_05{background:url(/site/consumer/images/sub/bg/bg_consumer_price05.png) no-repeat left center #fff;}
+.price_img_06{background:url(/site/consumer/images/sub/bg/bg_consumer_price06.png) no-repeat left center #fff;}
+.price_img_07{background:url(/site/consumer/images/sub/bg/bg_consumer_price07.png) no-repeat left center #fff;}
+.price_img_08{background:url(/site/consumer/images/sub/bg/bg_consumer_price08.png) no-repeat left center #fff;}
+.price_img_09{background:url(/site/consumer/images/sub/bg/bg_consumer_price09.png) no-repeat left center #fff;}
+.price_img_10{background:url(/site/consumer/images/sub/bg/bg_consumer_price10.png) no-repeat left center #fff;}
+
+/* ========================= 문자알림 서비스 */
+.sms_user_info { margin-top:30px; padding:15px 20px 20px 20px; background:#f6f6f6; line-height:36px;}
+.sms_user_info li{position:relative;margin-top:5px;}
+.sms_user_info p.sms_request_title{position:absolute; top:0; left:0; width:82px; min-height:36px; color:#4a4a4a;font-weight:700; vertical-align:middle;}
+.sms_user_info p.sms_request_input{min-height:36px; padding-left:82px; vertical-align:middle;}
+.sms_user_info p.sms_request_input span.input_mr{margin-right:25px;}
+.sms_user_info p.sms_request_input select,
+.sms_user_info p.sms_request_input input[type='text'] {width:120px;}
+
+/* ========================= 비교공감 */
+
+/* 게시판유형 게시일 및 조회수 */
+.compare_detail_wrap .compare_board_info{text-align:right; vertical-align:middle;}
+.compare_detail_wrap .compare_board_info dt{display:inline-block; margin-left:8px; color:#545454; font-weight:700;}
+.compare_detail_wrap .compare_board_info dt + dd:after {content:""; display:inline-block; width:1px; height:11px; margin-left:8px; background:#d2d2d2; vertical-align:middle;}
+.compare_detail_wrap .compare_board_info dt + dd + dt + dd:after {content:""; display:inline-block; width:0px; height:0px; margin:0;}
+.compare_detail_wrap .compare_board_info dd{display:inline-block; padding-left:8px; }
+
+/* 게시판유형 제목타입 */
+/*.compare_detail_wrap .compare_content{margin-top:17px;}*/
+.compare_detail_wrap .compare_content > h4{padding:20px 20px 22px 20px; border-top:2px solid #505050; border-bottom:1px solid #e1e2e2; font-size:20px; font-weight:700; color:#414141; text-align:center; line-height:26px; background:#fafafa;}
+.compare_detail_wrap .compare_content .con_show_hide_content{padding:0 0 30px 0; border-bottom:1px solid #acacac;}
+
+/* 비교공감 - 개요 */
+.compare_detail_wrap .compare_content .compare_summary_subject{padding:47px 20px 35px 20px; background:url(/site/consumer/images/sub/bg/bg_summary_titlie.png) repeat-x; border-bottom:1px solid #bfeaee; text-align:center; font-family:'NanumSquare'; font-weight:700; }
+.compare_detail_wrap .compare_content .compare_summary_subject .compare_content_subject{font-size:15px; color:#4f4f4f;}
+.compare_detail_wrap .compare_content .compare_summary_subject .compare_page_subject{margin-top:10px; font-size:25px; color:#007987;}
+
+/*비교해보기*/
+.compare_detail_wrap .tbl.rwd table tbody td {white-space:inherit;}
+
+/* 일반비교정보 */
+.compare_file {display:table; width:100%; border-bottom:1px solid #e1e2e2;}
+.compare_file dt{display:table-cell; width:145px; text-align:center; vertical-align:middle; font-weight:700;}
+.compare_file dd{display:table-cell;}
+
+/* 개인정보 동의함 */
+.evt_box{ border:1px solid #e0e0e0; margin-top:30px;}
+.evt_head{ background:#f8f8f8;}
+.evt_head p{ color:#e41414; font-size:17px; font-weight:bold;font-family:NanumSquare; padding-left:24px; line-height:54px;}
+.evt_head p span{ color:#686868; font-size:15px; font-weight:normal;}
+.evt_body{ padding:20px 25px;}
+.evt_body .pns_info{ margin-bottom:20px;}
+.evt_body .pns_info p{ height:36px; line-height:36px; margin-bottom:5px;}
+.evt_body .pns_info label{ font-weight:bold; font-size:13px; color:#4a4a4a; display: inline-block; width: 63px;}
+.evt_body .pns_info input{ width:263px; height:34px; border:1px solid #e0e0e0;}
+.evt_body .pns_info span{ color:#686868; font-size:13px; display:inline-block; margin-left:5px;}
+.evt_body > strong{ color:#2977ac; font-size:14px; font-weight:bold;}
+.evt_con{ border:1px solid #e2e2e2; margin:15px 0; height:165px; padding:18px; box-sizing:border-box; overflow:auto;}
+.evt_con p{ margin-bottom:10px;word-break:keep-all;}
+.evt_chk{ float:right;}
+.evt_chk label{ color:#686868; font-size:13px;}
+.user_state_box{ border:1px solid #e2e2e2; height:55px; line-height:55px; margin-top:10px; font-weight:bold;}
+.user_state_box strong{ float:left;background:#fafafa; font-size:17px; color:#393939; display:block; padding:0 40px;}
+.user_state_box span{ float:left; font-size:15px; color:#e41414; display:block; padding:0 20px;}
+.user_state_box p{ float:left; font-size:17px; color:#4a4a4a;background:url(/site/consumer/images/common/bul/user_state1.png) no-repeat 0 center; padding-left:40px;}
+.user_state_box p.state2{background:url(/site/consumer/images/common/bul/user_state2.png) no-repeat 0 center}
+.user_state_box p.state3{background:url(/site/consumer/images/common/bul/user_state3.png) no-repeat 0 center}
+.user_state_box p.state4{background:url(/site/consumer/images/common/bul/user_state4.png) no-repeat 0 center}
+.user_state_box p.state5{background:url(/site/consumer/images/common/bul/user_state5.png) no-repeat 0 center}
+
+/* ========================= 소비자톡톡 */
+
+/* 소비자톡톡 > 상단 정보 */
+.talktalk_top_content {margin-top:20px;}
+.talktalk_top_content li{margin-bottom:8px; border:1px solid #d9d9d9; border-radius:3px; box-shadow:0 3px 0 #ebebeb;}
+.talktalk_top_content li > button{display:block; width:100%; padding:16px 30px 16px 25px; font-size:14px; color:#595959; font-weight:600; line-height:20px; text-align:left; background:url(/site/consumer/images/sub/bg/bg_consumer_talktalk_btn_off.png) no-repeat 97% 50%;}
+.talktalk_top_content li > button:focus{outline:0;}
+.talktalk_top_content li > div{display:none; padding:20px 25px 22px 25px; background:#f7f7f7; color:#555; }
+.talktalk_top_content li.active{border:2px solid #1c98de; }
+.talktalk_top_content li.active > button{color:#0068a2; background:url(/site/consumer/images/sub/bg/bg_consumer_talktalk_btn_on.png) no-repeat 97% 50%; }
+
+/* 소비자톡톡 - 서비스 만족도 */
+.talktalk_total_satisfaction {overflow:hidden; margin-top:7px; padding-left:1px;}
+.talktalk_total_satisfaction li{float:left; width:20%; min-height:184px; margin-top:10px; margin-left:-1px; text-align:center; border-top:1px solid #acacac; border-left:1px solid #e0e0e0; border-right:1px solid #e0e0e0; box-sizing:border-box;}
+.talktalk_total_satisfaction li .talktalk_brand{min-height:143px; padding:10px 10px 0 10px; box-sizing:border-box; }
+.talktalk_total_satisfaction li .talktalk_brand img{width:115px; height:95px;}
+.talktalk_total_satisfaction li .talktalk_brand span{display:block; margin-top:7px; color:#434343; font-weight:700;}
+.talktalk_total_satisfaction li .brand_score{height:41px; font-size:16px; font-weight:700; color:#fff; background:#5f5f5f; line-height:41px;}
+
+/* 소비자톡톡 - 평가항목 */
+.talktalk_satisfaction_list {overflow:hidden; margin:13px 0 0 -5px;}
+.talktalk_satisfaction_list li{float:left; width:20%; margin-top:5px;}
+.talktalk_satisfaction_list li a{display:block; height:45px; margin-left:5px; padding:0 15px; line-height:45px; font-size:14px; font-weight:700; color:#fff; background:#008dac; text-align:center;}
+.talktalk_satisfaction_list li a span{padding-right:19px; background:url(/site/consumer/images/common/btn/btn_ui_ico_new_window_small.png) no-repeat right center;}
+
+/* 소비자톡톡 - 서비스만족도, 평가항목 온라인,오프라인 타입 */
+.talktalk_total_satisfaction.talktalk_type1 li .brand_score,
+.talktalk_satisfaction_list.talktalk_type1 li a{background:#ec710f;}
+.talktalk_total_satisfaction.talktalk_type2 li .brand_score,
+.talktalk_satisfaction_list.talktalk_type2 li a {background:#338000;}
+
+/* 소비자톡톡 - 소비자 이용후기 */
+.review_like {display:inline-block; padding-left:27px; background:url(/site/consumer/images/sub/bg/bg_review_like.png) no-repeat; line-height:21px;}
+.review_hate {display:inline-block; padding-left:27px; background:url(/site/consumer/images/sub/bg/bg_review_hate.png) no-repeat; line-height:21px;}
+
+/* 소비자톡톡 - 나도 참여해보기 */
+.participation_box {margin-top:20px; border:1px solid #e0e0e0;}
+.participation_box .participation_top{position:relative; padding:18px 185px 26px 20px; background:#f6f6f6; border-bottom:1px dashed #e0e0e0; }
+.participation_box .participation_top.opinion_participation{padding:15px 30px 20px 30px;}
+.participation_box .participation_top .participation_info dt{padding-left:24px;background:url(/site/consumer/images/common/bul/bul_ui_box_info_style_02.png) no-repeat 0 2px; font-weight:700; color:#414141; line-height:21px;}
+.participation_box .participation_top .participation_info dd{margin-top:10px;}
+.participation_box .participation_top .participation_login{position:absolute; top:18px; right:20px; }
+.participation_box .participation_top .participation_login dt{text-align:center; font-weight:700; color:#464646;}
+.participation_box .participation_top .participation_login dd{margin-top:5px; }
+.participation_box .participation_top .participation_login dd a.ui_btn.a_type{height:32px; line-height:32px;}
+.participation_box .participation_top .brand_opinion {display:inline-block; position:relative; margin:0 20px 0 0;}
+.participation_box .participation_top .brand_opinion dt{position:absolute; font-weight:700; color:#414141; line-height:36px;}
+.participation_box .participation_top .brand_opinion dd{width:200px; padding-left:100px;}
+.participation_box .participation_top .brand_opinion dd select{width:100%;}
+.participation_box .participation_top .text_atten{display:inline-block; padding:13px 0 0 24px; background:url(/site/consumer/images/common/bul/bul_ui_box_info_style_02.png) no-repeat 0 15px; color:#2977ac; line-height:21px; vertical-align:middle;}
+
+/* 소비자톡톡 - 나도 참여해보기 - 브랜드 목록 */
+.participation_box .participation_inner{padding:18px 20px 20px 20px; }
+.participation_box .participation_inner > dl{position:relative; }
+.participation_box .participation_inner > dl > dt{position:absolute; font-weight:700; color:#414141;}
+.participation_box .participation_inner > dl > dd{padding-left:100px;}
+.participation_box .participation_inner > dl > dd > span{display:inline-block; vertical-align:middle;}
+.participation_box .participation_inner > dl > dd > span:first-child:before{content:""; margin:0; display:none;}
+.participation_box .participation_inner > dl > dd > span:before{content:""; display:inline-block; width:1px; height:12px; margin:0 12px; background:#e0e0e0; vertical-align:middle;}
+
+/* 소비자톡톡 - 나도 참여해보기 - 종합의견 등록 */
+.participation_box .participation_inner .total_opinion{padding:0 10px 0 10px; }
+.participation_box .participation_inner .total_opinion .total_opinion_regist{position:relative; margin-top:18px; padding-right:148px; }
+.participation_box .participation_inner .total_opinion .total_opinion_regist textarea{width:100%; height:100px; }
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul{ margin-top:10px; }
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl{position:relative; line-height:25px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dt{position:absolute; top:5px; font-weight:700; color:#414141;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd{overflow:hidden; padding-left:100px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd span{display:inline-block; float:left;min-width:64px; margin-top:5px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email input,
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email select{ width:100%;box-sizing:border-box; height:36px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email01{ width:110px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email02{ text-align:center; width:30px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email03{ width:110px;}0
+
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email04{ width:110px; margin-left:5px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.phone span:first-child{ width:180px;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.phone span:first-child input{ width:180px; height:36px;box-sizing:border-box;}
+.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.phone span + span{ width:100%;}
+
+.participation_box .participation_inner .total_opinion .total_opinion_regist input[type='submit']{position:absolute; top:0; bottom:0; right:0; width:120px; height:auto;}
+
+.participation_box .participation_inner .total_opinion .survey_box {margin-top:10px;}
+.participation_box .participation_inner .total_opinion .survey_box dd:after {display:block;content:'';clear:both;}
+.participation_box .participation_inner .total_opinion .survey_box .radioList {float:left;}
+.participation_box .participation_inner .total_opinion .survey_box > dd > ul {margin-top: 8px;}
+.participation_box .participation_inner .total_opinion .survey_box > dd > ul > li > label {margin-right:10px;}
+
+/* 소비자톡톡 - 사업자 tip */
+.entre_wrap {margin-top:20px; border:1px solid #e0e0e0;}
+.entre_wrap .entre_info{border-bottom:1px dashed #e0e0e0; text-align:center; }
+.entre_wrap .entre_info .entre_text{padding:25px 20px 27px 20px; background:#f6f6f6; font-size:15px; font-weight:700; color:#414141; line-height:22px; }
+.entre_wrap .entre_info .entre_brand {padding:15px 10px 20px 15px; word-break:keep-all; word-wrap:break-word;}
+.entre_wrap .entre_info .entre_brand li{display:inline-block; margin-top:10px;}
+.entre_wrap .entre_info .entre_brand li:first-child:before{content:""; margin:0; display:none;}
+.entre_wrap .entre_info .entre_brand li:before{content:""; display:inline-block; width:1px; height:15px; margin:4px 15px 0 12px; background:#e0e0e0; vertical-align:top;}
+.entre_wrap .entre_info .entre_brand li button{padding:0 0 5px 13px; border-bottom:2px solid #fff; background:url(/site/consumer/images/sub/bg/bg_entre_icon.png) no-repeat 0 3px; }
+.entre_wrap .entre_info .entre_brand li button:focus{outline:none;}
+.entre_wrap .entre_info .entre_brand li.angel button,
+.entre_wrap .entre_info .entre_brand li.angel.active {padding-left:0; background:none;}
+.entre_wrap .entre_info .entre_brand li.active button{ border-bottom:2px solid #f58518; color:#f7600e; background-position:0 -39px;}
+
+/* 소비자톡톡 - 사업자 tip - 상세보기 */
+.entre_wrap .entre_content{padding:30px; text-align:center; }
+.entre_wrap .entre_content .entre_brand_tip {display:none;}
+.entre_wrap .entre_content .entre_brand_tip.active {display:block;}
+.entre_wrap .entre_content .entre_brand_tip.angel {height:90px; padding-top:210px; background:url(/site/consumer/images/sub/bg/bg_entre_nodata.png) no-repeat center 70px;}
+
+/* ========================= 가격정보 */
+
+/* 가격정보 > 참가격 */
+.consumer_price_info {padding-bottom:5px; background:url(/site/consumer/images/sub/bg/bg_info_diagonal.png) repeat-x bottom;  font-size:15px; line-height:26px;  word-break:keep-all; word-wrap:break-word;}
+.consumer_price_info.price_info_bottom{padding-bottom:30px;}
+.consumer_price_info.last {background:none;}
+.consumer_price_info .price_logo{display:inline-block; width:105px; height:49px; background:url(/site/consumer/images/sub/bg/bg_price_logo.gif) no-repeat; text-indent:-9999px; vertical-align:text-bottom;}
+.consumer_price_info h4{font-size:20px; font-weight:700; font-family:'NanumSquare'; color:#414141;}
+.consumer_price_info strong{color:#414141;}
+.consumer_price_info .price_info_top{min-height:292px; padding-right:395px; background:url(/site/consumer/images/sub/bg/bg_consumer_price_site.png) no-repeat right top;}
+.consumer_price_info .price_info_top p{margin-bottom:22px; font-size:20px; line-height:34px; font-family:'NanumSquare'; }
+.consumer_price_info .price_info_detail_wrap{overflow:hidden; padding:30px 0;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul{overflow:hidden; margin:13px 0 0 0; text-align:center;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li{display:inline-block; width:180px; height:180px; margin:15px 0 0 15px; text-align:center; background:url(/site/consumer/images/sub/bg/bg_price_detail.png) no-repeat -1px -1px;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li > span:first-child{display:block; padding-top:90px; font-size:16px; font-weight:700; color:#5a5a5a; text-transform:uppercase; }
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li > span + span{display:block; font-size:35px; font-weight:700; line-height:40px; color:#009ab6;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li > span + span{color:#00b2bd;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li > span + span{color:#009ab6;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li + li > span + span{color:#00b2bd;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li {background-position:-236px -1px;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li {background-position:-471px -1px;}
+.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li + li {background-position:-706px -1px;}
+
+.consumer_price_info .price_info_basket {min-height:150px; padding:30px 390px 0 0 ; background:url(/site/consumer/images/sub/bg/bg_price_basket.png) no-repeat right 30px;}
+.consumer_price_info .price_info_area {min-height:300px; padding:30px 430px 0 0 ; background:url(/site/consumer/images/sub/bg/bg_price_area.png) no-repeat right 30px;}
+.consumer_price_info .price_info_basket p, .consumer_price_info .price_info_area p{margin-top:10px;}
+
+/* ========================= 금융보험정보/의료정보 */
+.consumer_box_list {overflow:hidden; margin-left:-20px;}
+.consumer_box_list li{float:left; width:50%;}
+.consumer_box_list li .cont_box_info{margin:0 0 20px 20px; border:1px solid #e0e0e0;}
+.consumer_box_list li .cont_box_info .cont_box_title{padding:18px 20px 14px 20px; font-family:'NanumSquare'; font-size:20px; font-weight:700; color:#4a4a4a; background:#f6f6f6; line-height:28px;}
+.consumer_box_list li .cont_box_info .box_content{position:relative; min-height:109px; padding:24px 150px 20px 25px; }
+.consumer_box_list li .cont_box_info .box_content .btn_link{position:absolute; bottom:20px; left:25px;}
+
+/* 금융보험_bg */
+.consumer_box_list li .cont_box_info .finance_img01{background:url(/site/consumer/images/sub/bg/bg_consumer_finance01.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img02{background:url(/site/consumer/images/sub/bg/bg_consumer_finance02.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img03{background:url(/site/consumer/images/sub/bg/bg_consumer_finance03.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img04{background:url(/site/consumer/images/sub/bg/bg_consumer_finance04.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img05{background:url(/site/consumer/images/sub/bg/bg_consumer_finance05.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img06{background:url(/site/consumer/images/sub/bg/bg_consumer_finance06.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img07{background:url(/site/consumer/images/sub/bg/bg_consumer_finance07.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img08{background:url(/site/consumer/images/sub/bg/bg_consumer_finance08.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .finance_img09{background:url(/site/consumer/images/sub/bg/bg_consumer_finance09.png) no-repeat right bottom;}
+
+/* 의료정보_bg */
+.consumer_box_list li .cont_box_info .medical_img01{background:url(/site/consumer/images/sub/bg/bg_consumer_medical01.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img02{background:url(/site/consumer/images/sub/bg/bg_consumer_medical02.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img03{background:url(/site/consumer/images/sub/bg/bg_consumer_medical03.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img04{background:url(/site/consumer/images/sub/bg/bg_consumer_medical04.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img05{background:url(/site/consumer/images/sub/bg/bg_consumer_medical05.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img06{background:url(/site/consumer/images/sub/bg/bg_consumer_medical06.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img07{background:url(/site/consumer/images/sub/bg/bg_consumer_medical07.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img08{background:url(/site/consumer/images/sub/bg/bg_consumer_medical08.png) no-repeat right bottom;}
+.consumer_box_list li .cont_box_info .medical_img09{background:url(/site/consumer/images/sub/bg/bg_consumer_medical09.png) no-repeat right bottom;}
+
+/* ========================= 소비자연계기관 */
+.consumer_linkage_wrap {overflow:hidden; margin:20px 0 0 -30px;}
+.consumer_linkage_wrap .consumer_linkage_box{float:left; width:50%; }
+.consumer_linkage_wrap .consumer_linkage_box .tbl{margin-left:30px;}
+.consumer_linkage_box .in_bul {padding-left:10px;background:url(/site/consumer/images/common/bul/bul_ui_list_square.png) no-repeat 0 1px;margin: 5px 0 0 10px;}
+
+/* ========================= 교육연계기관 */
+.linkage_edu_list {overflow:hidden; margin-top:20px; border-top:2px solid #505050; border-bottom:1px solid #ababab; }
+.linkage_edu_list li{float:left; width:100%;}
+.linkage_edu_list li.last_br_none dl{border-right:0;}
+.linkage_edu_list li dl{border-right:1px solid #d5d5d6;}
+.linkage_edu_list li dl dt{padding:0 10px; height:41px; background:#f5f5f5; text-align:center; color:#333; font-weight:700; line-height:41px; border-bottom:1px solid #b7b7b7;}
+.linkage_edu_list li dl dd{height:58px; padding:18px 10px 0 10px; vertical-align:middle; text-align:center;}
+.linkage_edu_list.layout_row2 li:nth-child(2n) dl{border-right:0;}
+.linkage_edu_list.layout_row3 li:nth-child(3n) dl{border-right:0;}
+.linkage_edu_list.layout_row3 li + li + li + li  dl dt{border-top:1px solid #b7b7b7;}
+.linkage_edu_list.layout_row4 li:nth-child(4n) dl{border-right:0;}
+.linkage_edu_list.layout_row4 li + li + li + li + li dl dt{border-top:1px solid #b7b7b7;}
+
+/* ==========================================================================
+	//1. 소비자정보
+==========================================================================  */
+
+
+
+
+/* ==========================================================================
+	2. 피해구제/분쟁조정신청
+==========================================================================  */
+
+/* ========================= 피해구제/분쟁조정신청 step관련 */
+
+/* font 및 ie관련 재정의 */
+.dispute_req_wrap .join_step {margin-top:0;}
+.dispute_req_wrap .join_step li{position:relative; border:0; padding:0; }
+.dispute_req_wrap .join_step li:first-child,
+.dispute_req_wrap .join_step li:nth-child(5){border:0;}
+.dispute_req_wrap .join_step li span{position:absolute; top:16px; left:50%; margin-left:-33px; }
+.dispute_req_wrap .join_step li em{padding:50px 0 17px 0; margin-top:0; font-size:13px; letter-spacing:-1px; border-right:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0;}
+.dispute_req_wrap .join_step li.active em{font-weight:700;}
+.dispute_req_wrap .join_step li:first-child em,
+.dispute_req_wrap .join_step li:nth-child(5) em{border-left:1px solid #e0e0e0;}
+
+/* step5개일 경우 */
+.join_step.req_step_row5 {overflow:hidden; display:block;}
+.join_step.req_step_row5 li{width:20%;}
+.join_step.req_step_row5 li:nth-child(5n) em{border-left:0;}
+
+/* =========================  피해구제/분쟁조정신청 테이블관련 */
+
+/* 신청 폼 테이블 기본정의 */
+.tbl .dispute_input th{min-width:85px; background:#f9f9f9;}
+.tbl .dispute_input th.border_right{border-right:1px solid #e0e0e0;}
+
+/* 신청폼 타이틀 스타일 정의 */
+.tbl .dispute_input2 {border-top:1px solid #505050; border-bottom:1px solid #505050;}
+.tbl .dispute_input2.line_none {border-top:0; border-bottom:0;}
+.tbl .dispute_input2 th.col_th{ padding-left:20px; color:#505050; border-bottom:1px solid #b7b7b7; text-align:left; font-weight:700; font-size:16px; background:#fff9f8;}
+.tbl .dispute_input2 th.top_line{border-top:1px solid #505050;}
+.tbl .dispute_input2 th.col_th > span{display:inline-block; padding-left:23px; background:url(/site/consumer/images/sub/bul/bul_check.png) no-repeat 0 6px;}
+.tbl .dispute_input2 th,.tbl .dispute_input2 td{border-bottom:0;}
+
+/* ie관련 달력인풋 사이즈 재정의 */
+.dispute_req_wrap .datapicker_wrap input[type='text'] {padding-right:40px;}
+.dispute_req_wrap .datapicker_wrap input[type='text'].harf_size {width:105px;}
+
+/* 하자보수 청구구분 타이틀 관련  */
+.tbl .dispute_input2 td.td_pd_none{padding-bottom:0; padding-left:0; padding-right:0;}
+.tbl .dispute_input2 .title_relative {position:relative;}
+.tbl .dispute_input2 .title_relative .title_bul{display:inline-block; padding-left:23px; background:url(/site/consumer/images/sub/bul/bul_check.png) no-repeat 0 6px;}
+.tbl .dispute_input2 th span.spce_sel_title{position:absolute; top:3px; right:10%;}
+
+/* ========================= 피해구제/분쟁조정신청 input관련 */
+
+/* 태그사이즈 재정의 */
+.input_type_style .inp_row2 {width:220px !important;}
+.input_type_style input.full_size {width:95% !important;}
+.input_type_style select.full_size {width:95% !important;}
+
+/* 선택항목 기본여백 재정의 */
+.dispute_req_wrap .dispute_input input[type='radio'],
+.dispute_req_wrap .dispute_input input[type='checkbox'] {margin:0 5px 0 0; }
+
+/* 선택항목이 한줄 씩 뿌려질 경우 */
+.dispute_req_wrap .dispute_input .input_list_type p ,.dispute_req_wrap .dispute_input2 .input_list_type p {position:relative; padding-left:22px;}
+.dispute_req_wrap .dispute_input .input_list_type p input[type='radio'],
+.dispute_req_wrap .dispute_input .input_list_type p input[type='checkbox']{position:absolute; top:2px; left:0;}
+.dispute_req_wrap .dispute_input2 .input_list_type p input[type='radio'],
+.dispute_req_wrap .dispute_input2 .input_list_type p input[type='checkbox']{position:absolute; top:2px; left:0;}
+.dispute_req_wrap .dispute_input .input_list_type p + p, .dispute_req_wrap .dispute_input2 .input_list_type p + p{margin-top:5px;}
+
+/* 선택항목 중 입력사항이 필요할 경우 */
+.dispute_req_wrap .dispute_input .input_list_type .input_check_inner input[type='radio'],
+.dispute_req_wrap .dispute_input .input_list_type .input_check_inner input[type='checkbox'] {top:11px;}
+.dispute_req_wrap .dispute_input .input_list_type .input_check_inner input.inp_check_text {margin-left:10px;}
+
+/* 선택항목 중 textarea가 필요할 경우 */
+.dispute_req_wrap .dispute_input .input_list_type .check_detail_cont {display:block; margin-top:5px;}
+.dispute_req_wrap .dispute_input .input_list_type .check_detail_cont textarea{min-height:100px;}
+
+/* 선택항목이 한줄에 여러개 뿌려질 경우 */
+.input_type_style .checking_box em{display:inline-block;}
+.input_type_style .checking_box label{margin-right:10px;}
+
+/* 인풋태그 앞에 타이틀이 존재하는 경우*/
+.lable_type b {margin-right:10px; }
+
+/* ========================= 피해구제/분쟁조정신청 폼태그 예가 필요한 경우 */
+.ex_detail {position:relative; padding-left:25px; margin-top:10px;}
+.ex_detail .ex_text{position:absolute; top:0; left:0; }
+.ex_detail p{margin-top:5px;}
+
+/* ========================= 피해구제/분쟁조정 신청완료 */
+.dispute_req_complete {margin-top:30px; padding:50px; border:1px solid #e2e2e2; }
+.dispute_req_complete .dispute_complete_title{min-height:110px; padding-right:170px; background:url(/site/consumer/images/sub/bg/bg_dispute_complete_title.png) no-repeat right top; font-size:24px; font-family:'NanumSquare'; word-break:keep-all; word-wrap:break-word;}
+.dispute_req_complete .dispute_complete_title p:first-child span{color:#545454; font-weight:700;}
+.dispute_req_complete .dispute_complete_title p + p{margin-top:8px;}
+.dispute_req_complete .dispute_complete_title p + p > span{color:#3f5d8e; font-weight:700;}
+
+/* =========================  피해구제/분쟁조정 선택박스 (체크아이콘) */
+
+/* 선택박스 기본스타일 */
+.process_checking {margin-top:30px; padding:30px; background:#f6f6f6;}
+.process_checking .process_result_checking > li{position:relative; margin-top:40px;}
+.process_checking .process_result_checking > li:first-child {margin-top:0;}
+.process_checking .process_result_checking > li .result_subject{padding-left:23px; font-size:14px; font-weight:700; color:#4a4a4a; background:url(/site/consumer/images/sub/bul/bul_check.png) no-repeat 0 6px;}
+.process_checking .process_result_checking > li .result_check{margin-top:10px; padding-left:8px;}
+.process_checking .process_result_checking > li .result_check span{margin-left:15px;}
+.process_checking .process_result_checking > li .btn_help{position:absolute; top:0; right:0;}
+.process_checking .process_result_checking > li .result_check_list{margin:10px 0 0 23px; line-height:22px; }
+.process_checking .process_result_checking > li .inline_type{display:inline-block;}
+.process_checking .process_result_checking > li .result_check.inline_type{margin-top:0px;}
+
+/* 선택박스 상세노출 화면 (선택박스 하단 하얀박스 ) */
+.process_checking .result_detail {margin-top:20px; padding:20px 20px 10px 20px; background:#fff; color:#4a4a4a;}
+.process_checking .result_detail .detail_box{margin:10px 0;}
+.process_checking .result_detail .detail_box .left_btn_text{width:350px;}
+
+/* ========================= 선택박스 > 첨부파일 */
+
+/* 첨부파일이 없을 경우 */
+.process_checking .no_content{text-align:center; }
+.process_checking .no_content span{padding-left:23px; font-size:14px; font-weight:700; color:#4a4a4a; background:url(/site/consumer/images/sub/bul/bul_check.png) no-repeat 0 6px;}
+
+/* 첨부파일이 있을 경우 */
+.process_checking .file_add_list > li {margin-top:10px;}
+.process_checking .file_add_list > li .result_subject{position:relative; min-height:32px; padding:7px 0 0 23px; font-size:14px; font-weight:700; color:#4a4a4a; background:url(/site/consumer/images/sub/bul/bul_check.png) no-repeat 0 13px;}
+.process_checking .file_add_list > li .result_subject button{position:absolute; top:0; right:0;}
+.process_checking .file_add_list > li .result_detail{position:relative; overflow:hidden; margin-top:0; padding:10px 45px 10px 20px;}
+.process_checking .file_add_list > li > div + div {padding-top:0px !important;}
+.process_checking .file_add_list > li .result_detail p.file_text{float:left; width:238px; }
+.process_checking .file_add_list > li .result_detail div.file_text_add {float:left; width:445px;}
+.process_checking .file_add_list > li .result_detail div.file_text_add .attech_file_area{position:relative; padding-right:65px; }
+.process_checking .file_add_list > li .result_detail div.file_text_add .attech_file_area input{width:91%;}
+.process_checking .file_add_list > li .result_detail div.file_text_add .attech_file_area .btn_attech_file_area{position:absolute; top:0; right:0; margin-top:0; }
+.process_checking .file_add_list > li .result_detail p.btn_del {position:absolute; bottom:10px; right:20px;}
+
+/* 선택박스 > 첨부파일 버튼 및 인풋사이즈 정의 */
+.process_checking .file_add_list > li .result_detail p.file_text input.full_size {width:85%;}
+.process_checking .file_add_list > li .result_detail p.btn_del .btn_file_del{display:inline-block; width:39px;height:36px;margin-left:5px;background:url(/site/consumer/images/sub/btn/btn_file_del.png) no-repeat 50% #c73934; text-indent:-9999em;}
+
+/* ========================= inner 테이블 형식 입력화면 */
+
+/* 기본스타일 */
+.inner_tbltype_list {overflow:hidden; border-top:1px solid #b7c1d1; border-bottom:1px solid #e0e0e0; font-size:12px;}
+.inner_tbltype_list li{float:left;}
+.inner_tbltype_list li dl{border-left:1px solid #e0e0e0; border-right:1px solid #e0e0e0;}
+.inner_tbltype_list li dl dt{padding:8px 10px; background:#fafbfe; text-align:center; color:#3f5d8e; font-weight:700; }
+.inner_tbltype_list li dl dd{padding:8px 10px; border-top:1px solid #e0e0e0;}
+
+/* 4칸일 경우 */
+.inner_tbltype_list.layout_row4 li {width:22%;}
+.inner_tbltype_list.layout_row4 li .inp_full{width:110px;}
+.inner_tbltype_list.layout_row4 li + li + li  {width:34%;}
+.inner_tbltype_list.layout_row4 li + li + li .inp_full{width:200px;}
+.inner_tbltype_list.layout_row4 li + li + li + li{width:22%;}
+.inner_tbltype_list.layout_row4 li + li + li + li .inp_full{width:110px;}
+.inner_tbltype_list.layout_row4 li + li dl {border-left:0;}
+
+/* 2칸일 경우 */
+.inner_tbltype_list.layout_row2 li {width:50%;}
+.inner_tbltype_list.layout_row2 li dl dd input{width:199px;}
+.inner_tbltype_list.layout_row2 li dl dd select{width:227px;}
+.inner_tbltype_list.layout_row2 li dl dd .inp_small{width:138px;}
+.inner_tbltype_list.layout_row2 li dl dd .inp_full{width:273px;}
+.inner_tbltype_list.layout_row2 li dl dd select.inp_full{width:273px;}
+.inner_tbltype_list.layout_row2 li dl dd .inp_date{width:199px;}
+.inner_tbltype_list.layout_row2 li dl dd .inp_code{width:30px; background:#eeeeee;}
+.inner_tbltype_list.layout_row2 li dl dd .datapicker_wrap input{width:247px; height:37px;}
+.inner_tbltype_list.layout_row2 li + li dl {border-left:0;}
+.inner_tbltype_list.layout_row2 li:nth-child(2n+1) dl {border-left:1px solid #e0e0e0;}
+.inner_tbltype_list.layout_row2 li + li + li dl dt{border-top:1px solid #e0e0e0;}
+
+/* =========================  금융감독원 > 유사사례 검토 링크 */
+.case_link_list {overflow:hidden; padding:10px 20px 20px 0; margin-top:30px; background:#f6f6f6; }
+.case_link_list li{float:left; width:25%;}
+.case_link_list li > a{display:block; padding:9px 5px; margin:10px 0 0 20px; background:#008dac; color:#fff; font-weight:700; text-align:center; border:1px solid #008dac}
+.case_link_list li > a > span{padding-right:22px; background:url(/site/consumer/images/common/btn/btn_ui_ico_new_window_small.png) no-repeat right center;}
+.case_link_list li > a:hover,
+.case_link_list li > a:focus,
+.case_link_list li > a:active {background:#fff; color:#008dac;}
+.case_link_list li > a:hover span,
+.case_link_list li > a:focus span,
+.case_link_list li > a:active span{background:url(/site/consumer/images/sub/btn/btn_ui_ico_new_window_small_bluegreen.png) no-repeat right center;}
+
+/* =========================  회색 배경 박스 */
+.gray_info_box {padding:20px; background:#f6f6f6; word-break:keep-all; word-wrap:break-word;}
+.gray_info_box .inner_white_box{padding:20px; background:#fff; line-height:22px;}
+.gray_info_box .inner_white_box .inner_white_title{color:#4a4a4a; font-weight:700; font-size:14px;}
+.gray_info_box .finance_qna{margin:5px 0 15px 0;}
+
+/* ========================= 환경부 > 중앙환경분쟁조정위원회 > 재정신청 > 선택항목  관련 */
+.gray_info_box.adjust_check_list{padding-top:5px;}
+.adjust_check_list li{position:relative; padding-left:22px; margin:15px 0 0 0;}
+.adjust_check_list li label{vertical-align:middle; font-weight:700;}
+.adjust_check_list li input[type='text'],
+.adjust_check_list li select {vertical-align:middle;}
+.adjust_check_list li input[type='radio'],
+.adjust_check_list li input[type='checkbox']{position:absolute; top:4px; left:0;}
+.adjust_check_list li.detail_input input[type='radio'],
+.adjust_check_list li.detail_input input[type='checkbox']{position:absolute; top:11px; left:0;}
+
+/* ========================= 국토교통부 > 중앙공동주택관리 > 조정대상 여부확인 */
+.target_check_list li{position:relative; padding:30px 180px 25px 0; border-top:1px solid #e0e0e0;}
+.target_check_list li:first-child{padding-top:11px; border-top:0;}
+.target_check_list li:first-child span{top:5px;}
+.target_check_list li em{display:inline-block; padding-left:23px; font-size:14px; font-weight:700; color:#4a4a4a; background:url(/site/consumer/images/sub/bul/bul_check.png) no-repeat 0 4px;}
+.target_check_list li span{position:absolute; top:20px; right:0;}
+.target_check_list li span button{width:65px; padding:0 10px !important; border:1px solid #5a86c5; color:#215399; background:#e4ecf9;}
+.target_check_list li span button + button{border:1px solid #d47774; color:#c20500; background:#fbf3f3;}
+.target_check_list li span button.active{border:1px solid #215399; background:#215399; color:#fff; outline:0;}
+.target_check_list li span button + button.active{border:1px solid #c73935; background:#c73935;}
+
+/* 조정대상 결과 */
+.target_check_result {padding:30px; background:#f6f6f6; border:1px solid #e0e0e0; text-align:center; font-size:14px;}
+
+/* ========================= 신청인 및 신청날짜 컨텐츠 */
+.tbl_view_content {padding:20px 10px; text-align:center; }
+.tbl_view_content .user_appli_info{margin-top:20px; text-align:right;}
+.tbl_view_content .user_appli_info label{font-weight:700;}
+.tbl_view_content .messrs_text{margin-top:40px; color:#4a4a4a; font-weight:700; font-size:16px;}
+
+/* 신청날짜 인풋 사이즈 정의 */
+.tbl_view_content .user_appli_info input[type='text'].inp_small{width:20px; margin-left:10px;}
+.tbl_view_content .user_appli_info input[type='text'].inp_small2{width:40px; margin-left:10px;}
+.tbl_view_content .user_appli_info input[type='text'].inp_mid{width:160px; margin-left:10px;}
+
+/* ========================= 파일찾기 관련 사이즈 조절 및 여백제어 */
+.box_file_add {margin-top:20px; padding:20px; border:1px solid #e0e0e0;}
+.box_file_add input[type='text'] {margin:2px 0; width:685px;}
+.attech_full_size input[type='text'] {width:-webkit-calc(100% - 81px) !important; width:-moz-calc(100% - 81px) !important; width:calc(100% - 81px) !important; box-sizing:border-box;}
+
+
+/* ========================= 중앙공동주택관리분쟁조정위원회 > 처리절차 */
+.process_step {overflow:hidden; margin:30px 0 0 -10px;}
+.process_step li{float:left; width:20%;}
+.process_step li dl{margin-left:10px; min-height:200px; background:#21539a;}
+.process_step li dl dt{min-height:132px; text-align:center; color:#fff; font-weight:700; font-size:14px; line-height:24px;}
+.process_step li dl dt span{display:block; padding-top:30px;}
+.process_step li dl dd{min-height:67px; background:#f7f9fc; border:1px solid #e1e2e2; border-top:0; text-align:center;}
+.process_step li dl dd span{display:inline-block; padding-top:23px; color:#215398;}
+.process_step li + li dl{background:#03809c;}
+.process_step li + li dl dd{background:#fff;}
+.process_step li + li dl dd span{padding-top:14px; color:#03809c;}
+.process_step li + li + li + li + li dl{background:#21539a;}
+.process_step li + li + li + li + li dl dd{background:#f7f9fc;}
+.process_step li + li + li + li + li dl dd span{color:#215398;}
+
+/* ========================= 국토교통부 > 하자심사 분쟁조정 */
+/* 단지규모 */
+.hsmp_inp {overflow:hidden;}
+.hsmp_inp li{float:left; width:50%;}
+.hsmp_inp li label{display:inline-block; width:70px; font-weight:700; color:#414141;}
+.hsmp_inp li input[type='text']{width:75px;}
+.hsmp_inp li select{width:130px;}
+
+/* 하자심사 분쟁조정 세부신청내역 복사 */
+.appli_copy {position:relative; font-weight:700; color:#4a4a4a;}
+.appli_copy .btn_copy{position:absolute; top:20px; right:20px;}
+
+/* 하자심사 분쟁조정 > 하자부위/청구구분 목록 */
+.spce_select_list li{overflow:hidden; padding:5px 10px; border-top:1px solid #e0e0e0;}
+.spce_select_list li:first-child{padding-top:0; border-top:0;}
+.spce_select_list li p.spce_content{float:left; width:75%; margin:2px 0; padding:10px 0 9px 0; font-weight:700;}
+.spce_select_list li p.spce_select{float:left; width:25%;}
+
+/* 교섭경위서 목록 */
+.negoti_list {margin-top:30px;}
+.negoti_list tr:hover td.no_data{background:#fff; color:#686868; cursor:default;}
+.negoti_list tr:hover td{background:#f9fcff; color:#3f5d8e; cursor:pointer;}
+
+/* 신청완료 전 확인서 */
+.requ_user_messrs {padding:30px 20px; text-align:center; border-bottom:1px solid #acacac; }
+.requ_user_messrs .messrs_text{margin-top:50px; font-weight:700; font-size:16px;}
+
+/* ========================= 환경분쟁조정 인트로화면 */
+.dispute_intro_list {margin-top:30px; }
+.dispute_intro_list li{position:relative; margin-top:30px; border:1px solid #e1e2e2; }
+.dispute_intro_list li dl dt{height:55px; padding-left:20px; padding-right:20px; line-height:55px; font-size:17px; font-weight:700; background:#1551a2; color:#fff;}
+.dispute_intro_list li dl dd{min-height:90px; padding:30px 20px 20px 125px; font-size:14px; background:url(/site/consumer/images/sub/bg/bg_dispute_intro_list1.png) no-repeat 20px 20px;}
+.dispute_intro_list li dl dd .process_date{margin-top:10px; font-weight:700; }
+.dispute_intro_list li dl dd .process_date span{padding-left:10px; background:url(/site/consumer/images/common/bul/bul_h5_txt_exp_set_tit.png) no-repeat 0 -1px; color:#2977ac;}
+.dispute_intro_list li .btn_applica{position:absolute; top:10px; right:10px; }
+.dispute_intro_list li .btn_applica a{display:inline-block; height:30px; padding:0 15px; font-weight:700; color:#fff; border:1px solid #fff; border-radius:3px; line-height:28px; font-size:13px;}
+.dispute_intro_list li .btn_applica a span{padding-right:12px; background:url(/site/consumer/images/sub/btn/btn_icon_arrow.png) no-repeat right 50%;}
+
+.dispute_intro_list li + li dl dt{background:#1f75be;}
+.dispute_intro_list li + li + li dl dt{background:#0086a5;}
+.dispute_intro_list li + li + li + li dl dt{background:#00a5a3;}
+
+.dispute_intro_list li + li dl dd{background-image:url(/site/consumer/images/sub/bg/bg_dispute_intro_list2.png);}
+.dispute_intro_list li + li + li dl dd{background-image:url(/site/consumer/images/sub/bg/bg_dispute_intro_list3.png);}
+.dispute_intro_list li + li + li + li dl dd{background-image:url(/site/consumer/images/sub/bg/bg_dispute_intro_list4.png);}
+
+/* ========================= 작성예시 */
+.writing_exmp {margin-top:10px; padding:10px; border:1px solid #b7c1d1; background:#fafbfe;  font-size:13px;}
+.writing_exmp .exmp_title{display:inline-block; height:22px; margin-bottom:10px; padding:0 10px; font-size:12px; font-weight:700; border:1px solid #c73934; border-radius:2px; line-height:22px; color:#c73934;}
+.writing_exmp ul li {position:relative;  line-height:20px;}
+.writing_exmp ul li span{position:absolute; top:0px; left:0; display:inline-block; width:120px; padding-left:10px; font-weight:600; background:url(/site/consumer/images/common/bul/bul_ui_list_minus.png) no-repeat 0 0px;}
+.writing_exmp ul li p{display:block; padding-left:120px;}
+
+/* ========================= 구비서류 inner 테이블 형식 */
+.data_inner {margin:10px 0; font-size:13px; border:1px solid #b7c1d1;}
+.data_inner dl{position:relative; border-top:1px solid #e0e0e0; background:#fafbfe; }
+.data_inner dl:first-child{border-top:0;}
+.data_inner dl dt{position:absolute; top:50%; left:0; width:120px; margin-top:-9px; font-weight:700; color:#3f5d8e; text-align:center; }
+.data_inner dl dd{padding:10px 10px 10px 10px; margin-left:120px; background:#fff;}
+
+/* ========================= 구비서류 파일 첨부 */
+.documents_add {margin-top:10px;}
+.documents_add li{overflow:hidden;}
+.documents_add li .documents_sel{float:left; width:195px;}
+.documents_add li .documents_file{float:left; width:350px;}
+.documents_add li .documents_btn_add{float:left; width:94px; margin-left:5px; text-align:left; }
+.documents_add li .documents_file .fileDown{ background: #535353; color: #fff; font-weight: bold; font-size: 13px; display: block; float: left; height: 34px; line-height: 34px; text-align: center; padding: 0 10px;}
+
+/* ========================= 공통 신청 폼 관련 스타일 */
+.txt_square {padding-left:10px; background:url(/site/consumer/images/common/bul/bul_ui_list_square.png) no-repeat 0 1px; line-height:20px;}
+.input_type_style textarea.textarea_mini {min-height:100px;}
+.input_type_style textarea.textarea_mini2 {min-height:80px;}
+.input_type_style select.layout3_sel {width:255px;}
+.input_type_style input.layout3_text {width:225px !important;}
+.input_type_style input[type="text"].rqstpnm_etc {width:335px;}
+
+/* 숫자 리스트 타입 */
+.list_style_decimal {margin:10px 0 0 15px;}
+.list_style_decimal li {margin-top:10px; list-style-type:decimal;}
+.list_style_decimal li:first-child{margin-top:0;}
+.list_deci_inner li {margin-top:5px;}
+
+/* 프린트 버튼 모바일 제어 */
+.mo_print {width:120px;}
+
+/* ========================= 개인정보 수집 이용 동의 */
+.provision_ol_list > li, .provision_ul_list > li {margin-top:20px; }
+.provision_ol_list > li > b{display:inline-block; padding-left:25px; background:url(/site/consumer/images/sub/bul/bul_agree_num1.png) no-repeat 0 6px; font-size:17px; font-weight:700; color:#02809c;}
+.provision_ol_list > li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num2.png); }
+.provision_ol_list > li + li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num3.png); }
+.provision_ol_list > li + li + li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num4.png); }
+.provision_ol_list > li + li + li + li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num5.png); }
+.provision_ol_list > li + li + li + li + li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num6.png); }
+.provision_ol_list > li + li + li + li + li + li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num7.png); }
+.provision_ol_list > li + li + li + li + li + li + li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num8.png); }
+.provision_ol_list > li + li + li + li + li + li + li + li + li > b{background-image:url(/site/consumer/images/sub/bul/bul_agree_num9.png); }
+
+.provision_ul_list > li > b{display:inline-block; padding-left:25px; background:url(/site/consumer/images/sub/bul/bul_agree_title.png) no-repeat 0 6px; font-size:17px; font-weight:700; color:#02809c;}
+.provision_ol_list > li > p, .provision_ol_list > li > ul,
+.provision_ul_list > li > p, .provision_ul_list > li > ul {margin-top:10px; margin-left:25px; }
+
+/* ========================= 분쟁조정 신청 팝업 관련 */
+
+/* 일반 콘텐츠 관련 스타일 */
+.modal_gray_box {padding:20px; background:#f6f6f6; }
+.modal_title_blue{font-size:16px; font-weight:700; color:#3f5d8e; text-align:center; }
+
+/* e-금융민원센터 검색 관련 */
+.fin_search_box {position:relative; margin-top:20px;}
+.fin_search_box.fincorp_box {padding-left:180px;}
+.fin_search_box.fincorp_box select{position:absolute; top:0; left:0; width:175px;}
+
+/* e-금융민원센터 > 금융기관 관련 */
+.fin_circle {overflow:hidden; margin-top:20px; border-left:1px solid #e0e0e0;  border-top:1px solid #e0e0e0;}
+.fin_circle li{float:left; width:25%;}
+.fin_circle li button{display:block; width:100%; height:39px; border-right:1px solid #e0e0e0; border-bottom:1px solid #e0e0e0; line-height:39px; letter-spacing:-1px; font-size:13px !important;}
+.fin_circle li.active button{background:#757575; color:#fff; font-weight:600; outline:0;}
+.fin_search_list {border-top:2px solid #505050; border-bottom:1px solid #ababab;}
+.fin_search_list .modal_list_subject{padding:14px 5px; background:#f5f5f5; color:#333; font-weight:700; border-bottom:1px solid #b7b7b7; text-align:center;}
+
+/* 팝업 목록 스타일 관련 */
+.modal_list_type > li{padding:14px 20px; border-top:1px solid #e1e2e2;}
+.modal_list_type > li:first-child{border-top:0;}
+.modal_list_scroll {overflow-y:auto; height:200px;}
+
+/* 분쟁조정 팝업 검색 */
+.modal_search_area {position:relative; padding-right:42px;}
+.modal_search_area input{width:100%; box-sizing:border-box; }
+.modal_search_area button{position:absolute; top:0; right:0; display:inline-block; width:42px; height:39px; background:url(/site/consumer/images/sub/bg/bg_icon_modal_search.png) no-repeat center #444; text-indent:-9999px;}
+
+/* 팝업 스크롤 테이블 관련 */
+.modal_tbl_scroll {overflow-x:auto;}
+.modal_tbl_scroll table{table-layout:fixed;}
+.modal_tbl_scroll table th, .modal_tbl_scroll table td{font-size:13px !important;}
+.modal_tbl_scroll button{font-size:12px !important;}
+.modal_tbl_scroll .ul_h5_txt_exp_set > dt {font-size:14px;}
+
+/* 모바일 팝업 관련 */
+.mobile_on .fin_circle li{float:left; width:50%;}
+/* e-금융민원센터 모바일 관련 */
+.mobile_on .fin_search_box.fincorp_box {padding-left:0;}
+.mobile_on .fin_search_box.fincorp_box select{position:relative; width:100%; margin-bottom:5px;box-sizing:border-box;}
+.mobile_on .rwd2{overflow-x:auto;}
+
+/* ==========================================================================
+	//2. 피해구제/분쟁조정신청
+==========================================================================  */
+
+
+
+/* ==========================================================================
+	3. 공통스타일
+==========================================================================  */
+/* 테이블 스타일 */
+.up_num {color:#fc5927 !important;}
+.down_num {color:#0e59d4 !important;}
+.tbl_word th, .tbl_word td {word-break:keep-all; word-wrap:break-word;}
+.btn_label {font-weight:700; margin-right:10px; }
+.btn_label + .btn_label{margin-left:30px; }
+
+/* 레이아웃 관련 */
+.layout_row2 li{width:50%; }
+.layout_row3 li {width:33.3333%;}
+.layout_row4 li{width:25%; }
+
+/* 목록 상단 게시글 카운트*/
+.tbl_list_count {margin-top:20px; padding-left:18px;background:url(/site/consumer/images/sub/bul/bul_tbl_list_total.png) no-repeat 0 50%;line-height:36px;}
+.tbl_list_count strong {color:#0071db;}
+
+/* 폼 가운데 정렬 (셀렉트,인풋 1개씩 존재시 ) */
+.form_center {text-align:center;}
+.form_center select{width:150px;}
+.form_center input[type='submit'] {height:36px;margin-left:1px;border:0;background:#545454;font-weight:700;color:#ffffff;}
+.form_center .form_center_input{width:47%;}
+
+/* 폼 필수항목 */
+.essential_star {color:#fc5927; font-weight:700; vertical-align:middle; }
+
+/* ========================= 버튼색상 추가 및 아이콘타입 추가 */
+
+/* 버튼 색상 및 아이콘 추가 */
+.ui_btn.deepblue {background:#45546f; color:#fff;}
+.ui_btn.btn_search span{display:inline-block; width:18px; height:18px; margin-left:10px; background:url(/site/consumer/images/common/btn/btn_tree_search_top.png) no-repeat -11px -9px; vertical-align:middle;}
+.btn_blank_icon {padding-right:22px; background:url(/site/consumer/images/common/btn/btn_ui_ico_new_window_small.png) no-repeat right center;}
+
+/* 버튼 작은스타일 추가 */
+.ui_btn_small {display:inline-block; height:24px; padding:0 6px; border:1px solid #fc5927; color:#fc5927; font-size:12px; line-height:20px;}
+.ui_btn_small .btn_arrow{padding-left:16px; background:url(/site/consumer/images/sub/bg/bg_btn_small_arrow_orange.png) no-repeat 0 5px;}
+.ui_btn_small:hover,
+.ui_btn_small:focus,
+.ui_btn_small:active {background:#fc5927; color:#fff;}
+.ui_btn_small:hover .btn_arrow,
+.ui_btn_small:focus .btn_arrow,
+.ui_btn_small:active .btn_arrow{background:url(/site/consumer/images/sub/bg/bg_btn_small_arrow_white.png) no-repeat 0 5px;}
+
+/* 텍스트 다운로드 아이콘 타입 */
+.text_filedown{color:#02809c;}
+.text_filedown span{display:inline-block; padding:5px 30px 5px 0; background:url(/site/consumer/images/sub/bg/bg_txtdownload.png) no-repeat right;}
+
+/* 추가 삭제 아이콘 타입 버튼 */
+.btn_small_add{display:inline-block; width:39px;height:36px;margin-left:5px;background:url(/site/consumer/images/sub/btn/btn_file_add.png) no-repeat 50% #02809c; text-indent:-9999em;}
+.btn_small_del{display:inline-block; width:39px;height:36px;margin-left:5px;background:url(/site/consumer/images/sub/btn/btn_file_del.png) no-repeat 50% #c73934; text-indent:-9999em;}
+
+/* 테이블 안 작은 버튼 타입 */
+.small_type{height:30px; padding:0 10px; font-size:12px; line-height:30px;}
+.small_type span.row_add{padding-right:20px; background:url(/site/consumer/images/sub/btn/btn_ico_plus.png) right no-repeat;}
+.small_type span.row_del{padding-right:20px; background:url(/site/consumer/images/sub/btn/btn_ico_minus.png) right no-repeat;}
+.small_type span.icon_check{padding-right:20px; background:url(/site/consumer/images/common/btn/btn_ui_ico_check.png) right no-repeat;}
+
+/* 라운드버튼 타입 */
+.round_type {height:32px; padding:0 10px; font-size:12px; border-radius:16px;}
+.round_type.colbatblue{border:2px solid #027f9b; background:#fff; color:#027f9b;}
+.round_type.colbatblue span.row_add{padding-right:20px; background:url(/site/consumer/images/sub/btn/btn_ico_plus_blue.png) right no-repeat;}
+
+/* 버튼 모바일 제어 관련 */
+.mo_btn_inline{vertical-align:middle;}
+
+/* 개인정보동의 및 동의 텍스트 제어  */
+.member_agree .next_agree {display:block; margin-top:10px;}
+
+/* 기본검색타입 사이즈 수정 및 정의 */
+.select_wrap.search_select2 select,
+.search_select2 select {width:195px;}
+.search_select3 select{margin-left:5px; width:-webkit-calc((99.99% - 10px) / 3 );width:-moz-calc((99.99% - 10px) / 3 );width:calc((99.99% - 10px) / 3 ) !important;}
+.search_select3 select:first-child{margin-left:0px;}
+.search_select4 select{margin-left:5px; width:-webkit-calc((100% - 15px) / 4 );width:-moz-calc((100% - 15px) / 4 );width:calc((100% - 15px) / 4 ) !important;}
+.search_select4 select:first-child{margin-left:0px;}
+.sel_text select{width:160px;}
+.sel_text input{margin-left:5px; width:-webkit-calc(100% - 193px); width:-moz-calc(100% - 193px); width:calc(100% - 193px) !important; box-sizing:content-box !important;}
+.search_input_full input{width:100%; box-sizing:border-box;}
+/* 인풋 옆 글씨가 있을때 사용 */
+.txt_btn_right {position:relative; padding-right:105px;}
+.txt_btn_right .btn_right{position:absolute; top:8px; right:0; }
+.txt_btn_right input{width:95% !important;}
+
+/* 하단 회색 + 라인 info박스 */
+.ui_sub_bottom_info_gray {margin-top:20px; padding:0 20px 18px 20px; border:1px solid #e2e2e2; background:#f6f6f6; word-break:keep-all; word-wrap:break-word;}
+.ui_sub_bottom_info_gray > ul{margin-top:15px;}
+
+/* 제목 가운데정렬 info박스 */
+.ui_sub_title_info_box {margin-top:30px; border:1px solid #e0e0e0;}
+.ui_sub_title_info_box .sub_box_title{padding:26px 30px 27px 30px; background:#f6f6f6; border-bottom:1px dashed #e0e0e0; font-size:15px; color:#4a4a4a; font-weight:700; line-height:20px; text-align:center;}
+.ui_sub_title_info_box .sub_box_title.al{padding:26px 30px 27px 30px; background:#f6f6f6; border-bottom:1px dashed #e0e0e0; font-size:16px; color:#484848; font-weight:700; line-height:20px; text-align:left;}
+.ui_sub_title_info_box .title_info_inner{padding:20px;}
+.ui_sub_title_info_box .title_info_inner .title_inner_title{font-size:15px; font-weight:700; color:#4a4a4a; }
+
+/* 이용동의 */
+.agree_scroll_box {overflow-y:auto; height:252px; margin-top:16px; padding:20px; border:1px solid #e0e0e0;}
+.agree_scroll_box b{color:#414141;}
+.agree_scroll_box .agree_text{margin-top:15px;}
+.agree_scroll_box .agree_text p{margin-top:5px;}
+.agree_check {margin-top:20px; text-align:right; }
+.agree_check span{margin-left:30px;}
+
+
+/* 타이틀 옆 버튼 및 글자 존재 시 위치 제어 */
+.btn_position_title {position:relative; }
+.btn_position_title .title_btn{position:absolute; top:0; right:0; }
+.btn_position_title .title_text{position:absolute; bottom:0; right:0; font-size:14px; font-weight:700; color:#4a4a4a;}
+
+/* 포인트 컬러 */
+.point_cr_org {color:#fc5927 !important;}
+.point_cr_blue {color:#0052ae !important;}
+.point_cr_red {color:#e41414 !important;}
+
+/* 버튼 폰트 리셋 */
+.font_small {font-size:14px; font-weight:400;}
+.agree_ect {font-size:12px; color:#0052ae;}
+.font_reset {font-size:0;}
+.th_small_text {display:block; font-weight:400;}
+.ft_eng_bold {font-weight:600;}
+
+/* 여백 및 사이즈 관련 */
+.mgt0 {margin-top:0px !important;}
+.mgt5 {margin-top:5px !important;}
+.mgt10 {margin-top:10px !important;}
+.mgt15 {margin-top:15px !important;}
+.mgt20 {margin-top:20px !important;}
+.mgt30 {margin-top:30px !important;}
+.mgt40 {margin-top:40px !important;}
+.mgt50 {margin-top:50px !important;}
+.mgt70 {margin-top:70px !important;}
+.mgb30 {margin-bottom:30px !important;}
+.mgb50 {margin-bottom:50px !important;}
+.mgb70 {margin-bottom:70px !important;}
+.mgl0 {margin-left:0px !important;}
+.mgl5 {margin-left:5px !important;}
+.mgl10 {margin-left:10px !important;}
+.mgl15 {margin-left:15px !important;}
+.mgr10 {margin-right:10px !important;}
+.pdt0 {padding-top:0 !important;}
+.va_m {vertical-align:middle !important;}
+.wd100p {width:100px !important;}
+
+/* 반응형 관련 */
+.pcn_tblb, .pcn_mob {display:none;}
+.pcb_tbln, .pcb_mon {display:block;}
+
+/* 기타 */
+.btn_link_area {width:110px;}
+.btn_list_line {padding-top:20px; border-top:1px solid #acacac; text-align:right;}
+.list_detail {margin-top:10px; color:#2977ac;}
+.link_blank {padding:1px 26px 4px 0;background:url(/site/consumer/images/sub/bul/bul_linker_navy.png) no-repeat 100% 0;color:#3f5d8e;word-break:break-all;font-weight:600;}
+.btn_exam span{padding-left:20px; background:url(/site/consumer/images/sub/btn/btn_ico_exam_text.png) no-repeat 0 50%; font-weight:700; color:#3f5d8e;}
+.remodal.exam_modal {width:250px; max-width:95%;}
+
+/* 모달팝업 관련 스타일 재정의 및 수정  */
+.pc_on .attribute_box {overflow-y:scroll; height:350px;  -webkit-overflow-scrolling:touch;}
+.mobile_on .attribute_box {overflow-y:scroll; ; height:300px;  -webkit-overflow-scrolling:touch;}
+.attribute_box ul li{position:relative; margin:5px 0; padding-left:25px;}
+.pc_on .attribute_box ul li input{position:absolute; top:2px; left:0;}
+.mobile_on .attribute_box ul li input{position:absolute; top:5px; left:0;}
+.comparison_title {font-size:20px; font-weight:700; color:#414141;}
+.consumer_modal_body .rwd{overflow-x:scroll; -webkit-overflow-scrolling:touch;}
+.consumer_modal_body.foreign .box {position:relative;margin-top:30px;}
+
+.consumer_info_text em {color:#f57018;}
+
+.new_goods_top_wrap {margin-top:-6px;}
+.new_goods_top_wrap .title_link_area {font-size:0;}
+.new_goods_top_wrap .title_link_area,
+.new_goods_top_wrap .title_link_area h4,
+.new_goods_top_wrap .title_link_area a {float:left;}
+.new_goods_top_wrap .title_link_area h4 ~ a {margin-left:5px;}
+.new_goods_top_wrap .my_zzim_linker {display:inline-block;float:right;padding:0 36px 0 17px;border:1px solid #f58518; background:url(/site/consumer/images/sub/btn/btn_favorite.png) #fc5927 no-repeat 114px 8px;color:#ffffff;line-height:28px;-webkit-transition:background-position .3s;transition:background-position .3s;}
+.new_goods_top_wrap .my_zzim_linker.active {border:1px solid #fc5927;background-position-y:-19px;background-color:#fff;color:#fc5927;}
+.new_goods_top_wrap .title_link_area h4 {font-size:20px;font-weight:700;color:#3f5d8e;line-height:30px;}
+
+
+
+
+
+/* ==========================================================================
+	//3. 공통스타일
+==========================================================================  */
+
+
+
+
+
+/* ==========================================================================
+    tablet ~ PC 중간 사이즈
+========================================================================== */
+ @media screen and (max-width:1139px) {
+	 .m_lh30{ line-height:30px !important;}
+	 .barcode_box div{ width:55%; padding-right:5%; box-sizing: border-box;}
+	 .barcode_box div + img{ width:40%;}
+	 .eyong_info_list ul{ background-position:0 center !important;}
+	 .eyong_info_list li:before{ top:11px;}
+	 .participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email01 input{ height:41px;}
+	 .participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email02 input{ height:41px;}
+	 .participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email03 input{ height:41px;}
+	 .participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email04 select{ height:41px;}
+	 .participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.phone span:first-child input{ height:41px;}
+	/* ==========================================================================
+		1. 소비자 정보
+	==========================================================================  */
+
+	/* 문자알림 서비스 */
+	.sms_user_info {margin-top:30px; line-height:41px;}
+	.sms_user_info p.sms_request_title,
+	.sms_user_info p.sms_request_input{min-height:41px;}
+
+	/* 소비자톡톡 - 서비스 만족도 */
+	.talktalk_total_satisfaction li{width:25%; min-height:195px;}
+	.talktalk_total_satisfaction li .talktalk_brand{min-height:150px;}
+	.talktalk_total_satisfaction li .talktalk_brand img{width:auto; height:95px;}
+	.talktalk_total_satisfaction li .talktalk_brand span{font-size:15px;}
+	.talktalk_total_satisfaction li .brand_score{height:45px; font-size:18px; line-height:45px;}
+
+	.talktalk_satisfaction_list li{width:25%;}
+	.talktalk_satisfaction_list li a{font-size:16px;}
+
+	/* 소비자톡톡 - 나도 참여해보기 */
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd span{width:80px; }
+
+	/* 가격정보 > 참가격 */
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul {overflow:hidden; margin-left:-15px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li{width:159px; height:159px; margin-left:15px; background-position:-1px -246px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li > span:first-child{padding-top:80px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li > span + span{font-size:30px; line-height:30px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li > span + span{color:#00b2bd;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li {background-position:-236px -246px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li {background-position:-471px -246px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li + li {background-position:-706px -246px;}
+
+	/* 금융보험정보/의료정보 */
+	.consumer_box_list li .cont_box_info .box_content{min-height:142px; padding:18px 120px 15px 20px; }
+	.consumer_box_list li .cont_box_info .box_content .btn_link{bottom:15px; left:20px;}
+
+	/*  가격정보 > 유가정보 > 전국지도 */
+	.select_map {display:none;}
+
+	/* ==========================================================================
+		//1. 소비자 정보
+	==========================================================================  */
+
+
+
+	/* ==========================================================================
+		2. 피해구제/분쟁조정 신청
+	==========================================================================  */
+	/* ========================= 공통 신청 폼 관련 스타일 */
+	.input_type_style select.layout3_sel,
+	.input_type_style input.layout3_text {width:100% !important; box-sizing:border-box;}
+
+	/* 선택항목이 한줄 씩 뿌려질 경우 */
+	.dispute_req_wrap .dispute_input .input_list_type p input[type='radio'],
+	.dispute_req_wrap .dispute_input .input_list_type p input[type='checkbox']{position:absolute; top:4px; left:0;}
+
+	/* 피해구제/분쟁조정 확인선택박스 */
+	.process_checking .process_result_checking li .result_subject{font-size:16px; }
+
+	/* inner 테이블 형식 입력화면 */
+	.inner_tbltype_list li .inp_full{width:100% !important; box-sizing:border-box;}
+	.inner_tbltype_list.layout_row2 li dl dd input{width:-webkit-calc(100% - 110px);width:-moz-calc(100% - 110px);width:calc(100% - 110px);}
+	.inner_tbltype_list.layout_row2 li dl dd .inp_small{width:-webkit-calc(100% - 170px);width:-moz-calc(100% - 170px);width:calc(100% - 170px);}
+	.inner_tbltype_list.layout_row2 li dl dd select{width:-webkit-calc(100% - 65px);width:-moz-calc(100% - 65px);width:calc(100% - 65px);}
+	.inner_tbltype_list.layout_row2 li dl dd .datapicker_wrap{display:block; }
+	.inner_tbltype_list.layout_row2 li dl dd .datapicker_wrap input[type='text']{height:41px;}
+
+	/* 금융감독원 > 유사사례 검토 링크 */
+	.case_link_list li{width:33.3333%;}
+
+	/* 체크리스트 관련 박스 */
+	.adjust_check_list li input[type='radio'],
+	.adjust_check_list li input[type='checkbox']{position:absolute; top:5px; left:0;}
+	.adjust_check_list li.detail_input input[type='radio'],
+	.adjust_check_list li.detail_input input[type='checkbox']{position:absolute; top:6px; left:0;}
+
+	.adjust_check_list li span {display:block; margin-top:10px; }
+
+	/* 조정대상 여부확인 */
+	.target_check_list li em{font-size:16px; background-position:0 8px;}
+
+	/* 파일첨부 박스 */
+	.box_file_add input[type='text'] {width:-webkit-calc(100% - 98px);width:-moz-calc(100% - 98px);width:calc(100% - 98px);}
+
+	/* 중앙공동주택관리분쟁조정위원회 > 처리절차 */
+	.process_step li dl dd span{display:inline-block; padding-top:23px; color:#215398; font-size:13px;}
+	.process_step li + li dl dd span{padding-top:14px; color:#03809c;}
+
+	/* 하자심사 분쟁조정 단지규모 */
+	.hsmp_inp li {width:50%; height:45px;}
+	.hsmp_inp li label{width:90px;}
+	.hsmp_inp li input[type='text']{width:-webkit-calc(100% - 170px);width:-moz-calc(100% - 170px);width:calc(100% - 170px);}
+	.hsmp_inp li select{width:-webkit-calc(100% - 100px);width:-moz-calc(100% - 100px);width:calc(100% - 100px);}
+
+	/* 하자심사 분쟁조정 세부신청내역 복사 */
+	.appli_copy span{display:block; margin-bottom:5px;}
+	.input_type_style input[type="text"].rqstpnm_etc {width:-webkit-calc(100% - 230px);width:-moz-calc(100% - 230px);width:calc(100% - 230px);}
+
+	/* 확인선택박스 > 첨부파일 */
+	.process_checking .file_add_list > li .result_detail p.file_text{width:170px; }
+	.process_checking .file_add_list > li .result_detail div.file_text_add {width:-webkit-calc(100% - 190px);width:-moz-calc(100% - 190px);width:calc(100% - 190px);}
+	.process_checking .file_add_list > li .result_detail div.file_text_add .attech_file_area{position:relative; padding-right:0; margin-left:5px; }
+	.process_checking .file_add_list > li .result_detail div.file_text_add .attech_file_area input{width:-webkit-calc(100% - 100px);width:-moz-calc(100% - 100px);width:calc(100% - 100px);}
+
+	.process_checking .file_add_list > li .result_detail p.file_text input.full_size {width:100%; box-sizing:border-box;}
+	.process_checking .file_add_list > li .result_detail p.btn_del .btn_file_del{width:41px;height:41px;}
+
+	/* 구비서류 파일 첨부 */
+	.documents_add li .documents_file{float:left; width:-webkit-calc(100% - 195px);width:-moz-calc(100% - 195px);width:calc(100% - 195px);}
+
+	/* 강조 여백 제어 */
+	.dispute_req_wrap .exp_mark {padding-left:20px;}
+	/* ==========================================================================
+		//2. 피해구제/분쟁조정 신청
+	==========================================================================  */
+
+
+
+	/* ==========================================================================
+		3. 공통 스타일
+	==========================================================================  */
+
+	/* 제목강조 info박스 */
+	.ui_sub_title_info_box {margin-top:30px;  border:1px solid #e0e0e0;}
+
+	/* 이용동의 스크롤 박스 */
+	.agree_scroll_box {margin-top:16px;}
+
+	/* 테이블 관련 */
+	.tbl.rwd2 {overflow-x:auto; }
+	.tbl.rwd2 table{table-layout:fixed;}
+
+	/* 버튼관련 */
+	.btn_small_add{width:41px; height:41px;}
+	.btn_small_del{width:41px; height:41px;}
+
+	/* 기본폼타입 */
+	.form_center input[type='submit'] {width:57px;height:41px;} /* 검색 폼 가운데 정렬 버튼사이즈 */
+    .select_wrap.search_select2 select,
+	.search_select2 select {width:-webkit-calc((100% - 5px) / 2 );width:-moz-calc((100% - 5px) / 2 );width:calc((100% - 5px) / 2 );}
+
+	/* 태블릿 전용 클래스 */
+	.tbl_none {display:none;}
+	.tbl_block {display:inline-block;}
+	.pcn_tblb {display:inline-block;}
+	.pcb_tbln {display:none;}
+
+	.txt_square {line-height:24px;}
+
+	/* ==========================================================================
+		//3. 공통 스타일
+	==========================================================================  */
+
+    .new_goods_top_wrap .my_zzim_linker {line-height:35px;background-position: 137px 12px;}
+
+    .documents_add li .documents_file .fileDown {height:39px;font-size:16px;}
+ }
+
+
+/* ==========================================================================
+    tablet
+========================================================================== */
+@media screen and (max-width:768px) {
+	.m_lh30{ line-height:30px;}
+	.bd_beige{ width:100%;}
+	.evt_head p{ line-height: 1.5; height: 65px; padding-top: 17px;}
+	.evt_head p span{ display:block;}
+	.evt_body .pns_info p{ font-size: 0; position: relative; padding-left: 70px; box-sizing: border-box; width: 100%; height:auto;}
+	.evt_body .pns_info label{ position:absolute; top:0; left:0;}
+	.evt_body .pns_info input{ width:100%;box-sizing:border-box;}
+	.evt_body .pns_info span{ display: block; line-height: 1.5;}
+	.evt_con p{ font-size:13px;}
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email01{ width:100%;}
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email02{ display:none;}
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email03{ width:100%;}
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd.email .email04{ width:100%; margin-left:0;}
+	/* ==========================================================================
+		1. 소비자 정보
+	==========================================================================  */
+
+	/* 문자알림 서비스 */
+	.sms_user_info p.sms_request_input select,
+	.sms_user_info p.sms_request_input input[type='text'] {width:100px;}
+
+	/* 소비자톡톡 - 서비스 만족도 */
+	.talktalk_satisfaction_list li{width:33.3333%;}
+
+	/* 교육연계기관 */
+	.linkage_edu_list li dl dt{letter-spacing:-1px;}
+	.linkage_edu_list.layout_row4 li:nth-child(4n) dl{border-right:1px solid #d5d5d6;}
+	.linkage_edu_list.layout_row4 li:nth-child(3n) dl{border-right:0;}
+	.linkage_edu_list.layout_row4 li + li + li + li  dl dt{border-top:1px solid #b7b7b7;}
+	.layout_row4 li{width:33.33333%; }
+	.linkage_edu_list li.tbl_none_type{display:none;}
+
+	/* 가격정보 > 참가격 */
+	.consumer_price_info .price_info_top{min-height:auto; padding-right:0; padding-bottom:320px; background-position:center bottom;}
+	.consumer_price_info .price_info_top p{margin-bottom:22px; font-size:20px; line-height:34px; font-family:'NanumSquare'; }
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul {margin-left:-5px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li{width:135px; height:135px; margin-left:5px; background-position:-1px -490px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li > span:first-child{padding-top:64px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li > span + span{font-size:26px; line-height:20px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li > span + span{color:#00b2bd;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li {background-position:-236px -490px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li {background-position:-471px -490px;}
+	.consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li + li {background-position:-706px -490px;}
+
+	.consumer_price_info .price_info_basket {min-height:auto; padding:30px 0 155px 0; background-position:center bottom;}
+	.consumer_price_info .price_info_area {min-height:auto; padding:30px 0 300px 0; background-position:center bottom;}
+
+	/* ==========================================================================
+		//1. 소비자 정보
+	==========================================================================  */
+
+
+
+	/* ==========================================================================
+		2. 피해구제/분쟁조정신청
+	==========================================================================  */
+
+	/* 피해구제/분쟁조정신청 step관련 */
+	.join_step.req_step_row5 li{width:33.3333%;}
+	.join_step.req_step_row5 li:nth-child(4n) em{border-left:1px solid #e0e0e0;}
+
+	/* 선택항목이 한줄에 여러개 뿌려질 경우 */
+	.input_type_style .checking_box {display:block; margin-top:5px;}
+	/* harf_size 태블릿 반응 사이즈 재정의 */
+	.input_type_style .dispute_input input[type="text"].harf_size,
+	.input_type_style .dispute_input input[type="password"].harf_size {width:127px;}
+	.input_type_style .dispute_input select.harf_size {width:160px;}
+	.dispute_req_wrap .datapicker_wrap input[type='text'].harf_size {width:100px;}
+
+	/* 확인선택박스 상세확인 */
+	.process_checking .result_detail .detail_box .left_btn_text{width:-webkit-calc(100% - 165px) !important; width:-moz-calc(100% - 165px) !important; width:calc(100% - 165px) !important;}
+
+	/* inner 테이블 형식 입력화면 */
+	.inner_tbltype_list li{float:none; border-top:1px solid #e0e0e0;}
+	.inner_tbltype_list li:first-child{border-top:0;}
+	.inner_tbltype_list li dl{position:relative; border-left:1px solid #e0e0e0 !important; border-right:1px solid #e0e0e0; background:#fafbfe; font-size:14px}
+	.inner_tbltype_list li dl dt{position:absolute; top:0; left:0; width:130px; min-height:61px; padding:0; line-height:61px;}
+	.inner_tbltype_list li dl dd{margin-left:130px; padding:11px 10px 11px 10px; border:0; background:#fff; }
+	.inner_tbltype_list li + li + li dl dt{border-top:0;}
+
+	.inner_tbltype_list.layout_row4 li {width:100% !important;}
+	.inner_tbltype_list.layout_row2 li {width:100% !important;}
+	.inner_tbltype_list.layout_row2 li + li + li dl dt {border-top:0;}
+
+	/* 금융감독원 > 유사사례 검토 링크 */
+	.case_link_list {padding-left:10px;}
+	.case_link_list li > a{margin-left:10px;}
+
+	/* ==========================================================================
+		//2. 피해구제/분쟁조정신청
+	==========================================================================  */
+
+	/* ==========================================================================
+		3. 공통 스타일
+	==========================================================================  */
+
+	/* 공통 */
+	.agree_ect {display:block; margin:5px 0 0 42px; }
+	/* ==========================================================================
+		//3. 공통 스타일
+	==========================================================================  */
+}
+
+
+/* ==========================================================================
+    mobile
+========================================================================== */
+@media screen and (max-width:639px) {
+	.bg_gray{ padding-left:20px; padding-right:20px;word-break:keep-all;}
+	.barcode_box div{ float:none; padding-right:0; border-right:0; border-bottom:1px dashed #d8d8d8; padding-bottom:20px; width:100%;}
+	.barcode_box div img{ width:100%;}
+	.barcode_box div + img{ float:none; width:100%; padding-top:20px;}
+	.eyong_info_list ul { background-position: center 0 !important; padding-left:0; padding-top:140px; height:auto;}
+	.user_state_box{ height: auto; line-height: 1.5;}
+	.user_state_box strong{ padding:10px 20px; float:none; width:100%; box-sizing:border-box;}
+	.user_state_box span{padding: 10px 20px;}
+	.user_state_box p{ padding-top:10px; padding-bottom:10px;}
+	/* ==========================================================================
+		1. 소비자 정보
+	==========================================================================  */
+
+	/* 상단 알림박스 */
+	.consumer_info {padding:25px 30px;}
+	.sms_request,
+    .sms_request.bg_request_02,
+	.sms_result,
+	.price_img_01,
+	.price_img_02,
+	.price_img_03,
+	.price_img_04,
+	.price_img_05,
+	.price_img_06,
+	.price_img_07,
+	.price_img_08,
+	.price_img_09,
+	.price_img_10{background-image:none;}
+
+	/* 소비자톡톡 - 서비스 만족도 */
+	.talktalk_total_satisfaction li{width:50%; min-height:185px;}
+	.talktalk_total_satisfaction li .talktalk_brand{min-height:145px;}
+	.talktalk_total_satisfaction li .talktalk_brand img{width:auto; height:auto;}
+	.talktalk_total_satisfaction li .brand_score{height:42px; line-height:42px;}
+
+	.talktalk_satisfaction_list li{width:50%;}
+
+	/* 소비자톡톡 - 나도 참여하기 로그인 후 */
+	.participation_box .participation_top .brand_opinion {display:block; margin:0;}
+	.participation_box .participation_top .brand_opinion dd{width:auto; padding-left:100px;}
+	.participation_box .participation_top .brand_opinion dd select{width:100%;}
+
+	.participation_box .participation_inner .total_opinion .total_opinion_regist{position:relative; margin-top:18px; padding-right:0; }
+	.participation_box .participation_inner .total_opinion .total_opinion_regist textarea{height:95px; }
+	.participation_box .participation_inner .total_opinion .total_opinion_regist input[type='submit']{position:relative; height:41px; width:100%; margin-top:20px;}
+
+	/* 문자알림 서비스 */
+	.sms_user_info li{margin-top:0px;}
+	.sms_user_info p.sms_request_input span.input_mr{display:inline-block; margin-top:5px;}
+	.sms_user_info p.sms_request_input select,
+	.sms_user_info p.sms_request_input input[type='text'] {width:100%; margin-top:5px; box-sizing:border-box;}
+
+	/* 금융보험정보/의료정보 */
+	.consumer_box_list {overflow:hidden; margin-left:0;}
+	.consumer_box_list li{float:none; width:auto;}
+	.consumer_box_list li .cont_box_info{margin:0 0 20px 0;}
+	.consumer_box_list li .cont_box_info .box_content{min-height:72px; padding:18px 135px 60px 20px; }
+	.consumer_box_list li .cont_box_info .box_content .btn_link{bottom:15px; left:20px;}
+
+	/* 소비자연계기관 */
+	.consumer_linkage_wrap {margin:0;}
+	.consumer_linkage_wrap .consumer_linkage_box{float:none; width:auto; margin-top:20px;}
+	.consumer_linkage_wrap .consumer_linkage_box .tbl{margin-left:0;}
+
+	/* 교육연계기관 */
+	.linkage_edu_list.layout_row3 li:nth-child(3n) dl,
+	.linkage_edu_list.layout_row4 li:nth-child(3n) dl,
+	.linkage_edu_list.layout_row4 li:nth-child(4n) dl{border-right:1px solid #d5d5d6;}
+	.linkage_edu_list.layout_row3 li:nth-child(2n) dl,
+	.linkage_edu_list.layout_row4 li:nth-child(2n) dl{border-right:0;}
+	.linkage_edu_list.layout_row3 li + li + li dl dt,
+	.linkage_edu_list.layout_row4 li + li + li dl dt {border-top:1px solid #b7b7b7;}
+	.layout_row3 li,
+	.layout_row4 li{width:50%; }
+	.linkage_edu_list li.tbl_none_type{display:block;}
+
+	/* ==========================================================================
+		//1. 소비자 정보
+	==========================================================================  */
+
+
+	/* ==========================================================================
+		2. 피해구제/분쟁조정신청
+	==========================================================================  */
+
+	/* ========================= 피해구제/분쟁조정신청 step관련 */
+
+	/* 폰트사이즈 재정의 */
+	.dispute_req_wrap .join_step {border-left:0;}
+	.dispute_req_wrap .join_step li {padding:15px 20px; border:1px solid #e0e0e0;}
+	.dispute_req_wrap .join_step li span{position:relative; top:0; left:0; margin-left:0; }
+	.dispute_req_wrap .join_step li em{padding:0 0 0 0; border:0; font-size:16px; letter-spacing:0px;}
+
+	.dispute_req_wrap .join_step li:first-child, .dispute_req_wrap .join_step li:nth-child(5) {border:1px solid #e0e0e0;}
+	.dispute_req_wrap .join_step li:first-child em,
+	.dispute_req_wrap .join_step li:nth-child(5) em{border-left:0;}
+
+	.join_step.req_step_row5 li:nth-child(4n) em{border-left:0;}
+
+	/* ========================= 피해구제/분쟁조정신청 input관련 */
+	/* 태그 사이즈 재정의 */
+	.input_type_style .inp_row2 {width:100% !important;}
+	.input_type_style .right_text_input,
+	.input_type_style input.number.right_text_input {width:-webkit-calc(100% - 30px) !important; width:-moz-calc(100% - 30px) !important; width:calc(100% - 30px) !important;}
+	.input_type_style input.full_size {width:100% !important;}
+	/* 선택항목이 한줄씩 뿌려질 경우*/
+	.dispute_req_wrap .dispute_input .input_list_type .input_check_inner input[type='radio'],
+	.dispute_req_wrap .dispute_input .input_list_type .input_check_inner input[type='checkbox']{top:2px;}
+	.dispute_req_wrap .dispute_input .input_list_type .input_check_inner input.inp_check_text {margin-left:0px;}
+	/* 인풋태그앞에 타이틀이 존재할 경우 */
+	.lable_type b {display:block; margin:10px 0 10px 0; color:#3f5d8e; }
+	.lable_type.mo_lable_row2 b {margin:20px 0 10px 0; padding:15px 0 0 0; border-top:1px solid #e0e0e0;}
+	/* harf_size 재정의 */
+	.input_type_style .dispute_input input[type="text"].harf_size,
+	.input_type_style .dispute_input input[type="password"].harf_size {width:100%;}
+	.input_type_style .dispute_input select.harf_size {width:100%;}
+
+	/* 피해구제/분쟁조정 신청완료 */
+	.dispute_req_complete {padding:30px;}
+	.dispute_req_complete .dispute_complete_title{min-height:auto; padding-right:0; background:none;}
+	.dispute_req_complete .dispute_complete_title p:first-child span{color:#545454; font-weight:700;}
+
+	/* 피해구제/분쟁조정 확인선택박스 */
+	.process_checking {padding:20px;}
+	.process_checking .process_result_checking li .btn_help{position:relative; margin:10px 0 0 23px;}
+	.process_checking .process_result_checking > li .result_check span{display:block; margin-bottom:5px;}
+	.process_checking .process_result_checking > li .result_check_list li{margin:5px 0;}
+	.process_checking .process_result_checking > li .inline_type{display:block;}
+	.process_checking .process_result_checking > li .result_check.inline_type{margin-top:10px;}
+
+	/* 확인선택박스 상세확인 */
+	.process_checking .result_detail .detail_box button,
+	.process_checking .result_detail .detail_box select{width:100%;}
+	.process_checking .result_detail .detail_box .left_btn_text{margin-top:5px; width:100% !important; box-sizing:border-box;}
+
+	/* 금융감독원 > 유사사례 검토 링크 */
+	.case_link_list {padding-left:0px;}
+	.case_link_list li{width:50%;}
+	.case_link_list li > a{margin-left:20px;}
+
+	/* inner 테이블 형식 입력화면 */
+	.inner_tbltype_list.layout_row2 li dl dd input,
+	.inner_tbltype_list.layout_row2 li dl dd select,
+	.inner_tbltype_list.layout_row2 li dl dd .inp_small,
+	.inner_tbltype_list.layout_row2 li dl dd .inp_code {width:100%; }
+
+	/* 신청정보 컨텐츠 */
+	.tbl_view_content {padding:20px 0; text-align:center; }
+	.tbl_view_content .user_appli_info input[type='text'].inp_small{width:50px;}
+	.tbl_view_content .user_appli_info input[type='text'].inp_small2{width:65px;}
+	.tbl_view_content .user_appli_info input[type='text'].inp_mid{width:190px;}
+
+	/* 파일첨부 박스 */
+	.box_file_add .attech_file_area input[type="text"]{width:-webkit-calc(100% - 99px);width:-moz-calc(100% - 99px);width:calc(100% - 99px);}
+
+	/* 중앙공동주택관리분쟁조정위원회 > 처리절차 */
+	.process_step {margin-left:0;}
+	.process_step li{float:none; width:100%; margin-top:20px;}
+	.process_step li:first-child{margin-top:0px;}
+	.process_step li dl{margin-left:0px; min-height:auto;}
+	.process_step li dl dt{min-height:auto; padding:10px 0; font-size:16px;}
+	.process_step li dl dt span{display:inline; padding-top:0px;}
+	.process_step li dl dd{min-height:auto; padding:10px 0 12px 0;}
+	.process_step li dl dd span{padding-top:0; font-size:14px; }
+	.process_step li + li dl dd span{padding-top:0; }
+
+	/* 하자심사 분쟁조정 단지규모 */
+	.hsmp_inp li {width:100%; height:45px;}
+
+	/* 하자심사 분쟁조정 세부신청내역 복사 */
+	.appli_copy span{display:inline; margin-bottom:0;}
+	.appli_copy .btn_copy{position:static; margin-top:10px;}
+
+	/* 하자심사 분쟁조정 > 하자부위/청구구분 목록 */
+	.spce_select_list li p.spce_content{float:none; width:100%; color:#3f5d8e;}
+	.spce_select_list li p.spce_select{position:relative; float:none; width:auto; padding-top:10px; padding-left:80px; border-top:1px dashed #e0e0e0;}
+	.spce_select_list li p.spce_select select.full_size{width:100% !important; box-sizing:border-box;}
+	.spce_select_list li p.spce_select:before{content:'청구구분'; position:absolute; top:16px; left:0; font-weight:700;}
+
+	/* 확인선택박스 > 첨부파일 */
+	.process_checking .file_add_list > li .result_subject {padding-right:75px;}
+	.process_checking .file_add_list > li .result_detail {padding-right:20px;}
+	.process_checking .file_add_list > li .result_detail p.file_text{float:none; width:100%; }
+	.process_checking .file_add_list > li .result_detail div.file_text_add {float:none; width:-webkit-calc(100% - 45px);width:-moz-calc(100% - 45px);width:calc(100% - 45px);}
+	.process_checking .file_add_list > li .result_detail div.file_text_add .attech_file_area{margin-left:0px; margin-top:5px; }
+	.process_checking .file_add_list > li .result_detail p.btn_del {top:auto; bottom:10px;}
+
+	/* 구비서류 파일 첨부 */
+	.documents_add li .documents_sel{float:none; width:auto;}
+	.documents_add li .documents_sel select{width:100%; box-sizing:border-box;}
+	.documents_add li .documents_file{float:left; width:-webkit-calc(100% - 99px);width:-moz-calc(100% - 99px);width:calc(100% - 99px);}
+
+
+	/* ==========================================================================
+		//2. 피해구제/분쟁조정신청
+	==========================================================================  */
+
+
+
+	/* ==========================================================================
+		3. 공통 스타일
+	==========================================================================  */
+	/* 타이틀 옆 버튼 위치 */
+	.btn_position_title .title_btn{position:relative; margin-top:20px;}
+	.btn_position_title .title_btn.mo_right{text-align:right;}
+
+	/* 기본검색타입 사이즈 수정 */
+	.form_center .form_center_input{width:40%;}
+	.line_01.search_select3 select {margin-top:5px !important; }
+	.line_01.search_select3 select:first-child {margin-top:0 !important; }
+	.line_02.search_select3 select {margin-top:5px; }
+	.search_select3 select,
+	.search_select4 select{margin-top:5px !important; margin-left:0; width:100% !important; box-sizing:border-box;}
+	.search_input_full {margin-top:5px !important;}
+	.sel_text select,
+	.sel_text input{margin-top:5px; margin-left:0px; width:100% !important; box-sizing:border-box;}
+	.input_type_style select.full_size {width:100% !important;}
+
+	/* 모바일 전용 클래스 */
+	.mo_none {display:none !important;}
+	.mo_block {display:inline-block !important;}
+	.pcn_mob {display:inline-block !important;}
+	.pcb_mon {display:none !important;}
+	.tbl_scroll_none {overflow-x:visible !important;}
+
+
+	/* 버튼 블럭 타입 */
+	.btn_block button,
+	.btn_block a {display:block; width:100%; margin-left:0 !important; box-sizing:border-box; text-align:center;}
+	.btn_block a + a,
+	.btn_block button + button{margin-top:5px;}
+
+	.input_type_style .ui_btn.mo_btn_inline{display:inline-block; width:auto; padding:0 10px;}
+
+	.fileSize > #upFile {margin-left:0;}
+	/* ==========================================================================
+		//3. 공통 스타일
+	==========================================================================  */
+
+    .consumer_talktalk {background-image:none;}
+    .new_goods_top_wrap .title_link_area {float:none;}
+    .new_goods_top_wrap .my_zzim_linker {float:none;margin-top:10px;}
+}
+
+/* ==========================================================================
+    mobile 구형 디바이스
+========================================================================== */
+@media screen and (max-width:480px) {
+	.evt_head p{ height:85px; word-break:keep-all; }
+	.tbl_title small{ bottom:-21px;}
+	/* ==========================================================================
+		1. 소비자정보
+	==========================================================================  */
+
+	/* 일반비교정보 */
+	.compare_file dt{width:100px;}
+
+	/* 소비자톡톡 - 서비스 만족도 */
+	.talktalk_satisfaction_list {margin:13px 0 0 0;}
+	.talktalk_satisfaction_list li{float:none; width:auto; margin-top:5px;}
+
+	/* 소비자톡톡 - 나도 참여하기 로그인 후 */
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dt {position:relative; padding-bottom:5px; border-bottom:1px solid #4a4a4a;}
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd {padding-left:0; margin-top:10px; }
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul li + li {margin-top:10px;}
+	.participation_box .participation_inner .total_opinion .total_opinion_regist ul dl dd span{width:33.333%;}
+
+	/* 소비자톡톡 - 사업자 tip */
+	.entre_wrap .entre_content{padding:20px;}
+	.entre_wrap .entre_content .entre_brand_tip.angel {height:70px; padding-top:160px; background:url(/site/consumer/images/sub/bg/bg_entre_nodata.png) no-repeat center 35px;}
+
+	/* 가격정보 > 참가격 */
+	.consumer_price_info .price_info_top{background:url(/site/consumer/images/sub/bg/bg_consumer_price_site_mo.png) no-repeat center bottom;}
+	.consumer_price_info .price_info_basket {padding-bottom:150px; background:url(/site/consumer/images/sub/bg/bg_price_basket_mo.png) no-repeat center bottom;}
+	.consumer_price_info .price_info_area {padding-bottom:230px; background:url(/site/consumer/images/sub/bg/bg_price_area_mo.png) no-repeat center bottom;}
+
+	/* ==========================================================================
+		//1. 소비자정보
+	==========================================================================  */
+
+
+
+	/* ==========================================================================
+		2. 피해구제/분쟁조정신청
+	==========================================================================  */
+
+	/* 피해구제/분쟁조정신청 step관련 */
+	.join_step.req_step_row5 li{width:33.3333%;}
+
+	/* 피해구제/분쟁조정신청 input관련 */
+	.dispute_req_wrap .dispute_input input[type='radio'],
+	.dispute_req_wrap .dispute_input input[type='checkbox'] {margin:0 5px 0 0;}
+
+	.input_type_style .checking_box em {display:block;}
+	.input_type_style .checking_box.check_inline em {display:inline-block;}
+
+	/* inner 테이블 형식 입력화면 */
+	.inner_tbltype_list li dl{background:#fff;}
+	.inner_tbltype_list li dl dt{position:relative; width:auto; min-height:auto; padding:11px 10px; line-height:22px;}
+	.inner_tbltype_list li dl dd{padding:11px 10px; margin:0; border-top:1px solid #e0e0e0;}
+
+	/* 금융감독원 > 유사사례 검토 링크 */
+	.case_link_list {padding-left:20px;}
+	.case_link_list li{float:none; width:100%;}
+	.case_link_list li > a{margin-left:0px;}
+
+	/* 피해구제/분쟁조정 확인선택박스 */
+	.process_checking .process_result_checking > li .result_check span{display:block; margin-bottom:5px;}
+	.process_checking .process_result_checking > li .result_check_list li{margin:5px 0;}
+
+	/* 체크리스트 관련 박스 */
+	.adjust_check_list li span select{width:100%; margin-bottom:5px;}
+
+	/* 조정대상 여부확인 */
+	.target_check_list li{padding:11px 0 20px 0; }
+	.target_check_list li em{font-size:16px;}
+	.target_check_list li span{position:relative; top:0; right:0; display:block; margin:10px 0 0 23px; }
+
+	/* 환경분쟁조정 인트로 */
+	.dispute_intro_list li dl dd{background-position:20px center;}
+
+	/* 작성예시 */
+	.writing_exmp ul li span{position:static; }
+	.writing_exmp ul li p{display:block; padding-left:10px;}
+
+	/* 구비서류 inner */
+	.data_inner dl dt{position:static; top:0; left:0; width:auto; margin-top:0; padding:10px; border-bottom:1px solid #e0e0e0;}
+	.data_inner dl dd{padding:10px 10px 10px 10px; margin-left:0;}
+
+	/* 구비서류 파일 첨부 */
+	.documents_add li .documents_sel{float:none; width:auto;}
+	.documents_add li .documents_file{float:none; width:100%;}
+	.documents_add li .documents_btn_add{float:none; width:auto; margin-left:0;}
+
+
+	/* 프린트 버튼 모바일 제어 */
+	.mo_print {width:80px;}
+	.mo_btn_print {width:41px !important; padding:0 !important; font-size:0;}
+	.mo_btn_print span{margin:0 !important;}
+
+	/* ==========================================================================
+		//2. 피해구제/분쟁조정신청
+	==========================================================================  */
+
+
+	/* ==========================================================================
+		3. 공통 스타일
+	==========================================================================  */
+	/* 이용동의 */
+	.agree_check {text-align:left; }
+
+	/* 기본검색타입 사이즈 수정 */
+	.form_center select{width:100%; margin-top:5px; box-sizing:border-box;}
+	.form_center .form_center_input{width:100%; margin-top:5px; box-sizing:border-box;}
+	.form_center input[type='submit'] {width:100%; margin-top:5px; box-sizing:border-box;}
+    .form_center .mobile-wide {width: calc(100% - 27px);}
+
+	/* 기본폼타입 셀렉트 수정 */
+    .select_wrap.search_select2 select,
+	.search_select2 select {width:100%;}
+
+	/* 기타 */
+	.btn_mo_blank{padding:0 10px !important;}
+	.btn_mo_blank span{display:inline-block; width:12px; text-indent:-9999px; background:url(/site/consumer/images/common/btn/btn_ui_ico_new_window_small.png) no-repeat center;}
+	.btn_link_area {width:auto;}
+
+	/* 버튼 블럭 타입 */
+	.btn_block button,
+	.btn_block a {display:block; width:100%; margin-left:0 !important; box-sizing:border-box; text-align:center;}
+	.btn_block a + a,
+	.btn_block button + button{margin-top:5px;}
+	.btn_finish .ui_btn {display:block; width:100%; margin-top:5px; margin-left:0 !important; box-sizing:border-box; }
+
+    /*문자서비스 알림*/
+    .agree_check.sns_service span {display:block;margin-left:0;margin-top:5px;}
+
+	/* ==========================================================================
+		//3. 공통 스타일
+	==========================================================================  */
+
+}

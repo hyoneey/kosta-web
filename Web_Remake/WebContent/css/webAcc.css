@@ -1,0 +1,122 @@
+@charset 'UTF-8';
+
+/*硫붿씤�뱀젒洹쇱꽦 紐낅룄��鍮� 異붽�*/
+
+/* *******************************************************
+    硫붿씤
+ ******************************************************* */
+.web_acc #visual_quick_menu > ul > li {background:url(/site/consumer/images/main/bg/bg_visual_quick_acc_01.png) #4e8400;}
+.web_acc #visual_quick_menu > ul > li + li  {background:url(/site/consumer/images/main/bg/bg_visual_quick_acc_02.png) #0078cc;}
+.web_acc #visual_quick_menu > ul > li + li + li {background:url(/site/consumer/images/main/bg/bg_visual_quick_acc_03.png) #cc4d00;}
+.web_acc #visual_quick_menu > ul > li + li + li + li {background: url(/site/consumer/images/main/bg/bg_visual_quick_04.png) no-repeat 0 0 #5f5f5f;}
+
+.web_acc .recall_cert_area > ul > .active > a[href='javascript:;'] {color:#e23000;}
+.web_acc .recall_cert_area > ul > li > a > .bar  {background-color:#e23000;}
+
+
+.web_acc .recall_cert_area .cat_new_list li a > dl > dd > .maker,
+.web_acc .recall_cert_area .cat_new_list li a > dl > dd > .date {color:#686868;}
+
+.web_acc .recall_cert_area .cat_list li a:hover, .recall_cert_area .cat_list li a:active, .recall_cert_area .cat_list li a:focus {border-color:#dd3721;background-color:#dd3721;}
+
+.web_acc .product_search_area_list li.on {background-color: #0078cc;}
+.web_acc .product_search_area .dream_down em {color:#CB4C33;}
+
+.web_acc .visual_wrap_bottom_area {background:url(/site/consumer/images/main/bg/bg_visual_bottom_bar_acc.png) repeat 0 0;}
+.web_acc .infographics_list .mini_infograph a:after {background-image: url(/site/consumer/images/main/bg/bg_infogra_title_acc.png);}
+
+.web_acc .main_right_menu li a .circle {background-image:url(/site/consumer/images/main/bg/bg_main_right_menu_acc.png);background-position:0 0;}
+.web_acc .main_right_menu li + li a .circle {background-position:-64px 0;}
+.web_acc .main_right_menu li + li + li a .circle {background-position:-128px 0;}
+.web_acc .main_right_menu li + li + li + li a .circle {background-position:-192px 0;}
+.web_acc .main_right_menu li + li + li + li + li a .circle {background-position:-256px 0;}
+
+.web_acc .main_right_menu li a:hover .circle,
+.web_acc .main_right_menu li a:focus .circle {background-position: 0px -64px;}
+
+.web_acc .main_right_menu li + li a:hover .circle,
+.web_acc .main_right_menu li + li a:focus .circle {background-position: -64px -64px;}
+.web_acc .main_right_menu li + li + li a:hover .circle,
+.web_acc .main_right_menu li + li + li a:focus .circle {background-position: -128px -64px;}
+.web_acc .main_right_menu li + li + li + li a:hover .circle,
+.web_acc .main_right_menu li + li + li + li a:focus .circle {background-position: -192px -64px;}
+.web_acc .main_right_menu li + li + li + li + li a:hover .circle,
+.web_acc .main_right_menu li + li + li + li + li a:focus .circle {background-position: -256px -64px;}
+
+
+
+/* *******************************************************
+    怨듯넻
+ ******************************************************* */
+.ui_btn.b_type.gray {background-color:#757575;}
+
+
+.web_acc .ui_sub_h4_txt .txt_orange,
+.web_acc .tbl .txt_orange,
+.web_acc .consumer_modal_body .txt_orange,
+.web_acc .compare_info .consumer_info_title .txt_orange,
+.web_acc .bloon_area .txt_orange,
+.web_acc .noti .txt_orange,
+.web_acc .service_title .txt_orange,
+.web_acc .ui_exp .txt_orange {color: #d73f03;}
+
+.web_acc .btn_detail,
+.web_acc .ui_sub_bottom_info_gray .txt_blue,
+.web_acc .ui_exp.txt_blue,
+.web_acc .consumer_modal_body .txt_blue,
+.web_acc .ui_exp .txt_blue,
+.web_acc .tbl .txt_blue,
+.web_acc .service_homepage_info .txt_blue,
+.web_acc .noti .txt_blue {color:#3d73b6;}
+
+.web_acc .ui_box_info_agency > dl > dd > dl > dd > .linker {color:#3A6AD7;}
+
+.web_acc .topGo {background:url(/site/consumer/images/common/btn/top_btn_acc.png) no-repeat 0 0;}
+
+.web_acc #site_satis_area .satis_choice_area ul li input[type='radio']:checked ~ label {color:#1674cc;}
+
+
+
+/* *******************************************************
+    �쒕툕�덉씠�꾩썐
+ ******************************************************* */
+.web_acc .subMDp-1 > .subMenuOn > a {background-color:#d93f07;}
+.web_acc .subMDp-1 > li > ul > .subMenuOn > a {color:#c9400e;}
+
+/* *******************************************************
+    �쒕툕�섏씠吏�
+ ******************************************************* */
+
+ /*�곹뭹�덉쟾�뺣낫*/
+.web_acc .goods_info_search_wrap > ul > li > .goods_search_form > .form_wrap > .form_wrap_inner.line_02 .btn_cat_reset {background-color:#757575;}
+.web_acc .ui_box_info_style_01 > dl > dt {color:#136dc2;}
+.web_acc .ui_goods_list > ul > li > a > dl > .cat,
+.web_acc .tbl_list_reset_wrap > .list_total_num strong {color:#0071da;}
+.web_acc .new_goods_top_wrap .my_zzim_linker {background-color:#e61d03;}
+.web_acc .new_goods_top_wrap .my_zzim_linker.active {border-color:#e61d03;color:#e61d03;}
+
+.web_acc .ui_twin_box_style .right_box .ul_h5_txt_exp {color:#0a6eb1;}
+.web_acc .ui_stats.liner.pumpkin {color:#D64201;border-color:#D64201;}
+
+/*�뚮퉬�먯젙蹂�*/
+
+.web_acc .tabNavi > .btn_consumer_compare > button[type='button'],
+.web_acc .consumer_info .consumer_info_title span {color:#C9400E;}
+.web_acc .consumer_calrender_wrap .tbl table .date > span {background:#d00000;}
+.web_acc .consumer_calrender_wrap .calrender_top_area .calrender_month_list .active button[type='button'] {background:#b50a0a;}
+
+.web_acc .consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li > span + span,
+.web_acc .consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li > span + span {color:#0d7099;}
+.web_acc .consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li > span + span,
+.web_acc .consumer_price_info .price_info_detail_wrap div.price_info_detail > ul li + li + li + li > span + span {color:#03828a;}
+
+.web_acc .consumer_price_info .price_info_area {background-image:url(/site/consumer/images/sub/bg/bg_price_area_acc.png);}
+.web_acc .up_num {color:#DF2F11 !important;}
+
+/*�곷떞 諛� �쇳빐遺꾩웳*/
+.web_acc .ui_btn.mint {background-color:#1197a3;}
+
+
+@media screen and (max-width: 480px) {
+    .web_acc .consumer_price_info .price_info_area {background-size: 300px;}
+}

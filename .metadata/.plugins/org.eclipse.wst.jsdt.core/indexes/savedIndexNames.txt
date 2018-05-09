@@ -1,0 +1,13 @@
+INDEX VERSION 1.3+C:\kosta180\web_work\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
+2803804213.index
+944792062.index
+3888706079.index
+1248348196.index
+155816633.index
+3694555155.index
+3581163120.index
+2288471381.index
+1807850184.index
+2442047710.index
+4079492467.index
+3740783920.index
